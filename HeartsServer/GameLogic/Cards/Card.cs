@@ -32,4 +32,33 @@ namespace Hearts_server.GameLogic.Cards
             }
         }
     }
+
+    public class CardComparer : IEqualityComparer<Card>
+    {
+        public bool Equals(Card? x, Card? y)
+        {
+            if(Object.ReferenceEquals(x, y)) 
+                return true;
+
+            if (Object.ReferenceEquals(x, null) || Object.ReferenceEquals(y, null))
+                return false;
+
+            return x.Value == y.Value && x.Colour == y.Colour;
+        }
+
+        public int GetHashCode(Card card)
+        {
+            //Check whether the object is null
+            if (Object.ReferenceEquals(card, null)) return 0;
+
+            //Get hash code for the Name field if it is not null.
+            int hashValue = card.Value.GetHashCode();
+
+            //Get hash code for the Code field.
+            int hashColour = card.Colour.GetHashCode();
+
+            //Calculate the hash code for the product.
+            return hashValue ^ hashColour;
+        }
+    }
 }

@@ -3,16 +3,22 @@ using Hearts_server.GameLogic.Shuffle;
 
 namespace HeartsServer.GameLogic.Shuffle
 {
-    public class GiveInOneColour : IShuffle
+    public class GiveInOneColour : BaseShuffleEngine, IShuffle
     {
-        public List<List<Card>> Shuffle(Card[] cards) 
+        public override List<List<Card>> Shuffle(Card[] cards) 
         {
+            if(cards is null || base.IsAnyCardNull(cards))
+                throw new ArgumentNullException(nameof(cards));
+            if(!base.IsCorrectNumberOfCards(cards) || !AreAllCardsDifferent(cards))
+                throw new ArgumentException(nameof(cards));
+            
+
             List<List<Card>> cardsForPlayers = new List<List<Card>>();
 
             for(int i = 0; i < Enum.GetNames(typeof(CardColour)).Length; i++)
             {
                 var inOneColour = cards.Where(c => (int)c.Colour == i).ToList();
-                cardsForPlayers[i] = inOneColour;
+                cardsForPlayers.Add(inOneColour);
             }
 
             return cardsForPlayers;

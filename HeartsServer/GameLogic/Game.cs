@@ -4,6 +4,7 @@ using Hearts_server.GameLogic.SignalR;
 using Hearts_server.GameLogic.Timer;
 using Hearts_server.History;
 using Hearts_server.ResultsWriterReader;
+using HeartsServer.GameLogic;
 
 namespace Hearts_server.GameLogic
 {
@@ -11,8 +12,6 @@ namespace Hearts_server.GameLogic
     //TODO: sprawdzic czy nie potrzebny Singleton bezpieczny watkowo
     public class Game
     {
-        public const int CARDS_NUMBER = 52;
-        public const int PLAYERS_NUMBER = 4;
 
         private static Game _instance;
         public static Game Instance
@@ -33,8 +32,8 @@ namespace Hearts_server.GameLogic
         internal IGameReader gameReader;
         internal GameHistory history = new GameHistory();
 
-        internal Player[] players = new Player[PLAYERS_NUMBER];
-        internal Card[] cards = new Card[CARDS_NUMBER];
+        internal Player[] players = new Player[Consts.PLAYERS_NUMBER];
+        internal Card[] cards = new Card[Consts.CARDS_NUMBER];
         internal Trick actualTrick = new Trick();
         internal int roundIndex = 1;
         internal int playerIndex;
@@ -52,6 +51,11 @@ namespace Hearts_server.GameLogic
         }
 
         public void AddPlayer(string playerName)
+        {
+            throw new NotImplementedException();
+        }
+
+        public void RemovePlayer(int id) 
         {
             throw new NotImplementedException();
         }
