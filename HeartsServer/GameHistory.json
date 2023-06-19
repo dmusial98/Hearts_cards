@@ -1,369 +1,369 @@
 {
-    "Players": [
+  "Players": [
+    {
+      "Id": 1,
+      "Name": "name",
+      "Points": 24,
+      "Bonuses": 2
+    },
+    {
+      "Id": 2,
+      "Name": "name2",
+      "Points": 100,
+      "Bonuses": 0
+    },
+    {
+      "Id": 3,
+      "Name": "name3",
+      "Points": 36,
+      "Bonuses": 1
+    },
+    {
+      "Id": 4,
+      "Name": "name4",
+      "Points": 51,
+      "Bonuses": 0
+    }
+  ],
+  "Rounds": [
+    {
+      "RoundNumber": 1,
+      "PointsAfterRound": [
         {
-            "Id": 1,
-            "Name": "name",
-            "Points": 24,
-            "Bonuses": 2
+          "PlayerId": 1,
+          "Points": 10
         },
         {
-            "Id": 2,
-            "Name": "name2",
-            "Points": 100,
-            "Bonuses": 0
-        },
-        {
-            "Id": 3,
-            "Name": "name3",
-            "Points": 36,
-            "Bonuses": 1
-        },
-        {
-            "Id": 4,
-            "Name": "name4",
-            "Points": 51,
-            "Bonuses": 0
+          "PlayerId": 2,
+          "Points": 12
         }
-    ],
-    "Rounds": [
+      ],
+      "PlayerCardsBefore": [
         {
-            "RoundNumber": 1,
-            "PointsAfterRound": [
-                {
-                    "PlayerId": 1,
-                    "Points": 10
-                },
-                {
-                    "PlayerId": 2,
-                    "Points": 12
-                }
-            ],
-            "PlayerCardsBefore": [
-                {
-                    "PlayerId": 1,
-                    "PlayerName": "name",
-                    "Cards": [
-                        {
-                            "Value": 3,
-                            "Colour": "Diamond"
-                        },
-                        {
-                            "Value": 3,
-                            "Colour": "Diamond"
-                        },
-                        {
-                            "Value": 3,
-                            "Colour": "Diamond"
-                        },
-                        {
-                            "Value": 3,
-                            "Colour": "Diamond"
-                        }
-                    ]
-                },
-                {
-                    "PlayerId": 2,
-                    "PlayerName": "name2",
-                    "Cards": [
-                        {
-                            "Value": 3,
-                            "Colour": "Diamond"
-                        },
-                        {
-                            "Value": 3,
-                            "Colour": "Diamond"
-                        },
-                        {
-                            "Value": 3,
-                            "Colour": "Diamond"
-                        },
-                        {
-                            "Value": 3,
-                            "Colour": "Diamond"
-                        }
-                    ]
-                }
-            ],
-            "Exchange": [
-                {
-                    "IdPlayer": 1,
-                    "ToWho": 2,
-                    "FromWho": 3,
-                    "Gave": [
-                        {
-                            "Value": 3,
-                            "Colour": "Diamond"
-                        },
-                        {
-                            "Value": 3,
-                            "Colour": "Diamond"
-                        },
-                        {
-                            "Value": 3,
-                            "Colour": "Diamond"
-                        }
-                    ],
-                    "Received": [
-                        {
-                            "Value": "Three",
-                            "Colour": "Diamond"
-                        },
-                        {
-                            "Value": "Three",
-                            "Colour": "Diamond"
-                        },
-                        {
-                            "Value": "Three",
-                            "Colour": "Diamond"
-                        }
-                    ],
-                    "CardsAfter": [
-                        {
-                            "Value": "Three",
-                            "Colour": "Diamond"
-                        },
-                        {
-                            "Value": "Three",
-                            "Colour": "Diamond"
-                        },
-                        {
-                            "Value": "Three",
-                            "Colour": "Diamond"
-                        }
-                    ]
-                },
-                {
-                    "IdPlayer": 2,
-                    "ToWho": 2,
-                    "FromWho": 3,
-                    "Gave": [
-                        {
-                            "Value": "Eight",
-                            "Colour": "Diamond"
-                        },
-                        {
-                            "Value": "Eight",
-                            "Colour": "Diamond"
-                        },
-                        {
-                            "Value": "Eight",
-                            "Colour": "Diamond"
-                        }
-                    ],
-                    "Received": [
-                        {
-                            "Value": "Eight",
-                            "Colour": "Diamond"
-                        },
-                        {
-                            "Value": "Eight",
-                            "Colour": "Diamond"
-                        },
-                        {
-                            "Value": "Eight",
-                            "Colour": "Diamond"
-                        }
-                    ],
-                    "CardsAfter": [
-                        {
-                            "Value": "Three",
-                            "Colour": "Diamond"
-                        },
-                        {
-                            "Value": "Three",
-                            "Colour": "Diamond"
-                        },
-                        {
-                            "Value": "Three",
-                            "Colour": "Diamond"
-                        }
-                    ]
-                }
-            ],
-            "Tricks": [
-                {
-                    "TrickNumber": 1,
-                    "WhoWon": 2,
-                    "Queue": [
-                        {
-                            "PlayerId": 3,
-                            "Card": {
-                                "Value": "King",
-                                "Colour": "Diamond"
-                            }
-                        },
-                        {
-                            "PlayerId": 4,
-                            "Card": {
-                                "Value": "Queen",
-                                "Colour": "Diamond"
-                            }
-                        },
-                        {
-                            "PlayerId": 1,
-                            "Card": {
-                                "Value": "Ten",
-                                "Colour": "Diamond"
-                            }
-                        },
-                        {
-                            "PlayerId": 2,
-                            "Card": {
-                                "Value": "Ace",
-                                "Colour": "Diamond"
-                            }
-                        }
-                    ],
-                    "PointsAfterTrick": [
-                        {
-                            "PlayerId": 1,
-                            "Points": 12
-                        },
-                        {
-                            "PlayerId": 2,
-                            "Points": 2
-                        }
-                    ],
-                    "PlayerCardsAfterTrick":
-                    [
-                        {
-                            "PlayerId": 1,
-                            "PlayerName": "name",
-                            "Cards": [
-                                {
-                                    "Value": 3,
-                                    "Colour": "Diamond"
-                                },
-                                {
-                                    "Value": 3,
-                                    "Colour": "Diamond"
-                                },
-                                {
-                                    "Value": 3,
-                                    "Colour": "Diamond"
-                                },
-                                {
-                                    "Value": 3,
-                                    "Colour": "Diamond"
-                                }
-                            ]
-                        },
-                        {
-                            "PlayerId": 2,
-                            "PlayerName": "name2",
-                            "Cards": [
-                                {
-                                    "Value": 3,
-                                    "Colour": "Diamond"
-                                },
-                                {
-                                    "Value": 3,
-                                    "Colour": "Diamond"
-                                },
-                                {
-                                    "Value": 3,
-                                    "Colour": "Diamond"
-                                },
-                                {
-                                    "Value": 3,
-                                    "Colour": "Diamond"
-                                }
-                            ]
-                        }
-                    ]
-                },
-                {
-                    "TrickNumber": 2,
-                    "WhoWon": 4,
-                    "Queue": [
-                        {
-                            "PlayerId": 3,
-                            "Card": {
-                                "Value": "King",
-                                "Colour": "Diamond"
-                            }
-                        },
-                        {
-                            "PlayerId": 4,
-                            "Card": {
-                                "Value": "Queen",
-                                "Colour": "Diamond"
-                            }
-                        },
-                        {
-                            "PlayerId": 1,
-                            "Card": {
-                                "Value": "Ten",
-                                "Colour": "Diamond"
-                            }
-                        },
-                        {
-                            "PlayerId": 2,
-                            "Card": {
-                                "Value": "Ace",
-                                "Colour": "Diamond"
-                            }
-                        }
-                    ],
-                    "PointsAfterTrick": [
-                        {
-                            "PlayerId": 1,
-                            "Points": 12
-                        },
-                        {
-                            "PlayerId": 2,
-                            "Points": 2
-                        }
-                    ],
-                    "PlayerCardsAfterTrick":
-                    [
-                        {
-                            "PlayerId": 1,
-                            "PlayerName": "name",
-                            "Cards": [
-                                {
-                                    "Value": 3,
-                                    "Colour": "Diamond"
-                                },
-                                {
-                                    "Value": 3,
-                                    "Colour": "Diamond"
-                                },
-                                {
-                                    "Value": 3,
-                                    "Colour": "Diamond"
-                                },
-                                {
-                                    "Value": 3,
-                                    "Colour": "Diamond"
-                                }
-                            ]
-                        },
-                        {
-                            "PlayerId": 2,
-                            "PlayerName": "name2",
-                            "Cards": [
-                                {
-                                    "Value": 3,
-                                    "Colour": "Diamond"
-                                },
-                                {
-                                    "Value": 3,
-                                    "Colour": "Diamond"
-                                },
-                                {
-                                    "Value": 3,
-                                    "Colour": "Diamond"
-                                },
-                                {
-                                    "Value": 3,
-                                    "Colour": "Diamond"
-                                }
-                            ]
-                        }
-                    ]
-                }
-            ]
+          "PlayerId": 1,
+          "PlayerName": "name",
+          "Cards": [
+            {
+              "Value": 3,
+              "Colour": "Diamond"
+            },
+            {
+              "Value": 3,
+              "Colour": "Diamond"
+            },
+            {
+              "Value": 3,
+              "Colour": "Diamond"
+            },
+            {
+              "Value": 3,
+              "Colour": "Diamond"
+            }
+          ]
+        },
+        {
+          "PlayerId": 2,
+          "PlayerName": "name2",
+          "Cards": [
+            {
+              "Value": 3,
+              "Colour": "Diamond"
+            },
+            {
+              "Value": 3,
+              "Colour": "Diamond"
+            },
+            {
+              "Value": 3,
+              "Colour": "Diamond"
+            },
+            {
+              "Value": 3,
+              "Colour": "Diamond"
+            }
+          ]
         }
-    ]
+      ],
+      "Exchange": [
+        {
+          "IdPlayer": 1,
+          "ToWho": 2,
+          "FromWho": 3,
+          "Gave": [
+            {
+              "Value": 3,
+              "Colour": "Diamond"
+            },
+            {
+              "Value": 3,
+              "Colour": "Diamond"
+            },
+            {
+              "Value": 3,
+              "Colour": "Diamond"
+            }
+          ],
+          "Received": [
+            {
+              "Value": "Three",
+              "Colour": "Diamond"
+            },
+            {
+              "Value": "Three",
+              "Colour": "Diamond"
+            },
+            {
+              "Value": "Three",
+              "Colour": "Diamond"
+            }
+          ],
+          "CardsAfter": [
+            {
+              "Value": "Three",
+              "Colour": "Diamond"
+            },
+            {
+              "Value": "Three",
+              "Colour": "Diamond"
+            },
+            {
+              "Value": "Three",
+              "Colour": "Diamond"
+            }
+          ]
+        },
+        {
+          "IdPlayer": 2,
+          "ToWho": 2,
+          "FromWho": 3,
+          "Gave": [
+            {
+              "Value": "Eight",
+              "Colour": "Diamond"
+            },
+            {
+              "Value": "Eight",
+              "Colour": "Diamond"
+            },
+            {
+              "Value": "Eight",
+              "Colour": "Diamond"
+            }
+          ],
+          "Received": [
+            {
+              "Value": "Eight",
+              "Colour": "Diamond"
+            },
+            {
+              "Value": "Eight",
+              "Colour": "Diamond"
+            },
+            {
+              "Value": "Eight",
+              "Colour": "Diamond"
+            }
+          ],
+          "CardsAfter": [
+            {
+              "Value": "Three",
+              "Colour": "Diamond"
+            },
+            {
+              "Value": "Three",
+              "Colour": "Diamond"
+            },
+            {
+              "Value": "Three",
+              "Colour": "Diamond"
+            }
+          ]
+        }
+      ],
+      "Tricks": [
+        {
+          "TrickNumber": 1,
+          "WhoWon": 2,
+          "Queue": [
+            {
+              "PlayerId": 3,
+              "Card": {
+                "Value": "King",
+                "Colour": "Diamond"
+              }
+            },
+            {
+              "PlayerId": 4,
+              "Card": {
+                "Value": "Queen",
+                "Colour": "Diamond"
+              }
+            },
+            {
+              "PlayerId": 1,
+              "Card": {
+                "Value": "Ten",
+                "Colour": "Diamond"
+              }
+            },
+            {
+              "PlayerId": 2,
+              "Card": {
+                "Value": "Ace",
+                "Colour": "Diamond"
+              }
+            }
+          ],
+          "PointsAfterTrick": [
+            {
+              "PlayerId": 1,
+              "PlayerName": "name",
+              "Points": 12
+            },
+            {
+              "PlayerId": 2,
+              "PlayerName": "name2",
+              "Points": 2
+            }
+          ],
+          "PlayerCardsAfterTrick": [
+            {
+              "PlayerId": 1,
+              "PlayerName": "name",
+              "Cards": [
+                {
+                  "Value": 3,
+                  "Colour": "Diamond"
+                },
+                {
+                  "Value": 3,
+                  "Colour": "Diamond"
+                },
+                {
+                  "Value": 3,
+                  "Colour": "Diamond"
+                },
+                {
+                  "Value": 3,
+                  "Colour": "Diamond"
+                }
+              ]
+            },
+            {
+              "PlayerId": 2,
+              "PlayerName": "name2",
+              "Cards": [
+                {
+                  "Value": 3,
+                  "Colour": "Diamond"
+                },
+                {
+                  "Value": 3,
+                  "Colour": "Diamond"
+                },
+                {
+                  "Value": 3,
+                  "Colour": "Diamond"
+                },
+                {
+                  "Value": 3,
+                  "Colour": "Diamond"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "TrickNumber": 2,
+          "WhoWon": 4,
+          "Queue": [
+            {
+              "PlayerId": 3,
+              "Card": {
+                "Value": "King",
+                "Colour": "Diamond"
+              }
+            },
+            {
+              "PlayerId": 4,
+              "Card": {
+                "Value": "Queen",
+                "Colour": "Diamond"
+              }
+            },
+            {
+              "PlayerId": 1,
+              "Card": {
+                "Value": "Ten",
+                "Colour": "Diamond"
+              }
+            },
+            {
+              "PlayerId": 2,
+              "Card": {
+                "Value": "Ace",
+                "Colour": "Diamond"
+              }
+            }
+          ],
+          "PointsAfterTrick": [
+            {
+              "PlayerId": 1,
+              "Points": 12
+            },
+            {
+              "PlayerId": 2,
+              "Points": 2
+            }
+          ],
+          "PlayerCardsAfterTrick": [
+            {
+              "PlayerId": 1,
+              "PlayerName": "name",
+              "Cards": [
+                {
+                  "Value": 3,
+                  "Colour": "Diamond"
+                },
+                {
+                  "Value": 3,
+                  "Colour": "Diamond"
+                },
+                {
+                  "Value": 3,
+                  "Colour": "Diamond"
+                },
+                {
+                  "Value": 3,
+                  "Colour": "Diamond"
+                }
+              ]
+            },
+            {
+              "PlayerId": 2,
+              "PlayerName": "name2",
+              "Cards": [
+                {
+                  "Value": 3,
+                  "Colour": "Diamond"
+                },
+                {
+                  "Value": 3,
+                  "Colour": "Diamond"
+                },
+                {
+                  "Value": 3,
+                  "Colour": "Diamond"
+                },
+                {
+                  "Value": 3,
+                  "Colour": "Diamond"
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  ]
 }

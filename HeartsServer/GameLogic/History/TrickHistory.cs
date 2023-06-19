@@ -3,12 +3,12 @@ using Hearts_server.GameLogic.Cards;
 
 namespace HeartsServer.GameLogic.History
 {
-    public class TrickHistory
-    {
-        public Card[] cards = new Card[4];
-        public Player WhoWon { get; set; }
-        public Player WhoStarted { get; set; }
-        public PlayerCardsHistory[] CardsHistoryAfterTrick { get; set; }
-
-    }
+	public class TrickHistory
+	{
+		public int TrickNumber { get; set; }
+		public Player WhoWon { get; set; }
+		public List<QueueHistory> Queue { get; set; }
+		public List<PlayerPointsHistory> PointsAfterTrick { get; set; }
+		public PlayerCardsHistory[] PlayerCardsAfterTrick { get; set; }
+	}
 }
