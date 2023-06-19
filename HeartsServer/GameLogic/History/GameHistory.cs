@@ -1,4 +1,4 @@
-﻿namespace Hearts_server.History
+﻿namespace HeartsServer.GameLogic.History
 {
     public class GameHistory
     {

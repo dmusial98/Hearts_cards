@@ -2,7 +2,7 @@
 using Hearts_server.GameLogic.Cards;
 using System;
 
-namespace Hearts_server.History
+namespace HeartsServer.GameLogic.History
 {
     public class PlayerCardsHistory : List<Card>
     {

@@ -1,7 +1,7 @@
 ﻿using Hearts_server.GameLogic;
 using Hearts_server.GameLogic.Cards;
 
-namespace Hearts_server.History
+namespace HeartsServer.GameLogic.History
 {
     public class TrickHistory
     {

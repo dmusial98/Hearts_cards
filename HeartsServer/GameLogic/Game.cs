@@ -2,9 +2,9 @@
 using Hearts_server.GameLogic.Shuffle;
 using Hearts_server.GameLogic.SignalR;
 using Hearts_server.GameLogic.Timer;
-using Hearts_server.History;
 using Hearts_server.ResultsWriterReader;
 using HeartsServer.GameLogic;
+using HeartsServer.GameLogic.History;
 
 namespace Hearts_server.GameLogic
 {
