@@ -47,7 +47,8 @@ namespace Hearts_server.GameLogic
 
         public void SetFields(IShuffle shuffle)
         {
-            this.shuffleLogic = shuffle;
+            if (shuffleLogic != null)
+                this.shuffleLogic = shuffle;
         }
 
         public void AddPlayer(string playerName)
@@ -55,7 +56,7 @@ namespace Hearts_server.GameLogic
             throw new NotImplementedException();
         }
 
-        public void RemovePlayer(int id) 
+        public void RemovePlayer(int id)
         {
             throw new NotImplementedException();
         }
