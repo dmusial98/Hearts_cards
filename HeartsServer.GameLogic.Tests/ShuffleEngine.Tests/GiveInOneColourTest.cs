@@ -3,7 +3,7 @@ using Hearts_server.GameLogic.Shuffle;
 using HeartsServer.GameLogic.Shuffle;
 
 
-namespace HeartsServer.GameLogic.Tests
+namespace HeartsServer.GameLogic.Tests.ShuffleEngine.Tests
 {
     [TestClass]
     public class GiveInOneColourTest : IShuffleTestBase
@@ -35,7 +35,7 @@ namespace HeartsServer.GameLogic.Tests
 
         [TestMethod]
         [ExpectedException(typeof(ArgumentException))]
-        public void GiveInOneColour_Shuffle_ToLittleCards()
+        public void GiveInOneColour_Shuffle_TooLittleCards()
         {
             Shuffle_ToLittleCards(new GiveInOneColour());
         }
