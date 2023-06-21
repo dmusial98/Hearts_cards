@@ -11,6 +11,8 @@ namespace HeartsServer.GameLogic.Tests.ShuffleEngine.Tests
 		public void StandardRandomShuffleEngine_Shuffle_CorrectList()
 		{
 			Shuffle_CorrectList(new StandardRandomShuffleEngine());
+
+			//TODO:Ogarnac TestContext
 			//WriteCards(testContext);
 			foreach (var playerCards in Cards)
 			{
@@ -20,6 +22,12 @@ namespace HeartsServer.GameLogic.Tests.ShuffleEngine.Tests
 				testContext?.Write("\n\n");
 
 			}
+		}
+
+		[TestMethod]
+		public void StandardRandomShuffleEngine_Shuffle_CardsAreDifferentInOutput()
+		{
+			Shuffle_CardsAreDifferentInOutput(new StandardRandomShuffleEngine());
 		}
 
 		[TestMethod]

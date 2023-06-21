@@ -56,7 +56,7 @@ namespace HeartsServer.GameLogic.Tests
         {
             Add4Players();
 
-            game.SetFields(new GiveInOneColour());
+            game.SetFields(new GiveInOneColourShuffleEngine());
 
             Assert.IsNotNull(game.shuffleLogic);
         }
@@ -65,7 +65,7 @@ namespace HeartsServer.GameLogic.Tests
         public void Game_AddShuffleLogic_DoPlayersHaveCardsInSameColour()
         {
             Add4Players();
-            game.SetFields(new GiveInOneColour());
+            game.SetFields(new GiveInOneColourShuffleEngine());
             //TODO: dokonczyc
 
         }

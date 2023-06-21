@@ -1,11 +1,6 @@
 ﻿using Hearts_server.GameLogic.Cards;
 using Hearts_server.GameLogic.Shuffle;
 using HeartsServer.GameLogic.Shuffle;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace HeartsServer.GameLogic.Tests.ShuffleEngine.Tests
 {
@@ -23,17 +18,32 @@ namespace HeartsServer.GameLogic.Tests.ShuffleEngine.Tests
 
 			Assert.IsNotNull(result);
 			Assert.AreEqual(Consts.PLAYERS_NUMBER, result.Count);
-			Assert.AreEqual(Consts.CARDS_FOR_PLAYER, result[0].Count);
-			Assert.AreEqual(Consts.CARDS_FOR_PLAYER, result[1].Count);
-			Assert.AreEqual(Consts.CARDS_FOR_PLAYER, result[2].Count);
-			Assert.AreEqual(Consts.CARDS_FOR_PLAYER, result[3].Count);
+
+			for (int i = 0; i < Consts.PLAYERS_NUMBER; i++)
+				Assert.AreEqual(Consts.CARDS_FOR_PLAYER, result[i].Count);
+		}
+
+		public void Shuffle_CardsAreDifferentInOutput(IShuffle shuffleEng)
+		{
+			IShuffle shuffleEngine = shuffleEng;
+			var result = shuffleEngine.Shuffle(GetCards());
+
+			Card[] array = new Card[Consts.CARDS_NUMBER];
+
+			for (int i = 0; i < Consts.PLAYERS_NUMBER; i++)
+				result[i].CopyTo(array, i * Consts.CARDS_FOR_PLAYER);
+
+			var groupped = array.GroupBy(x => x).Where(x => x.Count() > 1);
+
+			Assert.IsNotNull(groupped);
+			Assert.AreEqual(0, groupped.Count());
 		}
 
 		public void Shuffle_ToLittleCards(IShuffle shuffleEng)
 		{
 			try
 			{
-				IShuffle shuffleEngine = new GiveInOneColour();
+				IShuffle shuffleEngine = new GiveInOneColourShuffleEngine();
 				var result = shuffleEngine.Shuffle(new Card[4] { new Card(2, 2), new Card(3, 2), new Card(4, 2), new Card(4, 2) });
 			}
 			catch (ArgumentException ex)
@@ -49,7 +59,7 @@ namespace HeartsServer.GameLogic.Tests.ShuffleEngine.Tests
 		{
 			try
 			{
-				IShuffle shuffleEngine = new GiveInOneColour();
+				IShuffle shuffleEngine = new GiveInOneColourShuffleEngine();
 				var cards = GetCards();
 				cards[10] = new Card(2, 3);
 				var result = shuffleEngine.Shuffle(cards);
@@ -59,7 +69,6 @@ namespace HeartsServer.GameLogic.Tests.ShuffleEngine.Tests
 				throw ex;
 			}
 
-
 			Assert.Fail();
 		}
 
@@ -68,7 +77,7 @@ namespace HeartsServer.GameLogic.Tests.ShuffleEngine.Tests
 		{
 			try
 			{
-				IShuffle shuffleEngine = new GiveInOneColour();
+				IShuffle shuffleEngine = new GiveInOneColourShuffleEngine();
 				var result = shuffleEngine.Shuffle(null);
 			}
 			catch (ArgumentNullException ex)
@@ -84,7 +93,7 @@ namespace HeartsServer.GameLogic.Tests.ShuffleEngine.Tests
 		{
 			try
 			{
-				IShuffle shuffleEngine = new GiveInOneColour();
+				IShuffle shuffleEngine = new GiveInOneColourShuffleEngine();
 				var cards = GetCards();
 				cards[10] = null;
 				var result = shuffleEngine.Shuffle(cards);
@@ -117,7 +126,6 @@ namespace HeartsServer.GameLogic.Tests.ShuffleEngine.Tests
 					testContext?.WriteLine(card.ToString());
 
 				testContext?.Write("\n\n");
-
 			}
 
 		}

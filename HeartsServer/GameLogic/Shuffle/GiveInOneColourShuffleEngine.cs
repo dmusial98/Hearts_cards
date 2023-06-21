@@ -3,7 +3,7 @@ using Hearts_server.GameLogic.Shuffle;
 
 namespace HeartsServer.GameLogic.Shuffle
 {
-    public class GiveInOneColour : BaseShuffleEngine, IShuffle
+    public class GiveInOneColourShuffleEngine : BaseShuffleEngine, IShuffle
     {
         public override List<List<Card>> Shuffle(Card[] cards) 
         {
