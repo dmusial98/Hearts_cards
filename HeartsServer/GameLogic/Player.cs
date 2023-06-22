@@ -8,8 +8,10 @@ namespace Hearts_server.GameLogic
         public static void ResetIdCounter() => _idCounter = 0;
 
         private int _points = 0;
+        private int _pointsInRound = 0;
         private List<Trick> tricks = new List<Trick>();
         private List<Card> cards;
+        public int Place { get; set; }
 
         public Card[] OwnCards
         {
@@ -20,11 +22,16 @@ namespace Hearts_server.GameLogic
             get => tricks.ToArray();
         }
 
-
         public int Points
         {
             get { return _points; }
         }
+
+        public int PointsInRound
+        {
+            get { return _pointsInRound; }
+        }
+
         public int Id { get; private set; }
         public string Name { get; private set; }
         public bool ClickedStartGame { get; set; } = false;
@@ -49,12 +56,6 @@ namespace Hearts_server.GameLogic
 
         //set cards before new round
         public void SetCards(List<Card> cards)
-        {
-            throw new NotImplementedException();
-        }
-
-        //get points after round from tricks cards 
-        public int GetPointsFromThisRound()
         {
             throw new NotImplementedException();
         }
