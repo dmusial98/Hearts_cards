@@ -3,7 +3,7 @@ using Hearts_server.GameLogic.Cards;
 
 namespace Hearts_server.ResultsWriter
 {
-    public interface IFlatFileWriter
+    public interface ILogWriter
     {
         public void WriteUserConnected(Player player);
         public void WriteUserClickedStartGame(Player player);
