@@ -41,7 +41,7 @@ namespace Hearts_server.ResultsWriterReader
         readonly Regex regexPlayerName = new Regex(Regex.Escape(PLAYER_NAME_CONST));
         readonly Regex regexPlayerId = new Regex(Regex.Escape(PLAYER_ID_CONST));
 
-        protected IGameWriterHandler? _nextWriter;
+        protected IGameWriterHandler _nextWriter;
 
 		public IGameWriterHandler SetNext(IGameWriterHandler writer)
 		{

@@ -44,7 +44,7 @@ namespace HeartsServer.GameLogic.Tests.ShuffleEngine.Tests
 			try
 			{
 				IShuffle shuffleEngine = new GiveInOneColourShuffleEngine();
-				var result = shuffleEngine.Shuffle(new Card[4] { new Card(2, 2), new Card(3, 2), new Card(4, 2), new Card(4, 2) });
+				shuffleEngine.Shuffle(new Card[4] { new Card(2, 2), new Card(3, 2), new Card(4, 2), new Card(4, 2) });
 			}
 			catch (ArgumentException ex)
 			{
@@ -62,7 +62,7 @@ namespace HeartsServer.GameLogic.Tests.ShuffleEngine.Tests
 				IShuffle shuffleEngine = new GiveInOneColourShuffleEngine();
 				var cards = GetCards();
 				cards[10] = new Card(2, 3);
-				var result = shuffleEngine.Shuffle(cards);
+				shuffleEngine.Shuffle(cards);
 			}
 			catch (ArgumentException ex)
 			{
@@ -78,7 +78,7 @@ namespace HeartsServer.GameLogic.Tests.ShuffleEngine.Tests
 			try
 			{
 				IShuffle shuffleEngine = new GiveInOneColourShuffleEngine();
-				var result = shuffleEngine.Shuffle(null);
+				shuffleEngine.Shuffle(null);
 			}
 			catch (ArgumentNullException ex)
 			{
@@ -96,7 +96,7 @@ namespace HeartsServer.GameLogic.Tests.ShuffleEngine.Tests
 				IShuffle shuffleEngine = new GiveInOneColourShuffleEngine();
 				var cards = GetCards();
 				cards[10] = null;
-				var result = shuffleEngine.Shuffle(cards);
+				shuffleEngine.Shuffle(cards);
 			}
 			catch (ArgumentNullException ex)
 			{

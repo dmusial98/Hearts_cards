@@ -10,15 +10,15 @@ namespace Hearts_server.GameLogic
 
         private int _points = 0;
         private int _pointsInRound = 0;
-        readonly private List<Trick>? tricks = new ();
-        private List<Card>? cards;
+        readonly private List<Trick> tricks = new ();
+        private List<Card> cards;
         public int Place { get; set; }
 
-        public Card[]? OwnCards
+        public Card[] OwnCards
         {
             get => cards?.ToArray();
         }
-        public Trick[]? Tricks
+        public Trick[] Tricks
         {
             get => tricks?.ToArray();
         }

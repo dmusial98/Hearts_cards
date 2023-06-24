@@ -18,7 +18,7 @@ namespace Hearts_server.GameLogic.Cards
             Colour = colour;
         }
 
-        public int CompareTo(Card? other)
+        public int CompareTo(Card other)
         {
             if (other == null)
                 return -1;
@@ -46,7 +46,7 @@ namespace Hearts_server.GameLogic.Cards
 
     public class CardComparer : IEqualityComparer<Card>
     {
-        public bool Equals(Card? x, Card? y)
+        public bool Equals(Card x, Card y)
         {
             if (Object.ReferenceEquals(x, y))
                 return true;
