@@ -37,8 +37,6 @@ namespace Hearts_server.GameLogic
         public bool ClickedStartGame { get; set; } = false;
 
 
-
-
         private static void incrementIdCounter() => _idCounter++;
 
         public Player(string name)
@@ -57,7 +55,10 @@ namespace Hearts_server.GameLogic
         //set cards before new round
         public void SetCards(List<Card> cards)
         {
-            throw new NotImplementedException();
+            if (cards == null) 
+                throw new ArgumentNullException();
+            
+            this.cards = cards;
         }
 
         //add possible points at round from tricks cards

@@ -2,6 +2,7 @@
 using Hearts_server.GameLogic.Cards;
 using Hearts_server.ResultsWriter;
 using System.Text;
+using System.Text.RegularExpressions;
 
 namespace Hearts_server.ResultsWriterReader
 {
@@ -22,10 +23,10 @@ namespace Hearts_server.ResultsWriterReader
 		protected const string MESSAGE_CONST = "_Message_";
 		protected const string USER_CONNECTED_CONST = CODE_AND_TIME_CONST + " player " + PLAYER_NAME_AND_ID_CONST + " connected with server";
 		protected const string USER_CLICKED_START_GAME_CONST = CODE_AND_TIME_CONST + " player " + PLAYER_NAME_AND_ID_CONST + " clicked start game";
-		protected const string GAME_STARTED_CONST = CODE_AND_TIME_CONST + ": Game started";
+		protected const string GAME_STARTED_CONST = CODE_AND_TIME_CONST + "Game started";
 		protected const string PLAYER_GOT_CARDS_CONST = CODE_AND_TIME_CONST + " player " + PLAYER_NAME_AND_ID_CONST + " got cards: " + CARDS_CONST;
 		protected const string PLAYER_GAVE_CARDS_EXCHANGE_CONST = CODE_AND_TIME_CONST + " player " + PLAYER_NAME_AND_ID_CONST + " gave cards " + CARDS_CONST + " for exchange to " + PLAYER_NAME_AND_ID_CONST;
-		protected const string PLAYER_RECEIVED_CARDS_EXCHANGE_CONST = CODE_AND_TIME_CONST + " player " + PLAYER_NAME_AND_ID_CONST + " received cards " + CARDS_CONST + " for exchange to " + PLAYER_NAME_AND_ID_CONST;
+		protected const string PLAYER_RECEIVED_CARDS_EXCHANGE_CONST = CODE_AND_TIME_CONST + " player " + PLAYER_NAME_AND_ID_CONST + " received cards " + CARDS_CONST + " for exchange from " + PLAYER_NAME_AND_ID_CONST;
 		protected const string PLAYER_THREW_CARD_CONST = CODE_AND_TIME_CONST + " player " + PLAYER_NAME_AND_ID_CONST + " threw card " + CARD_CONST;
 		protected const string TRICK_CONST = CODE_AND_TIME_CONST + " player " + PLAYER_NAME_AND_ID_CONST + " won trick with cards: " + CARDS_CONST;
 		protected const string PLAYER_POINTS_IN_ROUND_CONST = CODE_AND_TIME_CONST + " player's " + PLAYER_NAME_AND_ID_CONST + " points in that round: " + POINTS_CONST;
@@ -34,9 +35,12 @@ namespace Hearts_server.ResultsWriterReader
 		protected const string PLAYER_CARDS_CONST = CODE_AND_TIME_CONST + " player's " + PLAYER_NAME_AND_ID_CONST + " cards: " + CARDS_CONST;
 		protected const string CLIENT_SEND_MESSAGE = CODE_AND_TIME_CONST + " player " + PLAYER_NAME_AND_ID_CONST + " send message: " + MESSAGE_CONST;
 
-		#endregion
+        #endregion
 
-		protected IGameWriterHandler _nextWriter;
+        readonly Regex regexPlayerName = new Regex(Regex.Escape(PLAYER_NAME_CONST));
+        readonly Regex regexPlayerId = new Regex(Regex.Escape(PLAYER_ID_CONST));
+
+        protected IGameWriterHandler? _nextWriter;
 
 		public IGameWriterHandler SetNext(IGameWriterHandler writer)
 		{
@@ -50,8 +54,8 @@ namespace Hearts_server.ResultsWriterReader
 		public virtual void HandleWriteUserClickedStartGame(Player player) { }
 		public virtual void HandleWriteStartedGame() { }
 		public virtual void HandleWritePlayersGotCards(Player[] players) { }
-		public virtual void HandleWritePlayerGaveCardsExchange(Player player, Card[] cards) { }
-		public virtual void HandleWritePlayerReceivedCardsExchange(Player player, Card[] cards) { }
+		public virtual void HandleWritePlayerGaveCardsExchange(Player playerFrom, Player playerto, Card[] cards) { }
+		public virtual void HandleWritePlayerReceivedCardsExchange(Player playerFrom, Player playerTo, Card[] cards) { }
 		public virtual void HandleWritePlayerThrewCard(Player player, Card card) { }
 		public virtual void HandleWriteTrick(Trick trick) { }
 		public virtual void HandleWritePlayersPointsInRound(Player[] players) { }
@@ -94,54 +98,60 @@ namespace Hearts_server.ResultsWriterReader
 		}
 		public string GetPlayersGotCardsLog(Player[] players)
 		{
-			string output = string.Empty;
+			StringBuilder output = new StringBuilder();
 
 			foreach (Player player in players)
 			{
 				StringBuilder cards = new StringBuilder();
 				foreach (var card in player.OwnCards)
-					cards.Append(card.ToString() + " ");
+					cards.Append(card.ToString() + ", ");
 
-				output += PLAYER_GOT_CARDS_CONST
+				 output.Append(PLAYER_GOT_CARDS_CONST
 						.Replace(CODE_CONST, "C4")
 						.Replace(TIME_CONST, DateTime.Now.ToString("G"))
 						.Replace(PLAYER_NAME_CONST, player.Name)
 						.Replace(PLAYER_ID_CONST, player.Id.ToString())
-						.Replace(CARDS_CONST, cards.ToString());
+						.Replace(CARDS_CONST, cards.ToString())).Append("\r\n");
 			}
 
-			return output;
+			return output.ToString();
 		}
-		public string GetPlayerGaveCardsExchangeLog(Player player, Card[] cards)
+		public string GetPlayerGaveCardsExchangeLog(Player playerFrom, Player playerTo, Card[] cards)
 		{
 			StringBuilder cardsStr = new StringBuilder();
 			foreach (Card card in cards)
-				cardsStr.Append(card.ToString() + " ");
+				cardsStr.Append(card.ToString() + ", ");
 
 			string output = PLAYER_GAVE_CARDS_EXCHANGE_CONST
 					.Replace(CODE_CONST, "C5")
 					.Replace(TIME_CONST, DateTime.Now.ToString("G"))
-					.Replace(PLAYER_NAME_CONST, player.Name)
-					.Replace(PLAYER_ID_CONST, player.Id.ToString())
 					.Replace(CARDS_CONST, cardsStr.ToString());
+			
+			output = regexPlayerName.Replace(output, playerFrom.Name, 1);
+			output = regexPlayerName.Replace(output, playerTo.Name, 1);
+			output = regexPlayerId.Replace(output, playerFrom.Id.ToString(), 1);
+			output = regexPlayerId.Replace(output, playerTo.Id.ToString(), 1);
 
 			return output;
 		}
-		public string GetPlayerReceivedCardsExchangeLog(Player player, Card[] cards)
+		public string GetPlayerReceivedCardsExchangeLog(Player playerFrom, Player playerTo, Card[] cards)
 		{
 
 			StringBuilder cardsStr = new StringBuilder();
 			foreach (Card card in cards)
-				cardsStr.Append(card.ToString() + " ");
+				cardsStr.Append(card.ToString() + ", ");
 
 			string output = PLAYER_RECEIVED_CARDS_EXCHANGE_CONST
 					.Replace(CODE_CONST, "C6")
 					.Replace(TIME_CONST, DateTime.Now.ToString("G"))
-					.Replace(PLAYER_NAME_CONST, player.Name)
-					.Replace(PLAYER_ID_CONST, player.Id.ToString())
 					.Replace(CARDS_CONST, cardsStr.ToString());
 
-			return output;
+            output = regexPlayerName.Replace(output, playerFrom.Name, 1);
+            output = regexPlayerName.Replace(output, playerTo.Name, 1);
+            output = regexPlayerId.Replace(output, playerFrom.Id.ToString(), 1);
+            output = regexPlayerId.Replace(output, playerTo.Id.ToString(), 1);
+
+            return output;
 		}
 		public string GetPlayerThrewCardLog(Player player, Card card)
 		{
@@ -158,7 +168,7 @@ namespace Hearts_server.ResultsWriterReader
 		{
 			StringBuilder cardsStr = new StringBuilder();
 			foreach (Card card in trick.Cards)
-				cardsStr.Append(card.ToString() + " ");
+				cardsStr.Append(card.ToString() + ", ");
 
 
 			string output = TRICK_CONST

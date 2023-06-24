@@ -37,17 +37,17 @@ namespace HeartsServer.ResultsWriterReader
 			if (_nextWriter != null)
 				_nextWriter.HandleWritePlayersGotCards(players);
 		}
-		public override void HandleWritePlayerGaveCardsExchange(Player player, Card[] cards)
+		public override void HandleWritePlayerGaveCardsExchange(Player playerFrom, Player playerTo, Card[] cards)
 		{
-			WritePlayerGaveCardsExchange(player, cards);
+			WritePlayerGaveCardsExchange(playerFrom, playerTo, cards);
 			if (_nextWriter != null)
-				_nextWriter.HandleWritePlayerGaveCardsExchange(player, cards);
+				_nextWriter.HandleWritePlayerGaveCardsExchange(playerFrom, playerTo, cards);
 		}
-		public override void HandleWritePlayerReceivedCardsExchange(Player player, Card[] cards)
+		public override void HandleWritePlayerReceivedCardsExchange(Player playerFrom, Player playerTo, Card[] cards)
 		{
-			WritePlayerReceivedCardsExchange(player, cards);
+			WritePlayerReceivedCardsExchange(playerFrom, playerTo, cards);
 			if (_nextWriter != null)
-				_nextWriter.HandleWritePlayerReceivedCardsExchange(player, cards);
+				_nextWriter.HandleWritePlayerReceivedCardsExchange(playerFrom, playerTo, cards);
 		}
 		public override void HandleWriteTrick(Trick trick)
 		{
@@ -112,17 +112,17 @@ namespace HeartsServer.ResultsWriterReader
 
 		public void WritePlayersGotCards(Player[] players)
 		{
-			Console.WriteLine(GetPlayersGotCardsLog(players));
+			Console.Write(GetPlayersGotCardsLog(players));
 		}
 
-		public void WritePlayerGaveCardsExchange(Player player, Card[] cards)
+		public void WritePlayerGaveCardsExchange(Player playerFrom, Player playerTo, Card[] cards)
 		{
-			Console.WriteLine(GetPlayerGaveCardsExchangeLog(player, cards));
+			Console.WriteLine(GetPlayerGaveCardsExchangeLog(playerFrom, playerTo, cards));
 		}
 
-		public void WritePlayerReceivedCardsExchange(Player player, Card[] cards)
+		public void WritePlayerReceivedCardsExchange(Player playerFrom, Player playerTo, Card[] cards)
 		{
-			Console.WriteLine(GetPlayerReceivedCardsExchangeLog(player, cards));
+			Console.WriteLine(GetPlayerReceivedCardsExchangeLog(playerFrom, playerTo, cards));
 		}
 
 		public void WritePlayerThrewCard(Player player, Card card)

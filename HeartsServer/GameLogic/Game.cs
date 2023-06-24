@@ -40,15 +40,24 @@ namespace Hearts_server.GameLogic
 
         private Game()
         {
-            for (int i = 0; i < Enum.GetNames(typeof(CardColour)).Length; i++)
-                for (int j = 2; j < Enum.GetNames(typeof(CardValue)).Length + 2; j++)
-                    cards[i * Enum.GetNames(typeof(CardValue)).Length + j - 2] = new Card(j, i);
+            cards = GetPackOfCards();
         }
 
         public void SetFields(IShuffle shuffle)
         {
             if (shuffleLogic != null)
                 this.shuffleLogic = shuffle;
+        }
+
+        public Card[] GetPackOfCards()
+        {
+            var cards = new Card[Consts.CARDS_NUMBER];
+
+            for (int i = 0; i < Enum.GetNames(typeof(CardColour)).Length; i++)
+                for (int j = 2; j < Enum.GetNames(typeof(CardValue)).Length + 2; j++)
+                    cards[i * Enum.GetNames(typeof(CardValue)).Length + j - 2] = new Card(j, i);
+
+            return cards;
         }
 
         public void AddPlayer(string playerName)
