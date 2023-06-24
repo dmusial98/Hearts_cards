@@ -68,11 +68,11 @@ namespace HeartsServer.ResultsWriterReader
 			if (_nextWriter != null)
 				_nextWriter.HandleWritePlayersPointsInRound(players);
 		}
-		public override void HandleWritePlayersPointsAfterRound(Player[] players)
+		public override void HandleWritePlayersPointsAfterRound(Player[] players, int roundNumber)
 		{
-			WritePlayersPointsAfterRound(players);
+			WritePlayersPointsAfterRound(players, roundNumber);
 			if (_nextWriter != null)
-				_nextWriter.HandleWritePlayersPointsAfterRound(players);
+				_nextWriter.HandleWritePlayersPointsAfterRound(players, roundNumber);
 		}
 		public override void HandleWritePlacesAfterGame(Player[] players)
 		{
@@ -137,22 +137,22 @@ namespace HeartsServer.ResultsWriterReader
 
 		public void WritePlayersPointsInRound(Player[] players)
 		{
-			Console.WriteLine(GetPlayersPointsInRoundLog(players));
+			Console.Write(GetPlayersPointsInRoundLog(players));
 		}
 
-		public void WritePlayersPointsAfterRound(Player[] players)
+		public void WritePlayersPointsAfterRound(Player[] players, int roundNumber)
 		{
-			Console.WriteLine(GetPlayersPointsAfterRoundLog(players));
+			Console.Write(GetPlayersPointsAfterRoundLog(players, roundNumber));
 		}
 
 		public void WritePlacesAfterGame(Player[] players)
 		{
-			Console.WriteLine(GetPlacesAfterGameLog(players));
+			Console.Write(GetPlacesAfterGameLog(players));
 		}
 
 		public void WritePlayersCards(Player[] players)
 		{
-			Console.WriteLine(GetPlayersCardsLog(players));
+			Console.Write(GetPlayersCardsLog(players));
 		}
 
 		public void WriteClientSendMessage(Player player, string message)

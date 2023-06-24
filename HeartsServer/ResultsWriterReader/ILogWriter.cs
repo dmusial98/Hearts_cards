@@ -14,7 +14,7 @@ namespace Hearts_server.ResultsWriter
         public void WritePlayerThrewCard(Player player, Card card);
         public void WriteTrick(Trick trick);
         public void WritePlayersPointsInRound(Player[] players);
-        public void WritePlayersPointsAfterRound(Player[] players);
+        public void WritePlayersPointsAfterRound(Player[] players, int roundNumber);
         public void WritePlacesAfterGame(Player[] players);
         public void WritePlayersCards(Player[] players);
         public void WriteClientSendMessage(Player player, string message);

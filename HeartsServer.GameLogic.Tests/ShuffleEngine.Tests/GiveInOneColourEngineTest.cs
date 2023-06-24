@@ -26,12 +26,12 @@ namespace HeartsServer.GameLogic.Tests.ShuffleEngine.Tests
 			IShuffle shuffleEngine = new GiveInOneColourShuffleEngine();
 			var result = shuffleEngine.Shuffle(GetCards());
 
-			for (int i = 0; i < Consts.PLAYERS_NUMBER; i++)
+			for (int i = 0; i < Consts.PLAYERS_NUMBER_CONST; i++)
 			{
 				//cards in the same colour
 				Assert.AreEqual(1, result[i].DistinctBy(c => c.Colour).Count());
 				//different values
-				Assert.AreEqual(Consts.CARDS_FOR_PLAYER, result[i].DistinctBy(c => c.Value).Count());
+				Assert.AreEqual(Consts.CARDS_FOR_PLAYER_CONST, result[i].DistinctBy(c => c.Value).Count());
 			}
 		}
 

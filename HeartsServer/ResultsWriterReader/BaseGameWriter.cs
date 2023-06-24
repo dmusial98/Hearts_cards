@@ -21,6 +21,7 @@ namespace Hearts_server.ResultsWriterReader
 		protected const string POINTS_CONST = "_Points";
 		protected const string PLACE_CONST = "_Place_";
 		protected const string MESSAGE_CONST = "_Message_";
+		protected const string ROUND_NUMBER_CONST = "_Round_Number_";
 		protected const string USER_CONNECTED_CONST = CODE_AND_TIME_CONST + " player " + PLAYER_NAME_AND_ID_CONST + " connected with server";
 		protected const string USER_CLICKED_START_GAME_CONST = CODE_AND_TIME_CONST + " player " + PLAYER_NAME_AND_ID_CONST + " clicked start game";
 		protected const string GAME_STARTED_CONST = CODE_AND_TIME_CONST + "Game started";
@@ -30,7 +31,7 @@ namespace Hearts_server.ResultsWriterReader
 		protected const string PLAYER_THREW_CARD_CONST = CODE_AND_TIME_CONST + " player " + PLAYER_NAME_AND_ID_CONST + " threw card " + CARD_CONST;
 		protected const string TRICK_CONST = CODE_AND_TIME_CONST + " player " + PLAYER_NAME_AND_ID_CONST + " won trick with cards: " + CARDS_CONST;
 		protected const string PLAYER_POINTS_IN_ROUND_CONST = CODE_AND_TIME_CONST + " player's " + PLAYER_NAME_AND_ID_CONST + " points in that round: " + POINTS_CONST;
-		protected const string PLAYER_POINTS_AFTER_ROUND_CONST = CODE_AND_TIME_CONST + " player's " + PLAYER_NAME_AND_ID_CONST + " points after that round: " + POINTS_CONST;
+		protected const string PLAYER_POINTS_AFTER_ROUND_CONST = CODE_AND_TIME_CONST + " player's " + PLAYER_NAME_AND_ID_CONST + " points after that round (" + ROUND_NUMBER_CONST + "): " + POINTS_CONST;
 		protected const string PLAYER_PLACE_AFTER_GAME_CONST = CODE_AND_TIME_CONST + " player's " + PLAYER_NAME_AND_ID_CONST + " place in game: " + PLACE_CONST;
 		protected const string PLAYER_CARDS_CONST = CODE_AND_TIME_CONST + " player's " + PLAYER_NAME_AND_ID_CONST + " cards: " + CARDS_CONST;
 		protected const string CLIENT_SEND_MESSAGE = CODE_AND_TIME_CONST + " player " + PLAYER_NAME_AND_ID_CONST + " send message: " + MESSAGE_CONST;
@@ -54,12 +55,12 @@ namespace Hearts_server.ResultsWriterReader
 		public virtual void HandleWriteUserClickedStartGame(Player player) { }
 		public virtual void HandleWriteStartedGame() { }
 		public virtual void HandleWritePlayersGotCards(Player[] players) { }
-		public virtual void HandleWritePlayerGaveCardsExchange(Player playerFrom, Player playerto, Card[] cards) { }
+		public virtual void HandleWritePlayerGaveCardsExchange(Player playerFrom, Player playerTo, Card[] cards) { }
 		public virtual void HandleWritePlayerReceivedCardsExchange(Player playerFrom, Player playerTo, Card[] cards) { }
 		public virtual void HandleWritePlayerThrewCard(Player player, Card card) { }
 		public virtual void HandleWriteTrick(Trick trick) { }
 		public virtual void HandleWritePlayersPointsInRound(Player[] players) { }
-		public virtual void HandleWritePlayersPointsAfterRound(Player[] players) { }
+		public virtual void HandleWritePlayersPointsAfterRound(Player[] players, int roundNumber) { }
 		public virtual void HandleWritePlacesAfterGame(Player[] players) { }
 		public virtual void HandleWritePlayersCards(Player[] players) { }
 		public virtual void HandleWriteClientSendMessage(string message) { }
@@ -182,74 +183,79 @@ namespace Hearts_server.ResultsWriterReader
 		}
 		public string GetPlayersPointsInRoundLog(Player[] players)
 		{
-			string output = string.Empty;
+			StringBuilder output = new();
 
 			foreach (Player player in players)
 			{
-				 output += PLAYER_POINTS_IN_ROUND_CONST
+				 output.Append(PLAYER_POINTS_IN_ROUND_CONST
 						.Replace(CODE_CONST, "C9")
 						.Replace(TIME_CONST, DateTime.Now.ToString("G"))
 						.Replace(PLAYER_NAME_CONST, player.Name)
 						.Replace(PLAYER_ID_CONST, player.Id.ToString())
-						.Replace(POINTS_CONST, player.PointsInRound.ToString());
+						.Replace(POINTS_CONST, player.PointsInRound.ToString()))
+					.Append("\r\n");
 			}
 
-			return output;
+			return output.ToString();
 		}
-		public string GetPlayersPointsAfterRoundLog(Player[] players)
+		public string GetPlayersPointsAfterRoundLog(Player[] players, int roundNumber)
 		{
-			string output = string.Empty;
+			StringBuilder output = new();
 
 			foreach (Player player in players)
 			{
-				output += PLAYER_POINTS_AFTER_ROUND_CONST
+				output.Append( PLAYER_POINTS_AFTER_ROUND_CONST
 						.Replace(CODE_CONST, "C10")
 						.Replace(TIME_CONST, DateTime.Now.ToString("G"))
 						.Replace(PLAYER_NAME_CONST, player.Name)
 						.Replace(PLAYER_ID_CONST, player.Id.ToString())
-						.Replace(POINTS_CONST, player.Points.ToString());
+						.Replace(ROUND_NUMBER_CONST, roundNumber.ToString())
+						.Replace(POINTS_CONST, player.Points.ToString()))
+					.Append("\r\n");
 			}
 
-			return output;
+			return output.ToString();
 		}
 		public string GetPlacesAfterGameLog(Player[] players)
 		{
-			string output = string.Empty;
+			StringBuilder output = new();
 			foreach (Player player in players)
 			{
-				output += PLAYER_PLACE_AFTER_GAME_CONST
+				output.Append(PLAYER_PLACE_AFTER_GAME_CONST
 						.Replace(CODE_CONST, "C11")
 						.Replace(TIME_CONST, DateTime.Now.ToString("G"))
 						.Replace(PLAYER_NAME_CONST, player.Name)
 						.Replace(PLAYER_ID_CONST, player.Id.ToString())
-						.Replace(PLACE_CONST, player.Place.ToString());
+						.Replace(PLACE_CONST, player.Place.ToString()))
+					.Append("\r\n");
 			}
 
-			return output;
+			return output.ToString();
 		}
 		public string GetPlayersCardsLog(Player[] players)
 		{
-			string output = string.Empty;
+			StringBuilder output = new();
 			foreach (Player player in players)
 			{
 				StringBuilder cardsStr = new StringBuilder();
 				foreach (Card card in player.OwnCards)
-					cardsStr.Append(card.ToString() + " ");
+					cardsStr.Append(card.ToString() + ", ");
 
-				output += PLAYER_CARDS_CONST
+				output.Append(PLAYER_CARDS_CONST
 						.Replace(CODE_CONST, "C12")
 						.Replace(TIME_CONST, DateTime.Now.ToString("G"))
 						.Replace(PLAYER_NAME_CONST, player.Name)
 						.Replace(PLAYER_ID_CONST, player.Id.ToString())
-						.Replace(CARDS_CONST, cardsStr.ToString());				
+						.Replace(CARDS_CONST, cardsStr.ToString()))
+					.Append("\r\n");				
 			}
 
-			return output;
+			return output.ToString();
 		}
 		public string GetClientSendMessageLog(Player player, string message)
 		{
 			string ouptut = CLIENT_SEND_MESSAGE
-					.Replace(CODE_CONST, "C12")
+					.Replace(CODE_CONST, "C13")
 					.Replace(TIME_CONST, DateTime.Now.ToString("G"))
 					.Replace(PLAYER_NAME_CONST, player.Name)
 					.Replace(PLAYER_ID_CONST, player.Id.ToString())

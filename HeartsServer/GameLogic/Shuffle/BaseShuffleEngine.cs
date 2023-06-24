@@ -11,7 +11,7 @@ namespace HeartsServer.GameLogic.Shuffle
         }
 
         protected bool IsAnyCardNull(Card[] cards) => cards.Any(c => c is null);
-        protected bool IsCorrectNumberOfCards(Card[] cards) => cards.Length == Consts.CARDS_NUMBER;
+        protected bool IsCorrectNumberOfCards(Card[] cards) => cards.Length == Consts.CARDS_NUMBER_CONST;
         protected bool AreAllCardsDifferent(Card[] cards) => cards.Distinct(new CardComparer()).Count() == cards.Length;
     }
 }

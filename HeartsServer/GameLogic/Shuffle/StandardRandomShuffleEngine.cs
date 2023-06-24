@@ -16,8 +16,8 @@ namespace HeartsServer.GameLogic.Shuffle
 			Random random = new Random();
 			var shuffledArray = cards.OrderBy(x => random.Next()).ToArray();
 
-			for (int i = 0; i < Consts.PLAYERS_NUMBER; i++)
-				cardsForPlayers.Add(shuffledArray[(Consts.CARDS_FOR_PLAYER * i)..((i + 1) * Consts.CARDS_FOR_PLAYER)].ToList());
+			for (int i = 0; i < Consts.PLAYERS_NUMBER_CONST; i++)
+				cardsForPlayers.Add(shuffledArray[(Consts.CARDS_FOR_PLAYER_CONST * i)..((i + 1) * Consts.CARDS_FOR_PLAYER_CONST)].ToList());
 
 			return cardsForPlayers;
 		}

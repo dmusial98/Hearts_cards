@@ -1,4 +1,5 @@
 ﻿using Hearts_server.GameLogic.Cards;
+using HeartsServer.GameLogic;
 
 namespace Hearts_server.GameLogic
 {
@@ -9,17 +10,17 @@ namespace Hearts_server.GameLogic
 
         private int _points = 0;
         private int _pointsInRound = 0;
-        private List<Trick> tricks = new List<Trick>();
-        private List<Card> cards;
+        readonly private List<Trick>? tricks = new ();
+        private List<Card>? cards;
         public int Place { get; set; }
 
-        public Card[] OwnCards
+        public Card[]? OwnCards
         {
-            get => cards.ToArray();
+            get => cards?.ToArray();
         }
-        public Trick[] Tricks
+        public Trick[]? Tricks
         {
-            get => tricks.ToArray();
+            get => tricks?.ToArray();
         }
 
         public int Points
@@ -49,24 +50,39 @@ namespace Hearts_server.GameLogic
         //add trick during round
         public void AddTrick(Trick trick)
         {
-            throw new NotImplementedException();
+            tricks.Add(trick);
+            _pointsInRound = CountPointsInTricks();
         }
 
         //set cards before new round
         public void SetCards(List<Card> cards)
         {
-            if (cards == null) 
+            if (cards == null)
                 throw new ArgumentNullException();
-            
+
             this.cards = cards;
         }
 
         //add possible points at round from tricks cards
         public void CountPointsAfterRound()
         {
-            throw new NotImplementedException();
+            _points += CountPointsInTricks();
+        }
+
+        public void ClearTricks()
+        {
+            tricks.Clear();
         }
 
         public bool DoesPlayerHaveCardWithColour(CardColour colour) => OwnCards.Any(c => c.Colour == colour);
+
+        private int CountPointsInTricks()
+        {
+            int points = tricks.Sum(t => t.Points);
+            if (points == Consts.FULL_POINTS_IN_ROUND_CONST)
+                points = -Consts.FULL_POINTS_IN_ROUND_CONST;
+
+            return points;
+        }
     }
 }

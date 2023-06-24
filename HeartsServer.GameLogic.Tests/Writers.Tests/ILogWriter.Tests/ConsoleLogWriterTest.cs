@@ -77,14 +77,14 @@ namespace HeartsServer.GameLogic.Tests.Writers.Tests.ILogWriter.Tests
             var players = new Player[] { new Player("John"), new Player("Paul"), new Player("Michael"), new Player("Joseph") };
             var cards = new StandardRandomShuffleEngine().Shuffle(Game.Instance.GetPackOfCards());
 
-            for (int i = 0; i < Consts.PLAYERS_NUMBER; i++)
+            for (int i = 0; i < Consts.PLAYERS_NUMBER_CONST; i++)
                 players[i].SetCards(cards[i]);
 
             writer.WritePlayersGotCards(players);
 
             StringBuilder output = new StringBuilder();
 
-            for (int i = 0; i < Consts.PLAYERS_NUMBER; i++)
+            for (int i = 0; i < Consts.PLAYERS_NUMBER_CONST; i++)
             {
                 output.Append(String.Concat("C4 ", DateTime.Now.ToString("G"), ":  player ", players[i].Name, ", ID: ", players[i].Id, " got cards: "));
                 foreach (var card in players[i].OwnCards)
@@ -176,18 +176,153 @@ namespace HeartsServer.GameLogic.Tests.Writers.Tests.ILogWriter.Tests
             Player[] players = new Player[] {
                 new Player("John"),
                 new Player("Adam"),
-                new Player("Peter"),
-                new Player("David")
             };
 
+            Trick trick1 = new Trick(
+                new Card[]
+                {
+                    new Card(CardValue.Queen, CardColour.Spade),
+                    new Card(CardValue.Three, CardColour.Club),
+                    new Card(CardValue.Nine, CardColour.Heart),
+                    new Card(CardValue.King, CardColour.Diamond)
+                },
+                players[1],
+                players[1]);
 
+            Trick trick2 = new Trick(
+                new Card[]
+                {
+                    new Card(CardValue.Nine, CardColour.Club),
+                    new Card(CardValue.Three, CardColour.Heart),
+                    new Card(CardValue.Nine, CardColour.Heart),
+                    new Card(CardValue.King, CardColour.Heart)
+                },
+                players[0],
+                players[0]);
 
-            //for(int i = 0; i < Consts.PLAYERS_NUMBER; i++)
-            //{
-            //    players[i]. = i;
-            //}
+            players[1].AddTrick(trick1);
+            players[0].AddTrick(trick2);
 
-            //writer.WritePlayersPointsInRound();
+            writer.WritePlayersPointsInRound(players);
+
+            StringBuilder output = new();
+            foreach (Player player in players)
+                output.Append(String.Concat("C9 ", DateTime.Now.ToString("G"), ":  player's ", player.Name, ", ID: ", player.Id.ToString(), " points in that round: ", player.PointsInRound, "\r\n"));
+
+            Assert.AreEqual(output.ToString(), stringWriter.ToString());
+        }
+
+        [TestMethod]
+        public void WritePlayersPointsAfterRound_CorrectOutput()
+        {
+            int roundNumber = 5;
+
+            Player[] players = new Player[] {
+                new Player("John"),
+                new Player("Adam"),
+            };
+
+            Trick trick1 = new Trick(
+                new Card[]
+                {
+                    new Card(CardValue.Queen, CardColour.Spade),
+                    new Card(CardValue.Three, CardColour.Club),
+                    new Card(CardValue.Nine, CardColour.Heart),
+                    new Card(CardValue.King, CardColour.Diamond)
+                },
+                players[1],
+                players[1]);
+
+            Trick trick2 = new Trick(
+                new Card[]
+                {
+                    new Card(CardValue.Nine, CardColour.Club),
+                    new Card(CardValue.Three, CardColour.Heart),
+                    new Card(CardValue.Nine, CardColour.Heart),
+                    new Card(CardValue.King, CardColour.Heart)
+                },
+                players[0],
+                players[0]);
+
+            players[1].AddTrick(trick1);
+            players[0].AddTrick(trick2);
+            players[1].CountPointsAfterRound();
+            players[0].CountPointsAfterRound();
+
+            writer.WritePlayersPointsAfterRound(players, roundNumber);
+
+            StringBuilder output = new();
+            foreach (Player player in players)
+                output.Append(String.Concat("C10 ", DateTime.Now.ToString("G"), ":  player's ", player.Name, ", ID: ", player.Id.ToString(), " points after that round (", roundNumber, "): ", player.Points, "\r\n"));
+
+            Assert.AreEqual(output.ToString(), stringWriter.ToString());
+        }
+
+        [TestMethod]
+        public void WritePlayersPlacesAfterGame_CorrectOutput()
+        {
+            int[] places = new int[] { 2, 3, 1, 4 };
+            Player[] players = new Player[] {
+                new Player("John"),
+                new Player("Adam"),
+                new Player("David"),
+                new Player("Peter")
+            };
+
+            for (int i = 0; i < Consts.PLAYERS_NUMBER_CONST; i++)
+                players[i].Place = places[i];
+
+            writer.WritePlacesAfterGame(players);
+
+            StringBuilder output = new();
+            foreach (Player player in players)
+                output.Append(String.Concat("C11 ", DateTime.Now.ToString("G"), ":  player's ", player.Name, ", ID: ", player.Id.ToString(), " place in game: ", player.Place, "\r\n"));
+
+            Assert.AreEqual(output.ToString(), stringWriter.ToString());
+        }
+
+        [TestMethod]
+        public void WritePlayersCards_CorrectOutput()
+        {
+            var shuffleEngine = new StandardRandomShuffleEngine();
+            Card[] cards = Game.Instance.GetPackOfCards();
+            var cardsForPlayers = shuffleEngine.Shuffle(cards);
+
+            Player[] players = new Player[]
+            {
+                new Player("John"),
+                new Player("Adam"),
+                new Player("David"),
+                new Player("Peter")
+            };
+
+            for(int i =0; i < Consts.PLAYERS_NUMBER_CONST; i++)
+                players[i].SetCards(cardsForPlayers[i]);
+
+            writer.WritePlayersCards(players);
+
+            StringBuilder output = new();
+            foreach(Player player in players)
+            {
+                StringBuilder cardsStr = new();
+                foreach (Card card in player.OwnCards)
+                    cardsStr.Append(card.ToString()).Append(", ");
+
+                output.Append(String.Concat("C12 ", DateTime.Now.ToString("G"), ":  player's ", player.Name, ", ID: ", player.Id.ToString(), " cards: ", cardsStr.ToString(), "\r\n"));
+            }
+
+            Assert.AreEqual(output.ToString(), stringWriter.ToString());
+        }
+
+        [TestMethod]
+        public void WriteClientSendMessage_CorrectOutput()
+        {
+            Player player = new Player("John");
+            string message = "Hello, I sent this message to server";
+
+            writer.WriteClientSendMessage(player, message);
+
+            Assert.AreEqual(String.Concat("C13 ", DateTime.Now.ToString("G"), ":  player ", player.Name, ", ID: ", player.Id.ToString(), " send message: ", message, "\r\n"), stringWriter.ToString());
         }
     }
 }

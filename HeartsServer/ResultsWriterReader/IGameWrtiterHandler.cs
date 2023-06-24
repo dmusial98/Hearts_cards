@@ -16,7 +16,7 @@ namespace Hearts_server.ResultsWriterReader
         void HandleWritePlayerThrewCard(Player player, Card card);
         void HandleWriteTrick(Trick trick);
         void HandleWritePlayersPointsInRound(Player[] players);
-        void HandleWritePlayersPointsAfterRound(Player[] players);
+        void HandleWritePlayersPointsAfterRound(Player[] players, int roundNumber);
         void HandleWritePlacesAfterGame(Player[] players);
         void HandleWritePlayersCards(Player[] players);
         void HandleWriteClientSendMessage(string message);

@@ -32,8 +32,8 @@ namespace Hearts_server.GameLogic
         internal IGameReader gameReader;
         internal GameHistory history = new GameHistory();
 
-        internal Player[] players = new Player[Consts.PLAYERS_NUMBER];
-        internal Card[] cards = new Card[Consts.CARDS_NUMBER];
+        internal Player[] players = new Player[Consts.PLAYERS_NUMBER_CONST];
+        internal Card[] cards = new Card[Consts.CARDS_NUMBER_CONST];
         internal Trick actualTrick = new Trick();
         internal int roundIndex = 1;
         internal int playerIndex;
@@ -51,7 +51,7 @@ namespace Hearts_server.GameLogic
 
         public Card[] GetPackOfCards()
         {
-            var cards = new Card[Consts.CARDS_NUMBER];
+            var cards = new Card[Consts.CARDS_NUMBER_CONST];
 
             for (int i = 0; i < Enum.GetNames(typeof(CardColour)).Length; i++)
                 for (int j = 2; j < Enum.GetNames(typeof(CardValue)).Length + 2; j++)
