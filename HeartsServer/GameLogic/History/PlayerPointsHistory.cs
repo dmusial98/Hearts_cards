@@ -2,7 +2,8 @@
 {
 	public class PlayerPointsHistory
 	{
-		public int PlayerId { get; set; }
+        public bool IsWrittenInFiles { get; set; }
+        public int PlayerId { get; set; }
 		public string PlayerName { get; set; }
 		public int Points { get; set; }
 	}

@@ -80,9 +80,9 @@ namespace HeartsServer.ResultsWriterReader
 				await writeTask;
 		}
 
-		public async Task WritePlayersPointsInRoundAsync(Player[] players)
+		public async Task WritePlayersPointsInRoundAsync(Player[] players, int roundNumber)
 		{
-			string output = GetPlayersPointsInRoundLog(players);
+			string output = GetPlayersPointsInRoundLog(players, roundNumber);
 			using (Task writeTask = File.AppendAllTextAsync(_pathToFile, output))
 				await writeTask;
 		}

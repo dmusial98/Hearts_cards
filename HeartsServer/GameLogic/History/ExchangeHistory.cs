@@ -4,6 +4,7 @@ namespace HeartsServer.GameLogic.History
 {
 	public class ExchangeHistory
 	{
+		public bool IsWrittenInFiles { get; set; } 
 		public int IdPlayer { get; set; }
 		public int ToWho { get; set; }
 		public int FromWho { get; set; }

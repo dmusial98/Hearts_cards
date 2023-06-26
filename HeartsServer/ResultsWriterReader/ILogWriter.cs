@@ -13,7 +13,7 @@ namespace Hearts_server.ResultsWriter
         public Task WritePlayerReceivedCardsExchangeAsync(Player playerFrom, Player playerTo, Card[] cards);
         public Task WritePlayerThrewCardAsync(Player player, Card card);
         public Task WriteTrickAsync(Trick trick);
-        public Task WritePlayersPointsInRoundAsync(Player[] players);
+        public Task WritePlayersPointsInRoundAsync(Player[] players, int roundNumber);
         public Task WritePlayersPointsAfterRoundAsync(Player[] players, int roundNumber);
         public Task WritePlacesAfterGameAsync(Player[] players);
         public Task WritePlayersCardsAsync(Player[] players);

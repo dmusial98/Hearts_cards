@@ -5,7 +5,8 @@ namespace HeartsServer.GameLogic.History
 {
 	public class TrickHistory
 	{
-		public int TrickNumber { get; set; }
+        public bool IsWrittenInFiles { get; set; }
+        public int TrickNumber { get; set; }
 		public Player WhoWon { get; set; }
 		public List<QueueHistory> Queue { get; set; }
 		public List<PlayerPointsHistory> PointsAfterTrick { get; set; }

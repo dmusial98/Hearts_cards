@@ -15,7 +15,7 @@ namespace Hearts_server.ResultsWriterReader
 		Task HandleWritePlayerReceivedCardsExchangeAsync(Player playerFrom, Player playerTo, Card[] cards);
 		Task HandleWritePlayerThrewCardAsync(Player player, Card card);
 		Task HandleWriteTrickAsync(Trick trick);
-		Task HandleWritePlayersPointsInRoundAsync(Player[] players);
+		Task HandleWritePlayersPointsInRoundAsync(Player[] players, int roundNumber);
 		Task HandleWritePlayersPointsAfterRoundAsync(Player[] players, int roundNumber);
 		Task HandleWritePlacesAfterGameAsync(Player[] players);
 		Task HandleWritePlayersCardsAsync(Player[] players);

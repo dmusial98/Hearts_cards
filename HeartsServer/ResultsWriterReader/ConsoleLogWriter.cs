@@ -62,11 +62,11 @@ namespace HeartsServer.ResultsWriterReader
 			if (_nextWriter != null)
 				await _nextWriter.HandleWritePlayerThrewCardAsync(player, card);
 		}
-		public override async Task HandleWritePlayersPointsInRoundAsync(Player[] players)
+		public override async Task HandleWritePlayersPointsInRoundAsync(Player[] players, int roundNumber)
 		{
-			await WritePlayersPointsInRoundAsync(players);
+			await WritePlayersPointsInRoundAsync(players, roundNumber);
 			if (_nextWriter != null)
-				await _nextWriter.HandleWritePlayersPointsInRoundAsync(players);
+				await _nextWriter.HandleWritePlayersPointsInRoundAsync(players, roundNumber);
 		}
 		public override async Task HandleWritePlayersPointsAfterRoundAsync(Player[] players, int roundNumber)
 		{
@@ -137,9 +137,9 @@ namespace HeartsServer.ResultsWriterReader
 			Console.WriteLine(GetTrickLog(trick));
 		}
 
-		public async Task WritePlayersPointsInRoundAsync(Player[] players)
+		public async Task WritePlayersPointsInRoundAsync(Player[] players, int roundNumber)
 		{
-			Console.Write(GetPlayersPointsInRoundLog(players));
+			Console.Write(GetPlayersPointsInRoundLog(players, roundNumber));
 		}
 
 		public async Task WritePlayersPointsAfterRoundAsync(Player[] players, int roundNumber)

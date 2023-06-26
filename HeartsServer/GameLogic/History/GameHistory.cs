@@ -2,6 +2,7 @@
 {
     public class GameHistory
     {
+        public bool IsWrittenInFiles { get; set; }
         public List<RoundHistory> Rounds { get; set; } = new List<RoundHistory>();
         public List<PlayerHistory> Players { get; set; }
     }
