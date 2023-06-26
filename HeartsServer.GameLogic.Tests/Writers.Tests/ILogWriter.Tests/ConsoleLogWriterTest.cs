@@ -12,7 +12,7 @@ using System.Threading.Tasks;
 namespace HeartsServer.GameLogic.Tests.Writers.Tests.ILogWriter.Tests
 {
     [TestClass]
-    public class ConsoleLogWriterTest
+    public class ConsoleLogWriterTest : LogWriterTestBase
     {
         public static StringWriter stringWriter;
         public static TextWriter standardOut;
