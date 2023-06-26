@@ -5,19 +5,19 @@ namespace Hearts_server.ResultsWriter
 {
     public interface ILogWriter
     {
-        public void WriteUserConnected(Player player);
-        public void WriteUserClickedStartGame(Player player);
-        public void WriteStartedGame();
-        public void WritePlayersGotCards(Player[] players);
-        public void WritePlayerGaveCardsExchange(Player playerFrom, Player playerTo, Card[] cards);
-        public void WritePlayerReceivedCardsExchange(Player playerFrom, Player playerTo, Card[] cards);
-        public void WritePlayerThrewCard(Player player, Card card);
-        public void WriteTrick(Trick trick);
-        public void WritePlayersPointsInRound(Player[] players);
-        public void WritePlayersPointsAfterRound(Player[] players, int roundNumber);
-        public void WritePlacesAfterGame(Player[] players);
-        public void WritePlayersCards(Player[] players);
-        public void WriteClientSendMessage(Player player, string message);
+        public Task WriteUserConnectedAsync(Player player);
+        public Task WriteUserClickedStartGameAsync(Player player);
+        public Task WriteStartedGameAsync();
+        public Task WritePlayersGotCardsAsync(Player[] players);
+        public Task WritePlayerGaveCardsExchangeAsync(Player playerFrom, Player playerTo, Card[] cards);
+        public Task WritePlayerReceivedCardsExchangeAsync(Player playerFrom, Player playerTo, Card[] cards);
+        public Task WritePlayerThrewCardAsync(Player player, Card card);
+        public Task WriteTrickAsync(Trick trick);
+        public Task WritePlayersPointsInRoundAsync(Player[] players);
+        public Task WritePlayersPointsAfterRoundAsync(Player[] players, int roundNumber);
+        public Task WritePlacesAfterGameAsync(Player[] players);
+        public Task WritePlayersCardsAsync(Player[] players);
+        public Task WriteClientSendMessageAsync(Player player, string message);
 
 
     }

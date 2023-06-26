@@ -3,22 +3,22 @@ using Hearts_server.GameLogic.Cards;
 
 namespace Hearts_server.ResultsWriterReader
 {
-    public interface IGameWriterHandler
-    {
-        IGameWriterHandler SetNext(IGameWriterHandler handler);
+	public interface IGameWriterHandler
+	{
+		IGameWriterHandler SetNext(IGameWriterHandler handler);
 
-        void HandleWriteUserConnected(Player player);
-        void HandleWriteUserClickedStartGame(Player player);
-        void HandleWriteStartedGame();
-        void HandleWritePlayersGotCards(Player[] players);
-        void HandleWritePlayerGaveCardsExchange(Player playerFrom, Player playerTo, Card[] cards);
-        void HandleWritePlayerReceivedCardsExchange(Player playerFrom, Player playerTo, Card[] cards);
-        void HandleWritePlayerThrewCard(Player player, Card card);
-        void HandleWriteTrick(Trick trick);
-        void HandleWritePlayersPointsInRound(Player[] players);
-        void HandleWritePlayersPointsAfterRound(Player[] players, int roundNumber);
-        void HandleWritePlacesAfterGame(Player[] players);
-        void HandleWritePlayersCards(Player[] players);
-        void HandleWriteClientSendMessage(string message);
-    }
+		Task HandleWriteUserConnectedAsync(Player player);
+		Task HandleWriteUserClickedStartGameAsync(Player player);
+		Task HandleWriteStartedGameAsync();
+		Task HandleWritePlayersGotCardsAsync(Player[] players);
+		Task HandleWritePlayerGaveCardsExchangeAsync(Player playerFrom, Player playerTo, Card[] cards);
+		Task HandleWritePlayerReceivedCardsExchangeAsync(Player playerFrom, Player playerTo, Card[] cards);
+		Task HandleWritePlayerThrewCardAsync(Player player, Card card);
+		Task HandleWriteTrickAsync(Trick trick);
+		Task HandleWritePlayersPointsInRoundAsync(Player[] players);
+		Task HandleWritePlayersPointsAfterRoundAsync(Player[] players, int roundNumber);
+		Task HandleWritePlacesAfterGameAsync(Player[] players);
+		Task HandleWritePlayersCardsAsync(Player[] players);
+		Task HandleWriteClientSendMessageAsync(Player player, string message);
+	}
 }

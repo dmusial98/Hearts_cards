@@ -51,19 +51,19 @@ namespace Hearts_server.ResultsWriterReader
 
 		#region Handle methods
 
-		public virtual void HandleWriteUserConnected(Player player) { }
-		public virtual void HandleWriteUserClickedStartGame(Player player) { }
-		public virtual void HandleWriteStartedGame() { }
-		public virtual void HandleWritePlayersGotCards(Player[] players) { }
-		public virtual void HandleWritePlayerGaveCardsExchange(Player playerFrom, Player playerTo, Card[] cards) { }
-		public virtual void HandleWritePlayerReceivedCardsExchange(Player playerFrom, Player playerTo, Card[] cards) { }
-		public virtual void HandleWritePlayerThrewCard(Player player, Card card) { }
-		public virtual void HandleWriteTrick(Trick trick) { }
-		public virtual void HandleWritePlayersPointsInRound(Player[] players) { }
-		public virtual void HandleWritePlayersPointsAfterRound(Player[] players, int roundNumber) { }
-		public virtual void HandleWritePlacesAfterGame(Player[] players) { }
-		public virtual void HandleWritePlayersCards(Player[] players) { }
-		public virtual void HandleWriteClientSendMessage(string message) { }
+		public virtual Task HandleWriteUserConnectedAsync(Player player) { return new Task(() => { }); }
+		public virtual Task HandleWriteUserClickedStartGameAsync(Player player) { return new Task(() => { }); }
+		public virtual Task HandleWriteStartedGameAsync() { return new Task(() => { }); }
+		public virtual Task HandleWritePlayersGotCardsAsync(Player[] players) { return new Task(() => { }); }
+		public virtual Task HandleWritePlayerGaveCardsExchangeAsync(Player playerFrom, Player playerTo, Card[] cards) { return new Task(() => { }); }
+		public virtual Task HandleWritePlayerReceivedCardsExchangeAsync(Player playerFrom, Player playerTo, Card[] cards) { return new Task(() => { }); }
+		public virtual Task HandleWritePlayerThrewCardAsync(Player player, Card card) { return new Task(() => { }); }
+		public virtual Task HandleWriteTrickAsync(Trick trick) { return new Task(() => { }); }
+		public virtual Task HandleWritePlayersPointsInRoundAsync(Player[] players) { return new Task(() => { }); }
+		public virtual Task HandleWritePlayersPointsAfterRoundAsync(Player[] players, int roundNumber) { return new Task(() => { }); }
+		public virtual Task HandleWritePlacesAfterGameAsync(Player[] players) { return new Task(() => { }); }
+		public virtual Task HandleWritePlayersCardsAsync(Player[] players) { return new Task(() => { }); }
+		public virtual Task HandleWriteClientSendMessageAsync(Player player, string message) { return new Task(() => { }); }
 
 		#endregion
 

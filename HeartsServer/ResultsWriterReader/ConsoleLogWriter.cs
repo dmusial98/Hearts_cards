@@ -13,149 +13,151 @@ namespace HeartsServer.ResultsWriterReader
 	public class ConsoleLogWriter : BaseGameWriter, ILogWriter
 	{
 		#region Handles
-		public override void HandleWriteUserConnected(Player player)
+		public override async Task HandleWriteUserConnectedAsync(Player player)
 		{
-			WriteUserConnected(player);
+			await WriteUserConnectedAsync(player);
 			if (_nextWriter != null)
-				_nextWriter.HandleWriteUserConnected(player);
+				await _nextWriter.HandleWriteUserConnectedAsync(player);
 		}
-		public override void HandleWriteUserClickedStartGame(Player player)
+		public override async Task HandleWriteUserClickedStartGameAsync(Player player)
 		{
-			WriteUserClickedStartGame(player);
+			await WriteUserClickedStartGameAsync(player);
 			if (_nextWriter != null)
-				_nextWriter.HandleWriteUserClickedStartGame(player);
+				await _nextWriter.HandleWriteUserClickedStartGameAsync(player);
 		}
-		public override void HandleWriteStartedGame()
+		public override async Task HandleWriteStartedGameAsync()
 		{
-			WriteStartedGame();
+			await WriteStartedGameAsync();
 			if (_nextWriter != null)
-				_nextWriter.HandleWriteStartedGame();
+				await _nextWriter.HandleWriteStartedGameAsync();
 		}
-		public override void HandleWritePlayersGotCards(Player[] players)
+		public override async Task HandleWritePlayersGotCardsAsync(Player[] players)
 		{
-			WritePlayersGotCards(players);
+			await WritePlayersGotCardsAsync(players);
 			if (_nextWriter != null)
-				_nextWriter.HandleWritePlayersGotCards(players);
+				await _nextWriter.HandleWritePlayersGotCardsAsync(players);
 		}
-		public override void HandleWritePlayerGaveCardsExchange(Player playerFrom, Player playerTo, Card[] cards)
+		public override async Task HandleWritePlayerGaveCardsExchangeAsync(Player playerFrom, Player playerTo, Card[] cards)
 		{
-			WritePlayerGaveCardsExchange(playerFrom, playerTo, cards);
+			await WritePlayerGaveCardsExchangeAsync(playerFrom, playerTo, cards);
 			if (_nextWriter != null)
-				_nextWriter.HandleWritePlayerGaveCardsExchange(playerFrom, playerTo, cards);
+				await _nextWriter.HandleWritePlayerGaveCardsExchangeAsync(playerFrom, playerTo, cards);
 		}
-		public override void HandleWritePlayerReceivedCardsExchange(Player playerFrom, Player playerTo, Card[] cards)
+		public override async Task HandleWritePlayerReceivedCardsExchangeAsync(Player playerFrom, Player playerTo, Card[] cards)
 		{
-			WritePlayerReceivedCardsExchange(playerFrom, playerTo, cards);
+			await WritePlayerReceivedCardsExchangeAsync(playerFrom, playerTo, cards);
 			if (_nextWriter != null)
-				_nextWriter.HandleWritePlayerReceivedCardsExchange(playerFrom, playerTo, cards);
+				await _nextWriter.HandleWritePlayerReceivedCardsExchangeAsync(playerFrom, playerTo, cards);
 		}
-		public override void HandleWriteTrick(Trick trick)
+		public override async Task HandleWriteTrickAsync(Trick trick)
 		{
-			WriteTrick(trick);
+			await WriteTrickAsync(trick);
 			if (_nextWriter != null)
-				_nextWriter.HandleWriteTrick(trick);
+				await _nextWriter.HandleWriteTrickAsync(trick);
 		}
 
-		public override void HandleWritePlayerThrewCard(Player player, Card card)
+		public override async Task HandleWritePlayerThrewCardAsync(Player player, Card card)
 		{
-			WritePlayerThrewCard(player, card);
+			await WritePlayerThrewCardAsync(player, card);
 			if (_nextWriter != null)
-				_nextWriter.HandleWritePlayerThrewCard(player, card);
+				await _nextWriter.HandleWritePlayerThrewCardAsync(player, card);
 		}
-		public override void HandleWritePlayersPointsInRound(Player[] players)
+		public override async Task HandleWritePlayersPointsInRoundAsync(Player[] players)
 		{
-			WritePlayersPointsInRound(players);
+			await WritePlayersPointsInRoundAsync(players);
 			if (_nextWriter != null)
-				_nextWriter.HandleWritePlayersPointsInRound(players);
+				await _nextWriter.HandleWritePlayersPointsInRoundAsync(players);
 		}
-		public override void HandleWritePlayersPointsAfterRound(Player[] players, int roundNumber)
+		public override async Task HandleWritePlayersPointsAfterRoundAsync(Player[] players, int roundNumber)
 		{
-			WritePlayersPointsAfterRound(players, roundNumber);
+			await WritePlayersPointsAfterRoundAsync(players, roundNumber);
 			if (_nextWriter != null)
-				_nextWriter.HandleWritePlayersPointsAfterRound(players, roundNumber);
+				await _nextWriter.HandleWritePlayersPointsAfterRoundAsync(players, roundNumber);
 		}
-		public override void HandleWritePlacesAfterGame(Player[] players)
+		public override async Task HandleWritePlacesAfterGameAsync(Player[] players)
 		{
-			WritePlacesAfterGame(players);
+			await WritePlacesAfterGameAsync(players);
 			if (_nextWriter != null)
-				_nextWriter.HandleWritePlacesAfterGame(players);
+				await _nextWriter.HandleWritePlacesAfterGameAsync(players);
 		}
-		public override void HandleWritePlayersCards(Player[] players)
+		public override async Task HandleWritePlayersCardsAsync(Player[] players)
 		{
-			WritePlayersCards(players);
+			await WritePlayersCardsAsync(players);
 			if (_nextWriter != null)
-				_nextWriter.HandleWritePlayersCards(players);
+				await _nextWriter.HandleWritePlayersCardsAsync(players);
 		}
-		public override void HandleWriteClientSendMessage(string message)
+		public override async Task HandleWriteClientSendMessageAsync(Player player, string message)
 		{
-			throw new NotImplementedException();
+			await WriteClientSendMessageAsync(player, message);
+			if (_nextWriter != null)
+				await _nextWriter.HandleWriteClientSendMessageAsync(player, message);
 		}
 
 		#endregion
 
 		#region ILogWriter methods
 
-		public void WriteUserConnected(Player player)
+		public async Task WriteUserConnectedAsync(Player player)
 		{
 			Console.WriteLine(GetUserConnectedLog(player));
 		}
 
-		public void WriteUserClickedStartGame(Player player)
+		public async Task WriteUserClickedStartGameAsync(Player player)
 		{
 			Console.WriteLine(GetUserClickedStartGameLog(player));
 		}
 
-		public void WriteStartedGame()
+		public async Task WriteStartedGameAsync()
 		{
 			Console.WriteLine(GetStartedGameLog());
 		}
 
-		public void WritePlayersGotCards(Player[] players)
+		public async Task WritePlayersGotCardsAsync(Player[] players)
 		{
 			Console.Write(GetPlayersGotCardsLog(players));
 		}
 
-		public void WritePlayerGaveCardsExchange(Player playerFrom, Player playerTo, Card[] cards)
+		public async Task WritePlayerGaveCardsExchangeAsync(Player playerFrom, Player playerTo, Card[] cards)
 		{
 			Console.WriteLine(GetPlayerGaveCardsExchangeLog(playerFrom, playerTo, cards));
 		}
 
-		public void WritePlayerReceivedCardsExchange(Player playerFrom, Player playerTo, Card[] cards)
+		public async Task WritePlayerReceivedCardsExchangeAsync(Player playerFrom, Player playerTo, Card[] cards)
 		{
 			Console.WriteLine(GetPlayerReceivedCardsExchangeLog(playerFrom, playerTo, cards));
 		}
 
-		public void WritePlayerThrewCard(Player player, Card card)
+		public async Task WritePlayerThrewCardAsync(Player player, Card card)
 		{
 			Console.WriteLine(GetPlayerThrewCardLog(player, card));
 		}
 
-		public void WriteTrick(Trick trick)
+		public async Task WriteTrickAsync(Trick trick)
 		{
 			Console.WriteLine(GetTrickLog(trick));
 		}
 
-		public void WritePlayersPointsInRound(Player[] players)
+		public async Task WritePlayersPointsInRoundAsync(Player[] players)
 		{
 			Console.Write(GetPlayersPointsInRoundLog(players));
 		}
 
-		public void WritePlayersPointsAfterRound(Player[] players, int roundNumber)
+		public async Task WritePlayersPointsAfterRoundAsync(Player[] players, int roundNumber)
 		{
 			Console.Write(GetPlayersPointsAfterRoundLog(players, roundNumber));
 		}
 
-		public void WritePlacesAfterGame(Player[] players)
+		public async Task WritePlacesAfterGameAsync(Player[] players)
 		{
 			Console.Write(GetPlacesAfterGameLog(players));
 		}
 
-		public void WritePlayersCards(Player[] players)
+		public async Task WritePlayersCardsAsync(Player[] players)
 		{
 			Console.Write(GetPlayersCardsLog(players));
 		}
 
-		public void WriteClientSendMessage(Player player, string message)
+		public async Task WriteClientSendMessageAsync(Player player, string message)
 		{
 			Console.WriteLine(GetClientSendMessageLog(player, message));
 		}
