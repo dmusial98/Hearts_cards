@@ -5,25 +5,19 @@ namespace HeartsServer.ResultsWriterReader
 {
     public class TxtFileLogReader : IGameReader
     {
-        string _fileName = string.Empty;
+        public string FileName { get; set; } = string.Empty;
 
-        public string FileName
-        {
-            get { return _fileName; }
-            set { _fileName = value; }
-        }
-
-        public TxtFileLogReader(string fileName) => _fileName = fileName;
+        public TxtFileLogReader(string fileName) => FileName = fileName;
         public TxtFileLogReader() { }
 
         public async Task<GameHistory> GetGameHistoryFromFileAsync()
         {
             DirectoryInfo directory = new DirectoryInfo("LogFiles");
             FileInfo file = null;
-            if (_fileName == string.Empty)
+            if (FileName == string.Empty)
                 file = directory.GetFiles().OrderByDescending(f => f.LastWriteTime).First();
             else
-                file = directory.GetFiles().FirstOrDefault(f => f.Name == _fileName);
+                file = directory.GetFiles().FirstOrDefault(f => f.Name == FileName);
 
             if (file == null)
                 throw new FileNotFoundException();
