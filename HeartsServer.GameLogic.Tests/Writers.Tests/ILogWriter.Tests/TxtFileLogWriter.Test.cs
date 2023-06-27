@@ -200,7 +200,7 @@ namespace HeartsServer.GameLogic.Tests.Writers.Tests.ILogWriter.Tests
 
             Assert.IsTrue(result.Contains(String.Concat("C13 ", date, ":  player ", player.Name, ", ID: ", player.Id.ToString(), " send message: ", message, "\r\n")));
             Assert.IsTrue(result.Contains(String.Concat("C13 ", date, ":  player ", player2.Name, ", ID: ", player2.Id.ToString(), " send message: ", message2, "\r\n")));
-            Assert.IsTrue(result.Contains(String.Concat("C13 ", date, ":  player ", player.Name, ", ID: ", player.Id.ToString(), " send message: ", message, "\r\n")));
+            Assert.IsTrue(result.Contains(String.Concat("C2 ", date, ":  player ", player.Name, ", ID: ", player.Id, " clicked start game\r\n")));
         }
 
     }
