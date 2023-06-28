@@ -20,7 +20,7 @@ namespace HeartsServer.GameLogic.Tests.Writers.Tests.ILogWriter.Tests
         public void TestCleanup()
         {
             Player.ResetIdCounter();
-            DeleteLastDocumentInDirectory();
+            //DeleteLastDocumentInDirectory();
         }
 
         public async Task<string> GetTextFromFile()

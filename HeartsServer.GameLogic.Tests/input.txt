@@ -1,0 +1,77 @@
+C3 28.06.2023 11:10:35: Game started
+C13 28.06.2023 11:10:35:  player John, ID: 0 send message: message from user ;)
+C13 28.06.2023 11:10:35:  player Michael, ID: 1 send message: second message from user
+C2 28.06.2023 11:10:35:  player John, ID: 0 clicked start game
+C13 28.06.2023 11:10:35:  player John, ID: 0 send message: Hello, I sent this message to server
+C5 28.06.2023 11:10:35:  player John, ID: 0 gave cards Five Spade, Ten Diamond, Queen Club,  for exchange to Adam, ID: 1
+C5 28.06.2023 11:10:35:  player John, ID: 1 gave cards Five Spade, Ten Diamond, Queen Club,  for exchange to Adam, ID: 2
+C5 28.06.2023 11:10:35:  player John, ID: 2 gave cards Five Spade, Ten Diamond, Queen Club,  for exchange to Adam, ID: 3
+C5 28.06.2023 11:10:35:  player John, ID: 3 gave cards Five Spade, Ten Diamond, Queen Club,  for exchange to Adam, ID: 0
+C6 28.06.2023 11:10:35:  player John, ID: 0 received cards Five Spade, Ten Diamond, Queen Club,  for exchange from Adam, ID: 1
+C7 28.06.2023 11:10:35:  player John, ID: 0 threw card Ace Heart
+C12 28.06.2023 11:10:35:  player's John, ID: 0 cards: Six Spade, Nine Heart, Eight Club, Queen Club, Seven Club, Six Club, Four Spade, Seven Spade, King Diamond, Queen Spade, Ace Diamond, Eight Diamond, Six Diamond, 
+C12 28.06.2023 11:10:35:  player's Adam, ID: 1 cards: Queen Heart, King Club, Five Spade, Three Spade, Eight Spade, Two Heart, Seven Heart, Ace Spade, Four Club, Nine Diamond, King Spade, Jack Heart, Three Diamond, 
+C12 28.06.2023 11:10:35:  player's David, ID: 2 cards: Nine Spade, Two Club, Two Spade, Ten Club, Seven Diamond, Ten Spade, Jack Spade, Four Heart, Five Diamond, Five Heart, Two Diamond, Ten Heart, Three Heart, 
+C12 28.06.2023 11:10:35:  player's Peter, ID: 3 cards: Four Diamond, Eight Heart, Ten Diamond, Three Club, King Heart, Ace Club, Five Club, Six Heart, Nine Club, Jack Club, Queen Diamond, Ace Heart, Jack Diamond, 
+C4 28.06.2023 11:10:35:  player John, ID: 0 got cards: Seven Heart, Ten Club, Two Heart, Ace Spade, Ten Heart, Five Diamond, Six Club, Two Club, Ten Spade, Six Spade, Four Diamond, Eight Diamond, Eight Club, 
+C4 28.06.2023 11:10:35:  player Paul, ID: 1 got cards: Three Heart, Four Club, Ten Diamond, Three Diamond, Queen Spade, King Heart, Five Heart, Seven Club, Queen Heart, Three Club, Ace Diamond, Two Spade, King Diamond, 
+C4 28.06.2023 11:10:35:  player Michael, ID: 2 got cards: Two Diamond, Five Club, Ace Heart, Queen Club, Ace Club, Four Spade, Jack Heart, Jack Spade, Four Heart, Eight Heart, Eight Spade, Nine Heart, Seven Diamond, 
+C4 28.06.2023 11:10:35:  player Joseph, ID: 3 got cards: Seven Spade, Six Diamond, King Club, Jack Diamond, Five Spade, Nine Spade, Three Spade, King Spade, Nine Club, Six Heart, Jack Club, Queen Diamond, Nine Diamond, 
+C11 28.06.2023 11:10:35:  player's John, ID: 0 place in game: 2
+C11 28.06.2023 11:10:35:  player's Adam, ID: 1 place in game: 3
+C11 28.06.2023 11:10:35:  player's David, ID: 2 place in game: 1
+C11 28.06.2023 11:10:35:  player's Peter, ID: 3 place in game: 4
+C10 28.06.2023 11:10:35:  player's John, ID: 0 points after that round (5): 3
+C10 28.06.2023 11:10:35:  player's Adam, ID: 1 points after that round (5): 14
+C9 28.06.2023 11:10:35:  player's John, ID: 0 points in that round (8): 3
+C9 28.06.2023 11:10:35:  player's Adam, ID: 1 points in that round (8): 14
+C8 28.06.2023 11:10:35:  player Michael, ID: 0 won trick with cards: Two Club, Eight Club, Three Heart, Jack Club, 
+C2 28.06.2023 11:10:35:  player John, ID: 0 clicked start game
+C1 28.06.2023 11:10:35:  player John, ID: 0 connected with server
+C13 28.06.2023 11:11:08:  player John, ID: 0 send message: Hello, I sent this message to server
+C6 28.06.2023 11:11:08:  player John, ID: 0 received cards Five Spade, Ten Diamond, Queen Club,  for exchange from Adam, ID: 1
+C7 28.06.2023 11:11:08:  player John, ID: 0 threw card Ace Heart
+C12 28.06.2023 11:11:08:  player's John, ID: 0 cards: Five Diamond, Eight Diamond, Six Club, Three Club, Ten Club, Four Spade, Nine Diamond, Two Spade, Queen Club, Four Club, Ace Spade, Ace Diamond, Eight Club, 
+C12 28.06.2023 11:11:08:  player's Adam, ID: 1 cards: Four Diamond, Three Spade, Five Heart, King Heart, King Spade, Queen Diamond, Ace Heart, Five Club, Ten Diamond, Three Heart, Jack Diamond, Nine Club, Jack Spade, 
+C12 28.06.2023 11:11:08:  player's David, ID: 2 cards: King Club, Four Heart, Six Spade, Five Spade, Queen Spade, Ace Club, Queen Heart, Two Club, Seven Club, Nine Heart, Jack Heart, Eight Spade, Three Diamond, 
+C12 28.06.2023 11:11:08:  player's Peter, ID: 3 cards: Seven Heart, Six Heart, Nine Spade, King Diamond, Ten Spade, Jack Club, Seven Spade, Ten Heart, Seven Diamond, Six Diamond, Eight Heart, Two Heart, Two Diamond, 
+C4 28.06.2023 11:11:08:  player John, ID: 0 got cards: Jack Diamond, Six Spade, King Diamond, Three Club, Jack Spade, Ace Diamond, Five Heart, Six Diamond, Four Club, Five Diamond, Four Spade, Ten Heart, Nine Heart, 
+C4 28.06.2023 11:11:08:  player Paul, ID: 1 got cards: Two Heart, Four Diamond, Seven Spade, Seven Club, Nine Diamond, Nine Club, Three Diamond, Six Club, Nine Spade, Ten Club, King Heart, Eight Diamond, Six Heart, 
+C4 28.06.2023 11:11:08:  player Michael, ID: 2 got cards: Eight Spade, Queen Heart, Eight Club, Ten Diamond, Ten Spade, Three Spade, Three Heart, Ace Spade, Queen Spade, Ace Heart, Queen Club, Queen Diamond, Four Heart, 
+C4 28.06.2023 11:11:08:  player Joseph, ID: 3 got cards: Five Club, Two Club, Jack Club, Seven Diamond, King Spade, Seven Heart, Eight Heart, King Club, Jack Heart, Ace Club, Five Spade, Two Spade, Two Diamond, 
+C11 28.06.2023 11:11:08:  player's John, ID: 0 place in game: 2
+C11 28.06.2023 11:11:08:  player's Adam, ID: 1 place in game: 3
+C11 28.06.2023 11:11:08:  player's David, ID: 2 place in game: 1
+C11 28.06.2023 11:11:08:  player's Peter, ID: 3 place in game: 4
+C10 28.06.2023 11:11:08:  player's John, ID: 0 points after that round (5): 3
+C10 28.06.2023 11:11:08:  player's Adam, ID: 1 points after that round (5): 14
+C9 28.06.2023 11:11:08:  player's John, ID: 0 points in that round (8): 3
+C9 28.06.2023 11:11:08:  player's Adam, ID: 1 points in that round (8): 14
+C8 28.06.2023 11:11:08:  player Michael, ID: 0 won trick with cards: Two Club, Eight Club, Three Heart, Jack Club, 
+C2 28.06.2023 11:11:08:  player John, ID: 0 clicked start game
+C1 28.06.2023 11:11:08:  player John, ID: 0 connected with server
+C13 28.06.2023 11:11:13:  player John, ID: 0 send message: message from user ;)
+C13 28.06.2023 11:11:13:  player Michael, ID: 1 send message: second message from user
+C2 28.06.2023 11:11:13:  player John, ID: 0 clicked start game
+C13 28.06.2023 11:11:13:  player John, ID: 0 send message: Hello, I sent this message to server
+C6 28.06.2023 11:11:13:  player John, ID: 0 received cards Five Spade, Ten Diamond, Queen Club,  for exchange from Adam, ID: 1
+C7 28.06.2023 11:11:13:  player John, ID: 0 threw card Ace Heart
+C12 28.06.2023 11:11:13:  player's John, ID: 0 cards: Three Club, Six Club, Ten Spade, Eight Heart, Jack Heart, Ace Heart, Seven Spade, Nine Heart, King Heart, Ten Club, King Club, Eight Diamond, Queen Spade, 
+C12 28.06.2023 11:11:13:  player's Adam, ID: 1 cards: Nine Club, Ten Diamond, Five Diamond, Four Diamond, Queen Diamond, Queen Heart, Two Spade, Ace Club, Two Heart, Jack Spade, King Diamond, Jack Club, Two Diamond, 
+C12 28.06.2023 11:11:13:  player's David, ID: 2 cards: Four Heart, Three Spade, Nine Spade, Eight Spade, Six Spade, Four Spade, Seven Diamond, Six Heart, Five Club, Seven Club, Eight Club, Five Heart, Ace Spade, 
+C12 28.06.2023 11:11:13:  player's Peter, ID: 3 cards: Seven Heart, Five Spade, Four Club, King Spade, Two Club, Six Diamond, Queen Club, Nine Diamond, Ten Heart, Jack Diamond, Three Diamond, Three Heart, Ace Diamond, 
+C4 28.06.2023 11:11:13:  player John, ID: 0 got cards: Two Diamond, Seven Club, Ace Diamond, Two Spade, Jack Spade, Queen Spade, Eight Club, Three Diamond, Eight Heart, Jack Heart, Ace Heart, Six Spade, Ten Club, 
+C4 28.06.2023 11:11:13:  player Paul, ID: 1 got cards: Three Spade, Four Heart, Two Heart, Four Diamond, Eight Diamond, Four Club, Jack Diamond, Six Diamond, Queen Diamond, Five Spade, Three Heart, Five Heart, Five Diamond, 
+C4 28.06.2023 11:11:13:  player Michael, ID: 2 got cards: Six Heart, Ace Spade, Nine Club, Five Club, Jack Club, Nine Spade, Four Spade, Ace Club, Ten Heart, Six Club, Three Club, Ten Spade, Eight Spade, 
+C4 28.06.2023 11:11:13:  player Joseph, ID: 3 got cards: King Club, Queen Heart, Seven Spade, Queen Club, Nine Diamond, King Spade, King Heart, Ten Diamond, Two Club, Seven Heart, Seven Diamond, Nine Heart, King Diamond, 
+C11 28.06.2023 11:11:13:  player's John, ID: 0 place in game: 2
+C11 28.06.2023 11:11:13:  player's Adam, ID: 1 place in game: 3
+C11 28.06.2023 11:11:13:  player's David, ID: 2 place in game: 1
+C11 28.06.2023 11:11:13:  player's Peter, ID: 3 place in game: 4
+C10 28.06.2023 11:11:13:  player's John, ID: 0 points after that round (5): 3
+C10 28.06.2023 11:11:13:  player's Adam, ID: 1 points after that round (5): 14
+C9 28.06.2023 11:11:13:  player's John, ID: 0 points in that round (8): 3
+C9 28.06.2023 11:11:13:  player's Adam, ID: 1 points in that round (8): 14
+C8 28.06.2023 11:11:13:  player Michael, ID: 0 won trick with cards: Two Club, Eight Club, Three Heart, Jack Club, 
+C2 28.06.2023 11:11:13:  player John, ID: 0 clicked start game
+C1 28.06.2023 11:11:13:  player John, ID: 0 connected with server
