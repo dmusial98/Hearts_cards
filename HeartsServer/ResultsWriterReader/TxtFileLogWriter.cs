@@ -116,6 +116,22 @@ namespace HeartsServer.ResultsWriterReader
 				await writeTask;
 		}
 
+		public async Task WriteStartRoundAsync(int roundNumber)
+		{
+			string output = GetRoundStartedLog(roundNumber);
+			output = output + ("\r\n");
+			using (Task writeTask = File.AppendAllTextAsync(_pathToFile, output))
+				await writeTask;
+		}
+
+		public async Task WriteStartTrickAsync(int trickNumber, int roundNumber)
+		{
+			string output = GetTrickStartedLog(trickNumber, roundNumber);
+			output = output + ("\r\n");
+			using (Task writeTask = File.AppendAllTextAsync(_pathToFile, output))
+				await writeTask;
+		}
+
 		#endregion
 
 	}

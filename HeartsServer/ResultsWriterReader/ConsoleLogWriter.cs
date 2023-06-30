@@ -162,6 +162,16 @@ namespace HeartsServer.ResultsWriterReader
 			Console.WriteLine(GetClientSendMessageLog(player, message));
 		}
 
+		public async Task WriteStartRoundAsync(int roundNumber)
+		{
+			Console.WriteLine(GetRoundStartedLog(roundNumber));
+		}
+
+		public async Task WriteStartTrickAsync(int trickNumber, int roundNumber)
+		{
+			Console.WriteLine(GetTrickStartedLog(trickNumber, roundNumber));
+		}
+
 		#endregion
 	}
 }

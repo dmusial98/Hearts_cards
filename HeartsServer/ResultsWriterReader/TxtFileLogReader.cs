@@ -34,7 +34,7 @@ namespace HeartsServer.ResultsWriterReader
 			//zaladuj start gry C3 + 
 			//zaladuj rozdanie kart C4 +
 			//zaladuj wymianki i karty po wymiance C5 C6 C12 +
-			//zaladuj paczke czterech rzuconych kart, wygranie lewy i punkty w rundzie C7 C8 C9
+			//zaladuj log o rozpoczeciu rundy, rozpoczeciu lewy, paczke czterech rzuconych kart, wygranie lewy i punkty w rundzie C7 C8 C9
 			//zaladuj karty graczy po lewie C12
 			//po 13 lewach zaladuj punkty po rundzie C10
 			//powtarzaj aż załaduje informację o miejscach C11
@@ -42,42 +42,101 @@ namespace HeartsServer.ResultsWriterReader
 			listLines.RemoveAll(IsUnnecessaryLog);
 
 			//Started game
-			var startGameLog = listLines.Where(s => s[..3] == "C3 ").ToArray();
+			var startGameLog = listLines.Where(s => s[..3] == Consts.GAME_STARTED_CODE_CONST.PadRight(3, ' ')).ToArray();
 			if (startGameLog.Count() != 1)
 				throw new FileLoadException($"File {file.Name} doesn't contain exactly one start game message log");
 
 			listLines.Remove(startGameLog.First());
 
-			//Cards before game start
-			var playerCardsBeforeGameLogs = listLines.Where(s => s[..3] == "C4 ").Take(4).ToArray();
-			List<List<Card>> cardsBeforeStart = new List<List<Card>>();
-
-			foreach (var lineLog in playerCardsBeforeGameLogs)
+			string[] roundStartedLogs = listLines.Where(s => s[..3] == Consts.ROUND_STARTED_CODE_CONST.PadRight(3, ' ')).OrderBy(s => s).ToArray();
+			foreach (string roundStartedLog in roundStartedLogs)
 			{
-				string[] splittedCardsLog = lineLog.Split("got cards: ")[1].Split(", ");
-				cardsBeforeStart.Add(LoadCardsFromCardsLog(splittedCardsLog));
+				RoundHistory roundHistory = new RoundHistory();
+
+				//Cards before round start
+				var playerCardsBeforeGameLogs =
+					listLines
+					.Where(s => s[..3] == Consts.PLAYERS_GOT_CARDS_CODE_CONST.PadRight(3, ' '))
+					.OrderBy(s => s)
+					.Take(Consts.PLAYERS_NUMBER_CONST)
+					.ToArray();
+
+				List<List<Card>> cardsBeforeStart = new List<List<Card>>();
+
+				foreach (var lineLog in playerCardsBeforeGameLogs)
+				{
+					string[] splittedCardsLog = lineLog.Split("got cards: ")[1].Split(", ");
+					cardsBeforeStart.Add(LoadCardsFromCardsLog(splittedCardsLog));
+					listLines.Remove(lineLog);
+				}
+
+				//Cards exchange
+				string[] cardsGaveToExchangeLogs = listLines
+					.Where(s => s[..3] == Consts.PLAYER_GAVE_CARDS_CODE_CONST.PadRight(3, ' '))
+					.OrderBy(s => s)
+					.Take(Consts.PLAYERS_NUMBER_CONST)
+					.ToArray();
+				string[] cardsReceivedToExchangeLogs = listLines
+					.Where(s => s[..3] == Consts.PLAYER_RECEIVED_CARDS_CODE_CONST.PadRight(3, ' '))
+					.OrderBy(s => s)
+					.Take(Consts.PLAYERS_NUMBER_CONST)
+					.ToArray();
+
+				ExchangeHistory[] exchangeHistoryArray = GetExchangeHistory(cardsGaveToExchangeLogs, cardsReceivedToExchangeLogs);
+
+				foreach (var line in cardsGaveToExchangeLogs)
+					listLines.Remove(line);
+
+				foreach (var line in cardsReceivedToExchangeLogs)
+					listLines.Remove(line);
+
+				string[] playersCardsLog = listLines
+					.Where(s => s[..3] == Consts.PLAYERS_CARDS_CODE_CONST.PadRight(3, ' '))
+					.OrderBy(s => s)
+					.Take(Consts.PLAYERS_NUMBER_CONST)
+					.ToArray();
+
+				foreach (var line in playersCardsLog)
+				{
+					exchangeHistoryArray
+						.Where(h => h.IdPlayer == Int32.Parse(line.Split(" ")[7])).ToArray()
+						.First().CardsAfter = LoadCardsFromCardsLog(line.Split(" cards: ")[1].Split(", "));
+
+					listLines.Remove(line);
+				}
+
+				//Tricks
+				List<string> trickStartedLogs = listLines
+					.Where(s => s[..3] == Consts.TRICK_STARTED_CODE_CONST.PadRight(3, ' '))
+					.OrderBy(s => s)
+					.Take(Consts.TRICKS_NUMBER_IN_ROUND_CONST)
+					.ToList();
+
+				List<string> trickSummaryLog = listLines
+					.Where(s => s[..3] == Consts.TRICK_CODE_CONST.PadRight(3, ' '))
+					.OrderBy(s => s)
+					.Take(Consts.TRICKS_NUMBER_IN_ROUND_CONST)
+					.ToList();
+
+				foreach (var line in trickStartedLogs)
+				{
+					TrickHistory trickHistory = new TrickHistory();
+					int trickNumber = Int32.Parse(line.Split("Trick ")[1].Split(" ")[0]);
+
+
+					trickStartedLogs.Remove(line);
+					if (trickSummaryLog.Count > 0)
+						trickSummaryLog.RemoveAt(0);
+				}
+
+
+
+
+
+
+				listLines.Remove(roundStartedLog);
 			}
 
-			foreach (string line in listLines.Where(s => s[..3] == "C4 ").ToArray())
-				listLines.Remove(line);
-
-			//Cards exchange
-			var cardsGaveToExchangeLogs = listLines.Where(s => s[..3] == "C5 ").ToArray();
-			var cardsReceivedToExchangeLogs = listLines.Where(s => s[..3] == "C6 ").ToArray();
-
-			var exchangeHistoryArray = GetExchangeHistory(cardsGaveToExchangeLogs, cardsReceivedToExchangeLogs);
-			var playersCardsLog = listLines.Where(s => s[..3] == "C12").Take(4).ToArray();
-			
-			foreach (var line in playersCardsLog)
-			{
-				var a = line.Split(" ");
-				exchangeHistoryArray
-					.Where(h => h.IdPlayer == Int32.Parse(line.Split(" ")[7])).ToArray()
-					.First().CardsAfter = LoadCardsFromCardsLog(line.Split(" cards: ")[1].Split(", "));
-			}
-
-			foreach (var line in cardsGaveToExchangeLogs)
-				listLines.Remove(line);
 
 
 			return history;
@@ -91,7 +150,9 @@ namespace HeartsServer.ResultsWriterReader
 
 		private static bool IsUnnecessaryLog(string input)
 		{
-			return input[..3] == "C1 " || input[..3] == "C2 " || input[..3] == "C13";
+			return input[..3] == Consts.USER_CONNECTED_CODE_CONST.PadRight(3, ' ') ||
+				input[..3] == Consts.USER_CLICKED_START_CONST.PadRight(3, ' ') ||
+				input[..3] == Consts.USER_SEND_MESSAGE_CODE_CONST.PadRight(3, ' ');
 		}
 
 		private List<Card> LoadCardsFromCardsLog(string[] input)

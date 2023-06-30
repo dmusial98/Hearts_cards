@@ -148,5 +148,13 @@ namespace HeartsServer.GameLogic.Tests.Writers.Tests.ILogWriter.Tests
 
 			Assert.AreEqual(output, stringWriter.ToString());
 		}
+
+		[TestMethod]
+		public async Task WriteRoundStarted_CorrectOutput()
+		{
+			string output = await WriteRoundStarted_BaseTest(writer);
+
+			Assert.AreEqual(output, stringWriter.ToString());
+		}
 	}
 }
