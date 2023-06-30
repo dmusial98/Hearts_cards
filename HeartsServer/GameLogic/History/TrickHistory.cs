@@ -7,9 +7,10 @@ namespace HeartsServer.GameLogic.History
 	{
 		public bool IsWrittenInFiles { get; set; }
 		public int TrickNumber { get; set; }
-		public Player WhoWon { get; set; }
-		public List<QueueHistory> Queue { get; set; }
-		public List<PlayerPointsHistory> PointsAfterTrick { get; set; }
-		public PlayerCardsHistory[] PlayerCardsAfterTrick { get; set; }
+		public int WhoWon { get; set; }
+		public int WhoStarted { get; set; }
+		public List<QueueHistory> Queue { get; set; } = new();
+		public List<PlayerPointsHistory> PointsAfterTrick { get; set; } = new();
+		public List<PlayerCardsHistory> PlayerCardsAfterTrick { get; set; } = new();
 	}
 }

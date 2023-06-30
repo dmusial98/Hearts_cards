@@ -60,9 +60,9 @@ namespace Hearts_server.GameLogic
 			return cards;
 		}
 
-		public Card GetCard(CardValue cardValue, CardColour cardColour) => cards.Where(c => c.Value == cardValue && c.Colour == cardColour).FirstOrDefault();
+        public Card GetCard(CardValue cardValue, CardColour cardColour) => cards.Where(c => c.Value == cardValue && c.Colour == cardColour).FirstOrDefault();
 
-		public void AddPlayer(string playerName)
+        public void AddPlayer(string playerName)
 		{
 			throw new NotImplementedException();
 		}

@@ -179,11 +179,14 @@ namespace Hearts_server.ResultsWriterReader
 			string output = TRICK_CONST
 							.Replace(CODE_CONST, Consts.TRICK_CODE_CONST)
 							.Replace(TIME_CONST, DateTime.Now.ToString("G"))
-							.Replace(PLAYER_NAME_CONST, trick.Owner.Name)
-							.Replace(PLAYER_ID_CONST, trick.Owner.Id.ToString())
 							.Replace(CARDS_CONST, cardsStr.ToString());
 
-			return output;
+            output = regexPlayerName.Replace(output, trick.Owner.Name, 1);
+            output = regexPlayerName.Replace(output, trick.WhoStarted.Name, 1);
+            output = regexPlayerId.Replace(output, trick.Owner.Id.ToString(), 1);
+            output = regexPlayerId.Replace(output, trick.WhoStarted.Id.ToString(), 1);
+
+            return output;
 		}
 		public string GetPlayersPointsInRoundLog(Player[] players, int roundNumber)
 		{

@@ -7,7 +7,7 @@ namespace HeartsServer.GameLogic.History
 	public class PlayerCardsHistory
 	{
         public bool IsWrittenInFiles { get; set; }
-        public Player PlayerId { get; set; }
+        public int PlayerId { get; set; }
 		public string PlayerName { get; set; }
 		public List<Card> Cards { get; set; }
 	}
