@@ -1,5 +1,6 @@
 ﻿using Hearts_server.GameLogic.Cards;
 using HeartsServer.GameLogic;
+using HeartsServer.GameLogic.Consts;
 using Microsoft.AspNetCore.WebUtilities;
 
 namespace Hearts_server.GameLogic
@@ -16,7 +17,7 @@ namespace Hearts_server.GameLogic
             {
                 int points = Cards.Count(c => c.Colour == CardColour.Heart);
                 if (Cards.Contains(new Card(CardValue.Queen, CardColour.Spade), new CardComparer()))
-                    points += Consts.QUEEN_SPADE_POINTS_CONST;
+                    points += NumbersConsts.QUEEN_SPADE_POINTS_CONST;
 
                 return points;
             }

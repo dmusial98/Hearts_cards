@@ -1,5 +1,6 @@
 ﻿using Hearts_server.GameLogic.Cards;
 using HeartsServer.GameLogic;
+using HeartsServer.GameLogic.Consts;
 
 namespace Hearts_server.GameLogic
 {
@@ -13,6 +14,7 @@ namespace Hearts_server.GameLogic
         readonly private List<Trick> tricks = new ();
         private List<Card> cards;
         public int Place { get; set; }
+        public int BonusesNumber { get; set; }
 
         public Card[] OwnCards
         {
@@ -79,8 +81,8 @@ namespace Hearts_server.GameLogic
         private int CountPointsInTricks()
         {
             int points = tricks.Sum(t => t.Points);
-            if (points == Consts.FULL_POINTS_IN_ROUND_CONST)
-                points = -Consts.FULL_POINTS_IN_ROUND_CONST;
+            if (points == NumbersConsts.FULL_POINTS_IN_ROUND_CONST)
+                points = -NumbersConsts.FULL_POINTS_IN_ROUND_CONST;
 
             return points;
         }
