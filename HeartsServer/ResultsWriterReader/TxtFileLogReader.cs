@@ -210,8 +210,6 @@ namespace HeartsServer.ResultsWriterReader
 					trickSummaryLog.RemoveAt(0);
 				}
 
-
-
 				//Add pointsAfterRound
 				var pointsAfterRoundLog = listLines
 						.Where(s => s[..3] == LogCodesConsts.PLAYERS_POINTS_AFTER_ROUND_CODE_CONST.PadRight(3, ' '))
@@ -237,24 +235,29 @@ namespace HeartsServer.ResultsWriterReader
 					.Take(NumbersConsts.PLAYERS_NUMBER_CONST)
 					.ToArray();
 
+
+
 				List<PlayerHistory> playersHistory = new List<PlayerHistory>();
-				foreach(var log in playerPlacesAfterGameLogs)
+				foreach (var log in playerPlacesAfterGameLogs)
 				{
-					//TODO: wczytac miejsca i liczbe premii z logow po grze
+					playersHistory.Add(
+						new PlayerHistory
+						{
+							Id = int.Parse(log.Split("ID: ")[1].Split(' ')[0]),
+							Place = int.Parse(log.Split("game: ")[1].Split(' ')[0]),
+							Bonuses = int.Parse(log.Split("with ")[1].Split(' ')[0]),
+							Name = log.Split("player's ")[1].Split(' ')[0],
+						});
 
 					listLines.Remove(log);
 				}
 
-				if(playersHistory.Count > 0)
+				if (playersHistory.Count > 0)
 					history.Players = playersHistory;
 
 				history.Rounds.Add(roundHistory);
 				listLines.Remove(roundStartedLog);
-
-
 			}
-
-
 
 			return history;
 		}
