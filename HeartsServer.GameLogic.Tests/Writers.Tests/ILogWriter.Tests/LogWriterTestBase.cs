@@ -1,4 +1,5 @@
-﻿using Hearts_server.GameLogic;
+﻿using System.Globalization;
+using Hearts_server.GameLogic;
 using HeartsServer.GameLogic.Shuffle;
 using System.Text;
 using HeartsServer.ResultsWriterReader;
@@ -16,7 +17,7 @@ namespace HeartsServer.GameLogic.Tests.Writers.Tests.ILogWriter.Tests
 			Player player = new("John");
 			await writer.WriteUserConnectedAsync(player);
 
-			return String.Concat(LogCodesConsts.USER_CONNECTED_CODE_CONST, " ", DateTime.Now.ToString("G"), ":  player ", player.Name, ", ID: ", player.Id, " connected with server\r\n");
+			return String.Concat(LogCodesConsts.USER_CONNECTED_CODE_CONST, " ", DateTime.Now.ToString(LogCodesConsts.POLISH_CULTURE_INFO), ":  player ", player.Name, ", ID: ", player.Id, " connected with server", Consts.LogCodesConsts.NEW_LINE);
 		}
 
 
@@ -25,14 +26,14 @@ namespace HeartsServer.GameLogic.Tests.Writers.Tests.ILogWriter.Tests
 			Player player = new("John");
 			await writer.WriteUserClickedStartGameAsync(player);
 
-			return String.Concat(LogCodesConsts.USER_CLICKED_START_CONST, " ", DateTime.Now.ToString("G"), ":  player ", player.Name, ", ID: ", player.Id, " clicked start game\r\n");
+			return String.Concat(LogCodesConsts.USER_CLICKED_START_CONST, " ", DateTime.Now.ToString(LogCodesConsts.POLISH_CULTURE_INFO), ":  player ", player.Name, ", ID: ", player.Id, " clicked start game", Consts.LogCodesConsts.NEW_LINE);
 		}
 
 		public async Task<string> WriteStartGame_BaseTest(Hearts_server.ResultsWriter.ILogWriter writer)
 		{
 			await writer.WriteStartedGameAsync();
 
-			return String.Concat(LogCodesConsts.GAME_STARTED_CODE_CONST, " ", DateTime.Now.ToString("G"), ": Game started\r\n");
+			return String.Concat(LogCodesConsts.GAME_STARTED_CODE_CONST, " ", DateTime.Now.ToString(LogCodesConsts.POLISH_CULTURE_INFO), ": Game started", Consts.LogCodesConsts.NEW_LINE);
 		}
 
 		public async Task<string> WritePlayersGotCards_BaseTest(Hearts_server.ResultsWriter.ILogWriter writer)
@@ -49,11 +50,11 @@ namespace HeartsServer.GameLogic.Tests.Writers.Tests.ILogWriter.Tests
 
 			for (int i = 0; i < NumbersConsts.PLAYERS_NUMBER_CONST; i++)
 			{
-				output.Append(String.Concat(LogCodesConsts.PLAYERS_GOT_CARDS_CODE_CONST, " ", DateTime.Now.ToString("G"), ":  player ", players[i].Name, ", ID: ", players[i].Id, " got cards: "));
+				output.Append(String.Concat(LogCodesConsts.PLAYERS_GOT_CARDS_CODE_CONST, " ", DateTime.Now.ToString(LogCodesConsts.POLISH_CULTURE_INFO), ":  player ", players[i].Name, ", ID: ", players[i].Id, " got cards: "));
 				foreach (var card in players[i].OwnCards)
 					output.Append(card.ToString()).Append(", ");
 
-				output.Append("\r\n");
+				output.Append(Consts.LogCodesConsts.NEW_LINE);
 			}
 
 			return output.ToString();
@@ -77,7 +78,7 @@ namespace HeartsServer.GameLogic.Tests.Writers.Tests.ILogWriter.Tests
 			foreach (var card in cards)
 				cardsStr.Append(card.ToString() + ", ");
 
-			return String.Concat(LogCodesConsts.PLAYER_GAVE_CARDS_CODE_CONST, " ", DateTime.Now.ToString("G"), ":  player ", playerFrom.Name, ", ID: ", playerFrom.Id, " gave cards ", cardsStr, " for exchange to ", playerTo.Name, ", ID: ", playerTo.Id, "\r\n");
+			return String.Concat(LogCodesConsts.PLAYER_GAVE_CARDS_CODE_CONST, " ", DateTime.Now.ToString(LogCodesConsts.POLISH_CULTURE_INFO), ":  player ", playerFrom.Name, ", ID: ", playerFrom.Id, " gave cards ", cardsStr, " for exchange to ", playerTo.Name, ", ID: ", playerTo.Id, Consts.LogCodesConsts.NEW_LINE);
 		}
 
 		public async Task<string> WritePlayerReceivedCardsExchange_BaseTest(Hearts_server.ResultsWriter.ILogWriter writer)
@@ -95,7 +96,7 @@ namespace HeartsServer.GameLogic.Tests.Writers.Tests.ILogWriter.Tests
 			foreach (var card in cards)
 				cardsStr.Append(card.ToString() + ", ");
 
-			return String.Concat(LogCodesConsts.PLAYER_RECEIVED_CARDS_CODE_CONST, " ", DateTime.Now.ToString("G"), ":  player ", playerFrom.Name, ", ID: ", playerFrom.Id, " received cards ", cardsStr, " for exchange from ", playerTo.Name, ", ID: ", playerTo.Id, "\r\n");
+			return String.Concat(LogCodesConsts.PLAYER_RECEIVED_CARDS_CODE_CONST, " ", DateTime.Now.ToString(LogCodesConsts.POLISH_CULTURE_INFO), ":  player ", playerFrom.Name, ", ID: ", playerFrom.Id, " received cards ", cardsStr, " for exchange from ", playerTo.Name, ", ID: ", playerTo.Id, Consts.LogCodesConsts.NEW_LINE);
 		}
 
 		public async Task<string> WritePlayerThrewCard_BaseTest(Hearts_server.ResultsWriter.ILogWriter writer)
@@ -105,7 +106,7 @@ namespace HeartsServer.GameLogic.Tests.Writers.Tests.ILogWriter.Tests
 
 			await writer.WritePlayerThrewCardAsync(player, card);
 
-			return String.Concat(LogCodesConsts.PLAYER_THREW_CARD_CODE_CONST, " ", DateTime.Now.ToString("G"), ":  player ", player.Name, ", ID: ", player.Id.ToString(), " threw card ", card.ToString(), "\r\n");
+			return String.Concat(LogCodesConsts.PLAYER_THREW_CARD_CODE_CONST, " ", DateTime.Now.ToString(LogCodesConsts.POLISH_CULTURE_INFO), ":  player ", player.Name, ", ID: ", player.Id.ToString(), " threw card ", card.ToString(), Consts.LogCodesConsts.NEW_LINE);
 		}
 
 		public async Task<string> WriteTrick_BaseTest(Hearts_server.ResultsWriter.ILogWriter writer)
@@ -127,7 +128,7 @@ namespace HeartsServer.GameLogic.Tests.Writers.Tests.ILogWriter.Tests
 			foreach (Card card in cards)
 				cardsStr.Append(card.ToString() + ", ");
 
-			return String.Concat(LogCodesConsts.TRICK_CODE_CONST, " ", DateTime.Now.ToString("G"), ":  player ", playerWhoWonTrick.Name, ", ID: ", playerWhoWonTrick.Id.ToString(), " won trick, began " + playerWhoStarted.Name + ", ID: " + playerWhoStarted.Id + " cards: ", cardsStr.ToString(), "\r\n");
+			return String.Concat(LogCodesConsts.TRICK_CODE_CONST, " ", DateTime.Now.ToString(LogCodesConsts.POLISH_CULTURE_INFO), ":  player ", playerWhoWonTrick.Name, ", ID: ", playerWhoWonTrick.Id.ToString(), " won trick, began " + playerWhoStarted.Name + ", ID: " + playerWhoStarted.Id + " cards: ", cardsStr.ToString(), Consts.LogCodesConsts.NEW_LINE);
 		}
 
 		public async Task<string> WritePlayersPointsInRound_BaseTest(Hearts_server.ResultsWriter.ILogWriter writer)
@@ -168,7 +169,7 @@ namespace HeartsServer.GameLogic.Tests.Writers.Tests.ILogWriter.Tests
 
 			StringBuilder output = new();
 			foreach (Player player in players)
-				output.Append(String.Concat(LogCodesConsts.PLAYERS_POINTS_IN_ROUND_CODE_CONST, " ", DateTime.Now.ToString("G"), ":  player's ", player.Name, ", ID: ", player.Id.ToString(), " points in that round (", roundNumber.ToString(), "): ", player.PointsInRound, "\r\n"));
+				output.Append(String.Concat(LogCodesConsts.PLAYERS_POINTS_IN_ROUND_CODE_CONST, " ", DateTime.Now.ToString(LogCodesConsts.POLISH_CULTURE_INFO), ":  player's ", player.Name, ", ID: ", player.Id.ToString(), " points in that round (", roundNumber.ToString(), "): ", player.PointsInRound, Consts.LogCodesConsts.NEW_LINE));
 
 			return output.ToString();
 		}
@@ -213,7 +214,7 @@ namespace HeartsServer.GameLogic.Tests.Writers.Tests.ILogWriter.Tests
 
 			StringBuilder output = new();
 			foreach (Player player in players)
-				output.Append(String.Concat(LogCodesConsts.PLAYERS_POINTS_AFTER_ROUND_CODE_CONST, " ", DateTime.Now.ToString("G"), ":  player's ", player.Name, ", ID: ", player.Id.ToString(), " points after that round (", roundNumber, "): ", player.Points, "\r\n"));
+				output.Append(String.Concat(LogCodesConsts.PLAYERS_POINTS_AFTER_ROUND_CODE_CONST, " ", DateTime.Now.ToString(LogCodesConsts.POLISH_CULTURE_INFO), ":  player's ", player.Name, ", ID: ", player.Id.ToString(), " points after that round (", roundNumber, "): ", player.Points, Consts.LogCodesConsts.NEW_LINE));
 
 			return output.ToString();
 		}
@@ -236,7 +237,7 @@ namespace HeartsServer.GameLogic.Tests.Writers.Tests.ILogWriter.Tests
 
 			StringBuilder output = new();
 			foreach (Player player in players)
-				output.Append(String.Concat(LogCodesConsts.PLAYERS_PLACES_AFTER_GAME_CODE_CONST, " ", DateTime.Now.ToString("G"), ":  player's ", player.Name, ", ID: ", player.Id.ToString(), " place in game: ", player.Place, " with ", player.BonusesNumber, " bonuses", "\r\n"));
+				output.Append(String.Concat(LogCodesConsts.PLAYERS_PLACES_AFTER_GAME_CODE_CONST, " ", DateTime.Now.ToString(LogCodesConsts.POLISH_CULTURE_INFO), ":  player's ", player.Name, ", ID: ", player.Id.ToString(), " place in game: ", player.Place, " with ", player.BonusesNumber, " bonuses", Consts.LogCodesConsts.NEW_LINE));
 
 			return output.ToString();
 		}
@@ -267,7 +268,7 @@ namespace HeartsServer.GameLogic.Tests.Writers.Tests.ILogWriter.Tests
 				foreach (Card card in player.OwnCards)
 					cardsStr.Append(card.ToString()).Append(", ");
 
-				output.Append(String.Concat(LogCodesConsts.PLAYERS_CARDS_CODE_CONST, " ", DateTime.Now.ToString("G"), ":  player's ", player.Name, ", ID: ", player.Id.ToString(), " cards: ", cardsStr.ToString(), "\r\n"));
+				output.Append(String.Concat(LogCodesConsts.PLAYERS_CARDS_CODE_CONST, " ", DateTime.Now.ToString(LogCodesConsts.POLISH_CULTURE_INFO), ":  player's ", player.Name, ", ID: ", player.Id.ToString(), " cards: ", cardsStr.ToString(), Consts.LogCodesConsts.NEW_LINE));
 			}
 
 			return output.ToString();
@@ -280,7 +281,7 @@ namespace HeartsServer.GameLogic.Tests.Writers.Tests.ILogWriter.Tests
 
 			await writer.WriteClientSendMessageAsync(player, message);
 
-			return String.Concat(LogCodesConsts.USER_SEND_MESSAGE_CODE_CONST, " ", DateTime.Now.ToString("G"), ":  player ", player.Name, ", ID: ", player.Id.ToString(), " send message: ", message, "\r\n");
+			return String.Concat(LogCodesConsts.USER_SEND_MESSAGE_CODE_CONST, " ", DateTime.Now.ToString(Consts.LogCodesConsts.POLISH_CULTURE_INFO), ":  player ", player.Name, ", ID: ", player.Id.ToString(), " send message: ", message, LogCodesConsts.NEW_LINE);
 		}
 
 		public async Task<string> WriteRoundStarted_BaseTest(Hearts_server.ResultsWriter.ILogWriter writer)
@@ -289,7 +290,7 @@ namespace HeartsServer.GameLogic.Tests.Writers.Tests.ILogWriter.Tests
 
 			await writer.WriteStartRoundAsync(roundNumber);
 
-			return String.Concat(LogCodesConsts.ROUND_STARTED_CODE_CONST, " ", DateTime.Now.ToString("G"), ": Round ", roundNumber.ToString(), " started", "\r\n");
+			return String.Concat(LogCodesConsts.ROUND_STARTED_CODE_CONST, " ", DateTime.Now.ToString(LogCodesConsts.POLISH_CULTURE_INFO), ": Round ", roundNumber.ToString(), " started", Consts.LogCodesConsts.NEW_LINE);
 		}
 
 		public async Task<string> WriteTrickStarted_BaseTest(Hearts_server.ResultsWriter.ILogWriter writer)
@@ -299,7 +300,7 @@ namespace HeartsServer.GameLogic.Tests.Writers.Tests.ILogWriter.Tests
 
 			await writer.WriteStartTrickAsync(trickNumber, roundRumber);
 
-			return String.Concat(LogCodesConsts.TRICK_STARTED_CODE_CONST, " ", DateTime.Now.ToString("G"), ": Trick ", trickNumber.ToString("G"), " in ", roundRumber.ToString(), " round started", "\r\n");
+			return String.Concat(LogCodesConsts.TRICK_STARTED_CODE_CONST, " ", DateTime.Now.ToString(LogCodesConsts.POLISH_CULTURE_INFO), ": Trick ", trickNumber.ToString("G"), " in ", roundRumber.ToString(), " round started", Consts.LogCodesConsts.NEW_LINE);
 		}
 
 

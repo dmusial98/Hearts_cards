@@ -1,4 +1,7 @@
-﻿namespace HeartsServer.GameLogic.Consts
+﻿using System.Globalization;
+using System.Runtime.InteropServices;
+
+namespace HeartsServer.GameLogic.Consts
 {
     public class NumbersConsts
     {
@@ -27,5 +30,24 @@
         public const string USER_SEND_MESSAGE_CODE_CONST = "C13";
         public const string ROUND_STARTED_CODE_CONST = "C14";
         public const string TRICK_STARTED_CODE_CONST = "C15";
+
+        public static readonly CultureInfo POLISH_CULTURE_INFO = new("pl-PL");
+        
+        private static string newLine;
+        public static string NEW_LINE
+        {
+            get
+            {
+                if (String.IsNullOrEmpty(newLine))
+                {
+                    if (RuntimeInformation.IsOSPlatform((OSPlatform.Linux)))
+                        newLine = "\n";
+                    else
+                        newLine = "\r\n";
+                }
+
+                return newLine;
+            }
+        }
     }
 }
