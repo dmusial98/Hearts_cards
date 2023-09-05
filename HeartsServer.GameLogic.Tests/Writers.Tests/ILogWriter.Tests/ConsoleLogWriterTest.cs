@@ -144,7 +144,7 @@ namespace HeartsServer.GameLogic.Tests.Writers.Tests.ILogWriter.Tests
 		[TestMethod]
 		public async Task WriteClientSendMessage_CorrectOutput()
 		{
-		string output = await WriteClientSendMessage_BaseTest(writer);
+		    string output = await WriteClientSendMessage_BaseTest(writer);
 
 			Assert.AreEqual(output, stringWriter.ToString());
 		}

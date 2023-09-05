@@ -1,14 +1,5 @@
 ﻿using Hearts_server.GameLogic;
 using HeartsServer.ResultsWriterReader;
-using Microsoft.VisualStudio.TestPlatform.CommunicationUtilities;
-using Microsoft.VisualStudio.TestTools.UnitTesting;
-using System;
-using System.Collections.Generic;
-using System.IO;
-using System.Linq;
-using System.Numerics;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace HeartsServer.GameLogic.Tests.Writers.Tests.ILogWriter.Tests
 {
@@ -25,7 +16,7 @@ namespace HeartsServer.GameLogic.Tests.Writers.Tests.ILogWriter.Tests
 
 		public async Task<string> GetTextFromFile()
 		{
-			var directory = new DirectoryInfo("LogFiles");
+			var directory = new DirectoryInfo( "LogFiles");
 			var file = directory.GetFiles().OrderByDescending(f => f.LastWriteTime).First();
 
 			using (var readTask = File.ReadAllTextAsync(file.FullName))
@@ -213,16 +204,16 @@ namespace HeartsServer.GameLogic.Tests.Writers.Tests.ILogWriter.Tests
 			Player player = new("John"), player2 = new("Michael");
 			string message = "message from user ;)", message2 = "second message from user";
 
-			var date = DateTime.Now.ToString("G");
+			var date = DateTime.Now.ToString(Consts.LogCodesConsts.POLISH_CULTURE_INFO);
 			TxtFileLogWriter writer = new();
 			await writer.WriteClientSendMessageAsync(player, message);
 			await writer.WriteClientSendMessageAsync(player2, message2);
 			await writer.WriteUserClickedStartGameAsync(player);
 			string result = await GetTextFromFile();
 
-			Assert.IsTrue(result.Contains(String.Concat("C13 ", date, ":  player ", player.Name, ", ID: ", player.Id.ToString(), " send message: ", message, "\r\n")));
-			Assert.IsTrue(result.Contains(String.Concat("C13 ", date, ":  player ", player2.Name, ", ID: ", player2.Id.ToString(), " send message: ", message2, "\r\n")));
-			Assert.IsTrue(result.Contains(String.Concat("C2 ", date, ":  player ", player.Name, ", ID: ", player.Id, " clicked start game\r\n")));
+			Assert.IsTrue(result.Contains(String.Concat("C13 ", date, ":  player ", player.Name, ", ID: ", player.Id.ToString(), " send message: ", message, Consts.LogCodesConsts.NEW_LINE)));
+			Assert.IsTrue(result.Contains(String.Concat("C13 ", date, ":  player ", player2.Name, ", ID: ", player2.Id.ToString(), " send message: ", message2, Consts.LogCodesConsts.NEW_LINE)));
+			Assert.IsTrue(result.Contains(String.Concat("C2 ", date, ":  player ", player.Name, ", ID: ", player.Id, " clicked start game", Consts.LogCodesConsts.NEW_LINE)));
 		}
 
 		

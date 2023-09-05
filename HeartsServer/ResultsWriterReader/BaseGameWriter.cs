@@ -1,7 +1,6 @@
 ﻿using Hearts_server.GameLogic;
 using Hearts_server.GameLogic.Cards;
-using Hearts_server.ResultsWriter;
-using HeartsServer.GameLogic;
+using HeartsServer.GameLogic.Consts;
 using System.Text;
 using System.Text.RegularExpressions;
 
@@ -24,6 +23,7 @@ namespace Hearts_server.ResultsWriterReader
 		protected const string MESSAGE_CONST = "_Message_";
 		protected const string ROUND_NUMBER_CONST = "_Round_Number_";
 		protected const string TRICK_NUMBER_CONST = "_Trick_Number";
+		protected const string BONUSES_NUMBER_CONST = "_Bonuses_Number_";
 		protected const string USER_CONNECTED_CONST = CODE_AND_TIME_CONST + " player " + PLAYER_NAME_AND_ID_CONST + " connected with server";
 		protected const string USER_CLICKED_START_GAME_CONST = CODE_AND_TIME_CONST + " player " + PLAYER_NAME_AND_ID_CONST + " clicked start game";
 		protected const string GAME_STARTED_CONST = CODE_AND_TIME_CONST + "Game started";
@@ -34,7 +34,7 @@ namespace Hearts_server.ResultsWriterReader
 		protected const string TRICK_CONST = CODE_AND_TIME_CONST + " player " + PLAYER_NAME_AND_ID_CONST + " won trick, began " + PLAYER_NAME_AND_ID_CONST + " cards: " + CARDS_CONST;
 		protected const string PLAYER_POINTS_IN_ROUND_CONST = CODE_AND_TIME_CONST + " player's " + PLAYER_NAME_AND_ID_CONST + " points in that round (" + ROUND_NUMBER_CONST + "): " + POINTS_CONST;
 		protected const string PLAYER_POINTS_AFTER_ROUND_CONST = CODE_AND_TIME_CONST + " player's " + PLAYER_NAME_AND_ID_CONST + " points after that round (" + ROUND_NUMBER_CONST + "): " + POINTS_CONST;
-		protected const string PLAYER_PLACE_AFTER_GAME_CONST = CODE_AND_TIME_CONST + " player's " + PLAYER_NAME_AND_ID_CONST + " place in game: " + PLACE_CONST;
+		protected const string PLAYER_PLACE_AFTER_GAME_CONST = CODE_AND_TIME_CONST + " player's " + PLAYER_NAME_AND_ID_CONST + " place in game: " + PLACE_CONST + " with " + BONUSES_NUMBER_CONST + " bonuses";
 		protected const string PLAYER_CARDS_CONST = CODE_AND_TIME_CONST + " player's " + PLAYER_NAME_AND_ID_CONST + " cards: " + CARDS_CONST;
 		protected const string CLIENT_SEND_MESSAGE = CODE_AND_TIME_CONST + " player " + PLAYER_NAME_AND_ID_CONST + " send message: " + MESSAGE_CONST;
 		protected const string ROUND_STARTED_CONST = CODE_AND_TIME_CONST + "Round " + ROUND_NUMBER_CONST + " started";
@@ -76,8 +76,8 @@ namespace Hearts_server.ResultsWriterReader
 		public string GetUserConnectedLog(Player player)
 		{
 			string output = USER_CONNECTED_CONST
-							.Replace(CODE_CONST, Consts.USER_CONNECTED_CODE_CONST)
-							.Replace(TIME_CONST, DateTime.Now.ToString("G"))
+							.Replace(CODE_CONST, LogCodesConsts.USER_CONNECTED_CODE_CONST)
+							.Replace(TIME_CONST, DateTime.Now.ToString(LogCodesConsts.POLISH_CULTURE_INFO))
 							.Replace(PLAYER_NAME_CONST, player.Name)
 							.Replace(PLAYER_ID_CONST, player.Id.ToString());
 
@@ -86,8 +86,8 @@ namespace Hearts_server.ResultsWriterReader
 		public string GetUserClickedStartGameLog(Player player)
 		{
 			string output = USER_CLICKED_START_GAME_CONST
-							.Replace(CODE_CONST, Consts.USER_CLICKED_START_CONST)
-							.Replace(TIME_CONST, DateTime.Now.ToString("G"))
+							.Replace(CODE_CONST, LogCodesConsts.USER_CLICKED_START_CONST)
+							.Replace(TIME_CONST, DateTime.Now.ToString(LogCodesConsts.POLISH_CULTURE_INFO))
 							.Replace(PLAYER_NAME_CONST, player.Name)
 							.Replace(PLAYER_ID_CONST, player.Id.ToString());
 
@@ -96,8 +96,8 @@ namespace Hearts_server.ResultsWriterReader
 		public string GetStartedGameLog()
 		{
 			string output = GAME_STARTED_CONST
-							.Replace(CODE_CONST, Consts.GAME_STARTED_CODE_CONST)
-							.Replace(TIME_CONST, DateTime.Now.ToString("G"));
+							.Replace(CODE_CONST, LogCodesConsts.GAME_STARTED_CODE_CONST)
+							.Replace(TIME_CONST, DateTime.Now.ToString(LogCodesConsts.POLISH_CULTURE_INFO));
 
 			return output;
 		}
@@ -112,11 +112,11 @@ namespace Hearts_server.ResultsWriterReader
 					cards.Append(card.ToString() + ", ");
 
 				output.Append(PLAYER_GOT_CARDS_CONST
-							 .Replace(CODE_CONST, Consts.PLAYERS_GOT_CARDS_CODE_CONST)
-							 .Replace(TIME_CONST, DateTime.Now.ToString("G"))
+							 .Replace(CODE_CONST, LogCodesConsts.PLAYERS_GOT_CARDS_CODE_CONST)
+							 .Replace(TIME_CONST, DateTime.Now.ToString(LogCodesConsts.POLISH_CULTURE_INFO))
 							 .Replace(PLAYER_NAME_CONST, player.Name)
 							 .Replace(PLAYER_ID_CONST, player.Id.ToString())
-							 .Replace(CARDS_CONST, cards.ToString())).Append("\r\n");
+							 .Replace(CARDS_CONST, cards.ToString())).Append(LogCodesConsts.NEW_LINE);
 			}
 
 			return output.ToString();
@@ -128,8 +128,8 @@ namespace Hearts_server.ResultsWriterReader
 				cardsStr.Append(card.ToString() + ", ");
 
 			string output = PLAYER_GAVE_CARDS_EXCHANGE_CONST
-							.Replace(CODE_CONST, Consts.PLAYER_GAVE_CARDS_CODE_CONST)
-							.Replace(TIME_CONST, DateTime.Now.ToString("G"))
+							.Replace(CODE_CONST, LogCodesConsts.PLAYER_GAVE_CARDS_CODE_CONST)
+							.Replace(TIME_CONST, DateTime.Now.ToString(LogCodesConsts.POLISH_CULTURE_INFO))
 							.Replace(CARDS_CONST, cardsStr.ToString());
 
 			output = regexPlayerName.Replace(output, playerFrom.Name, 1);
@@ -147,8 +147,8 @@ namespace Hearts_server.ResultsWriterReader
 				cardsStr.Append(card.ToString() + ", ");
 
 			string output = PLAYER_RECEIVED_CARDS_EXCHANGE_CONST
-							.Replace(CODE_CONST, Consts.PLAYER_RECEIVED_CARDS_CODE_CONST)
-							.Replace(TIME_CONST, DateTime.Now.ToString("G"))
+							.Replace(CODE_CONST, LogCodesConsts.PLAYER_RECEIVED_CARDS_CODE_CONST)
+							.Replace(TIME_CONST, DateTime.Now.ToString(LogCodesConsts.POLISH_CULTURE_INFO))
 							.Replace(CARDS_CONST, cardsStr.ToString());
 
 			output = regexPlayerName.Replace(output, playerFrom.Name, 1);
@@ -161,8 +161,8 @@ namespace Hearts_server.ResultsWriterReader
 		public string GetPlayerThrewCardLog(Player player, Card card)
 		{
 			string output = PLAYER_THREW_CARD_CONST
-							.Replace(CODE_CONST, Consts.PLAYER_THREW_CARD_CODE_CONST)
-							.Replace(TIME_CONST, DateTime.Now.ToString("G"))
+							.Replace(CODE_CONST, LogCodesConsts.PLAYER_THREW_CARD_CODE_CONST)
+							.Replace(TIME_CONST, DateTime.Now.ToString(LogCodesConsts.POLISH_CULTURE_INFO))
 							.Replace(PLAYER_NAME_CONST, player.Name)
 							.Replace(PLAYER_ID_CONST, player.Id.ToString())
 							.Replace(CARD_CONST, card.ToString());
@@ -177,8 +177,8 @@ namespace Hearts_server.ResultsWriterReader
 
 
 			string output = TRICK_CONST
-							.Replace(CODE_CONST, Consts.TRICK_CODE_CONST)
-							.Replace(TIME_CONST, DateTime.Now.ToString("G"))
+							.Replace(CODE_CONST, LogCodesConsts.TRICK_CODE_CONST)
+							.Replace(TIME_CONST, DateTime.Now.ToString(LogCodesConsts.POLISH_CULTURE_INFO))
 							.Replace(CARDS_CONST, cardsStr.ToString());
 
             output = regexPlayerName.Replace(output, trick.Owner.Name, 1);
@@ -195,13 +195,13 @@ namespace Hearts_server.ResultsWriterReader
 			foreach (Player player in players)
 			{
 				output.Append(PLAYER_POINTS_IN_ROUND_CONST
-							 .Replace(CODE_CONST, Consts.PLAYERS_POINTS_IN_ROUND_CODE_CONST)
-							 .Replace(TIME_CONST, DateTime.Now.ToString("G"))
+							 .Replace(CODE_CONST, LogCodesConsts.PLAYERS_POINTS_IN_ROUND_CODE_CONST)
+							 .Replace(TIME_CONST, DateTime.Now.ToString(LogCodesConsts.POLISH_CULTURE_INFO))
 							 .Replace(PLAYER_NAME_CONST, player.Name)
 							 .Replace(PLAYER_ID_CONST, player.Id.ToString())
 							 .Replace(ROUND_NUMBER_CONST, roundNumber.ToString())
 							 .Replace(POINTS_CONST, player.PointsInRound.ToString()))
-					 .Append("\r\n");
+					 .Append(LogCodesConsts.NEW_LINE);
 			}
 
 			return output.ToString();
@@ -213,13 +213,13 @@ namespace Hearts_server.ResultsWriterReader
 			foreach (Player player in players)
 			{
 				output.Append(PLAYER_POINTS_AFTER_ROUND_CONST
-								.Replace(CODE_CONST, Consts.PLAYERS_POINTS_AFTER_ROUND_CODE_CONST)
-								.Replace(TIME_CONST, DateTime.Now.ToString("G"))
+								.Replace(CODE_CONST, LogCodesConsts.PLAYERS_POINTS_AFTER_ROUND_CODE_CONST)
+								.Replace(TIME_CONST, DateTime.Now.ToString(LogCodesConsts.POLISH_CULTURE_INFO))
 								.Replace(PLAYER_NAME_CONST, player.Name)
 								.Replace(PLAYER_ID_CONST, player.Id.ToString())
 								.Replace(ROUND_NUMBER_CONST, roundNumber.ToString())
 								.Replace(POINTS_CONST, player.Points.ToString()))
-						.Append("\r\n");
+						.Append(LogCodesConsts.NEW_LINE);
 			}
 
 			return output.ToString();
@@ -230,12 +230,13 @@ namespace Hearts_server.ResultsWriterReader
 			foreach (Player player in players)
 			{
 				output.Append(PLAYER_PLACE_AFTER_GAME_CONST
-								.Replace(CODE_CONST, Consts.PLAYERS_PLACES_AFTER_GAME_CODE_CONST)
-								.Replace(TIME_CONST, DateTime.Now.ToString("G"))
+								.Replace(CODE_CONST, LogCodesConsts.PLAYERS_PLACES_AFTER_GAME_CODE_CONST)
+								.Replace(TIME_CONST, DateTime.Now.ToString(LogCodesConsts.POLISH_CULTURE_INFO))
 								.Replace(PLAYER_NAME_CONST, player.Name)
 								.Replace(PLAYER_ID_CONST, player.Id.ToString())
 								.Replace(PLACE_CONST, player.Place.ToString()))
-						.Append("\r\n");
+								.Replace(BONUSES_NUMBER_CONST, player.BonusesNumber.ToString())
+						.Append(LogCodesConsts.NEW_LINE);
 			}
 
 			return output.ToString();
@@ -250,12 +251,12 @@ namespace Hearts_server.ResultsWriterReader
 					cardsStr.Append(card.ToString() + ", ");
 
 				output.Append(PLAYER_CARDS_CONST
-								.Replace(CODE_CONST, Consts.PLAYERS_CARDS_CODE_CONST)
-								.Replace(TIME_CONST, DateTime.Now.ToString("G"))
+								.Replace(CODE_CONST, LogCodesConsts.PLAYERS_CARDS_CODE_CONST)
+								.Replace(TIME_CONST, DateTime.Now.ToString(LogCodesConsts.POLISH_CULTURE_INFO))
 								.Replace(PLAYER_NAME_CONST, player.Name)
 								.Replace(PLAYER_ID_CONST, player.Id.ToString())
 								.Replace(CARDS_CONST, cardsStr.ToString()))
-						.Append("\r\n");
+						.Append(LogCodesConsts.NEW_LINE);
 			}
 
 			return output.ToString();
@@ -263,8 +264,8 @@ namespace Hearts_server.ResultsWriterReader
 		public string GetClientSendMessageLog(Player player, string message)
 		{
 			string ouptut = CLIENT_SEND_MESSAGE
-							.Replace(CODE_CONST, Consts.USER_SEND_MESSAGE_CODE_CONST)
-							.Replace(TIME_CONST, DateTime.Now.ToString("G"))
+							.Replace(CODE_CONST, LogCodesConsts.USER_SEND_MESSAGE_CODE_CONST)
+							.Replace(TIME_CONST, DateTime.Now.ToString(LogCodesConsts.POLISH_CULTURE_INFO))
 							.Replace(PLAYER_NAME_CONST, player.Name)
 							.Replace(PLAYER_ID_CONST, player.Id.ToString())
 							.Replace(MESSAGE_CONST, message);
@@ -275,8 +276,8 @@ namespace Hearts_server.ResultsWriterReader
 		public string GetRoundStartedLog(int roundNumber)
 		{
 			string output = ROUND_STARTED_CONST
-				.Replace(CODE_CONST, Consts.ROUND_STARTED_CODE_CONST)
-				.Replace(TIME_CONST, DateTime.Now.ToString("G"))
+				.Replace(CODE_CONST, LogCodesConsts.ROUND_STARTED_CODE_CONST)
+				.Replace(TIME_CONST, DateTime.Now.ToString(LogCodesConsts.POLISH_CULTURE_INFO))
 				.Replace(ROUND_NUMBER_CONST, roundNumber.ToString());
 			
 			return output;
@@ -285,10 +286,10 @@ namespace Hearts_server.ResultsWriterReader
 		public string GetTrickStartedLog(int trickNumber, int RoundNumber)
 		{
 			string output = TRICK_STARTED_CONST
-				.Replace(CODE_CONST, Consts.TRICK_STARTED_CODE_CONST)
-				.Replace(TIME_CONST, DateTime.Now.ToString("G"))
+				.Replace(CODE_CONST, LogCodesConsts.TRICK_STARTED_CODE_CONST)
+				.Replace(TIME_CONST, DateTime.Now.ToString(LogCodesConsts.POLISH_CULTURE_INFO))
 				.Replace(TRICK_NUMBER_CONST, trickNumber.ToString())
-				.Replace(ROUND_NUMBER_CONST, RoundNumber.ToString("G"));
+				.Replace(ROUND_NUMBER_CONST, RoundNumber.ToString());
 
 			return output;
 		}

@@ -1,5 +1,6 @@
 ﻿using Hearts_server.GameLogic.Cards;
 using Hearts_server.GameLogic.Shuffle;
+using HeartsServer.GameLogic.Consts;
 using HeartsServer.GameLogic.Shuffle;
 
 namespace HeartsServer.GameLogic.Tests.ShuffleEngine.Tests
@@ -17,10 +18,10 @@ namespace HeartsServer.GameLogic.Tests.ShuffleEngine.Tests
 			Cards = result;
 
 			Assert.IsNotNull(result);
-			Assert.AreEqual(Consts.PLAYERS_NUMBER_CONST, result.Count);
+			Assert.AreEqual(NumbersConsts.PLAYERS_NUMBER_CONST, result.Count);
 
-			for (int i = 0; i < Consts.PLAYERS_NUMBER_CONST; i++)
-				Assert.AreEqual(Consts.CARDS_FOR_PLAYER_CONST, result[i].Count);
+			for (int i = 0; i < NumbersConsts.PLAYERS_NUMBER_CONST; i++)
+				Assert.AreEqual(NumbersConsts.CARDS_FOR_PLAYER_CONST, result[i].Count);
 		}
 
 		public void Shuffle_CardsAreDifferentInOutput(IShuffle shuffleEng)
@@ -28,10 +29,10 @@ namespace HeartsServer.GameLogic.Tests.ShuffleEngine.Tests
 			IShuffle shuffleEngine = shuffleEng;
 			var result = shuffleEngine.Shuffle(GetCards());
 
-			Card[] array = new Card[Consts.CARDS_NUMBER_CONST];
+			Card[] array = new Card[NumbersConsts.CARDS_NUMBER_CONST];
 
-			for (int i = 0; i < Consts.PLAYERS_NUMBER_CONST; i++)
-				result[i].CopyTo(array, i * Consts.CARDS_FOR_PLAYER_CONST);
+			for (int i = 0; i < NumbersConsts.PLAYERS_NUMBER_CONST; i++)
+				result[i].CopyTo(array, i * NumbersConsts.CARDS_FOR_PLAYER_CONST);
 
 			var groupped = array.GroupBy(x => x).Where(x => x.Count() > 1);
 
@@ -109,7 +110,7 @@ namespace HeartsServer.GameLogic.Tests.ShuffleEngine.Tests
 
 		public Card[] GetCards()
 		{
-			Card[] cards = new Card[Consts.CARDS_NUMBER_CONST];
+			Card[] cards = new Card[NumbersConsts.CARDS_NUMBER_CONST];
 
 			for (int i = 0; i < Enum.GetValues(typeof(CardColour)).Length; i++)
 				for (int j = 2; j < Enum.GetValues(typeof(CardValue)).Length + 2; j++)

@@ -1,4 +1,5 @@
 ﻿using Hearts_server.GameLogic.Cards;
+using HeartsServer.GameLogic.Consts;
 
 namespace HeartsServer.GameLogic.Shuffle
 {
@@ -16,8 +17,8 @@ namespace HeartsServer.GameLogic.Shuffle
 			Random random = new Random();
 			var shuffledArray = cards.OrderBy(x => random.Next()).ToArray();
 
-			for (int i = 0; i < Consts.PLAYERS_NUMBER_CONST; i++)
-				cardsForPlayers.Add(shuffledArray[(Consts.CARDS_FOR_PLAYER_CONST * i)..((i + 1) * Consts.CARDS_FOR_PLAYER_CONST)].ToList());
+			for (int i = 0; i < NumbersConsts.PLAYERS_NUMBER_CONST; i++)
+				cardsForPlayers.Add(shuffledArray[(NumbersConsts.CARDS_FOR_PLAYER_CONST * i)..((i + 1) * NumbersConsts.CARDS_FOR_PLAYER_CONST)].ToList());
 
 			return cardsForPlayers;
 		}
