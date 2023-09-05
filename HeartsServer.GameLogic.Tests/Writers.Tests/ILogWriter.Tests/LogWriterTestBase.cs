@@ -65,12 +65,12 @@ namespace HeartsServer.GameLogic.Tests.Writers.Tests.ILogWriter.Tests
 			Player playerFrom = new Player("John");
 			Player playerTo = new Player("Adam");
 			Card[] cards =
-							new Card[]
-							{
-																				new Card(CardValue.Five, CardColour.Spade),
-																				new Card(CardValue.Ten, CardColour.Diamond),
-																				new Card(CardValue.Queen, CardColour.Club)
-							};
+				new Card[]
+				{
+					new Card(CardValue.Five, CardColour.Spade),
+					new Card(CardValue.Ten, CardColour.Diamond),
+					new Card(CardValue.Queen, CardColour.Club)
+				};
 
 			await writer.WritePlayerGaveCardsExchangeAsync(playerFrom, playerTo, cards);
 
@@ -86,9 +86,10 @@ namespace HeartsServer.GameLogic.Tests.Writers.Tests.ILogWriter.Tests
 			Player playerFrom = new Player("John");
 			Player playerTo = new Player("Adam");
 			Card[] cards = new Card[] {
-																																new Card(CardValue.Five, CardColour.Spade),
-																																new Card(CardValue.Ten, CardColour.Diamond),
-																																new Card(CardValue.Queen, CardColour.Club) };
+				new Card(CardValue.Five, CardColour.Spade),
+				new Card(CardValue.Ten, CardColour.Diamond),
+				new Card(CardValue.Queen, CardColour.Club) 
+			};
 
 			await writer.WritePlayerReceivedCardsExchangeAsync(playerFrom, playerTo, cards);
 
@@ -114,10 +115,10 @@ namespace HeartsServer.GameLogic.Tests.Writers.Tests.ILogWriter.Tests
 			Player playerWhoWonTrick = new("Michael"), playerWhoStarted = new("Adam");
 			Card[] cards = new Card[]
 			{
-								new Card(CardValue.Two, CardColour.Club),
-								new Card(CardValue.Eight, CardColour.Club),
-								new Card(CardValue.Three, CardColour.Heart),
-								new Card(CardValue.Jack, CardColour.Club)
+				new Card(CardValue.Two, CardColour.Club),
+				new Card(CardValue.Eight, CardColour.Club),
+				new Card(CardValue.Three, CardColour.Heart),
+				new Card(CardValue.Jack, CardColour.Club)
 			};
 
 			Trick trick = new Trick(cards, playerWhoWonTrick, playerWhoStarted);
@@ -136,31 +137,31 @@ namespace HeartsServer.GameLogic.Tests.Writers.Tests.ILogWriter.Tests
 			int roundNumber = 8;
 			Player[] players = new Player[]
 			{
-								new Player("John"),
-								new Player("Adam"),
+				new Player("John"),
+				new Player("Adam"),
 			};
 
 			Trick trick1 = new Trick(
-							new Card[]
-							{
-											 new Card(CardValue.Queen, CardColour.Spade),
-											 new Card(CardValue.Three, CardColour.Club),
-											 new Card(CardValue.Nine, CardColour.Heart),
-											 new Card(CardValue.King, CardColour.Diamond)
-							},
-							players[1],
-							players[1]);
+				new Card[]
+				{
+					new Card(CardValue.Queen, CardColour.Spade),
+					new Card(CardValue.Three, CardColour.Club),
+					new Card(CardValue.Nine, CardColour.Heart),
+					new Card(CardValue.King, CardColour.Diamond)
+				},
+				players[1],
+				players[1]);
 
 			Trick trick2 = new Trick(
-							new Card[]
-							{
-												new Card(CardValue.Nine, CardColour.Club),
-												new Card(CardValue.Three, CardColour.Heart),
-												new Card(CardValue.Nine, CardColour.Heart),
-												new Card(CardValue.King, CardColour.Heart)
-							},
-							players[0],
-							players[0]);
+				new Card[]
+				{
+					new Card(CardValue.Nine, CardColour.Club),
+					new Card(CardValue.Three, CardColour.Heart),
+					new Card(CardValue.Nine, CardColour.Heart),
+					new Card(CardValue.King, CardColour.Heart)
+				},
+				players[0],
+				players[0]);
 
 			players[1].AddTrick(trick1);
 			players[0].AddTrick(trick2);
@@ -179,31 +180,31 @@ namespace HeartsServer.GameLogic.Tests.Writers.Tests.ILogWriter.Tests
 
 			Player[] players = new Player[]
 			{
-								new Player("John"),
-								new Player("Adam"),
+				new Player("John"),
+				new Player("Adam"),
 			};
 
 			Trick trick1 = new Trick(
-					new Card[]
-					{
-										new Card(CardValue.Queen, CardColour.Spade),
-										new Card(CardValue.Three, CardColour.Club),
-										new Card(CardValue.Nine, CardColour.Heart),
-										new Card(CardValue.King, CardColour.Diamond)
-					},
-					players[1],
-					players[1]);
+				new Card[]
+				{
+					new Card(CardValue.Queen, CardColour.Spade),
+					new Card(CardValue.Three, CardColour.Club),
+					new Card(CardValue.Nine, CardColour.Heart),
+					new Card(CardValue.King, CardColour.Diamond)
+				},
+				players[1],
+				players[1]);
 
 			Trick trick2 = new Trick(
-											new Card[]
-											{
-																																								new Card(CardValue.Nine, CardColour.Club),
-																																								new Card(CardValue.Three, CardColour.Heart),
-																																								new Card(CardValue.Nine, CardColour.Heart),
-																																								new Card(CardValue.King, CardColour.Heart)
-											},
-											players[0],
-											players[0]);
+				new Card[]
+				{
+					new Card(CardValue.Nine, CardColour.Club),
+					new Card(CardValue.Three, CardColour.Heart),
+					new Card(CardValue.Nine, CardColour.Heart),
+					new Card(CardValue.King, CardColour.Heart)
+				},
+				players[0],
+				players[0]);
 
 			players[1].AddTrick(trick1);
 			players[0].AddTrick(trick2);
