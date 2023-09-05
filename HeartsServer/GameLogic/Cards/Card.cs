@@ -11,7 +11,7 @@ namespace Hearts_server.GameLogic.Cards
             Value = (CardValue)value;
             Colour = (CardColour)colour;
         }
-
+        
         public Card(CardValue value, CardColour colour)
         {
             Value = value;

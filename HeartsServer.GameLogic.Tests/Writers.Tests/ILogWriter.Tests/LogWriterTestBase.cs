@@ -297,7 +297,7 @@ namespace HeartsServer.GameLogic.Tests.Writers.Tests.ILogWriter.Tests
 
             await writer.WriteStartTrickAsync(trickNumber, roundRumber);
 
-            return String.Concat(Consts.TRICK_STARTED_CODE_CONST, " ", DateTime.Now.ToString("G"), "  Trick ", trickNumber.ToString("G"), " in ", roundRumber.ToString(), " round started");
+            return String.Concat(Consts.TRICK_STARTED_CODE_CONST, " ", DateTime.Now.ToString("G"), ": Trick ", trickNumber.ToString("G"), " in ", roundRumber.ToString(), " round started\r\n");
         }
 
 

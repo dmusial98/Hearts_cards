@@ -3,7 +3,7 @@
 namespace HeartsServer.GameLogic.Tests.ShuffleEngine.Tests
 {
 	[TestClass]
-	public class StandardRandomShuffleEngineTest : IShuffleTestBase
+	public class StandardRandomShuffleEngineTest : ShuffleTestBase
 	{
 		public TestContext? testContext { get; set; }
 

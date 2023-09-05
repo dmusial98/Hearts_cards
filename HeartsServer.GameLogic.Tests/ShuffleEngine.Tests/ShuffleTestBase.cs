@@ -5,7 +5,7 @@ using HeartsServer.GameLogic.Shuffle;
 namespace HeartsServer.GameLogic.Tests.ShuffleEngine.Tests
 {
 	[TestClass]
-	public abstract class IShuffleTestBase
+	public abstract class ShuffleTestBase
 	{
 		protected List<List<Card>> Cards { get; set; }
 

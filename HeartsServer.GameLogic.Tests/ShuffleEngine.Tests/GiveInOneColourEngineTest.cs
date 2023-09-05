@@ -6,7 +6,7 @@ using HeartsServer.GameLogic.Shuffle;
 namespace HeartsServer.GameLogic.Tests.ShuffleEngine.Tests
 {
 	[TestClass]
-	public class GiveInOneColourEngineTest : IShuffleTestBase
+	public class GiveInOneColourEngineTest : ShuffleTestBase
 	{
 		[TestMethod]
 		public void GiveInOneColourEngine_Shuffle_CorrectList()

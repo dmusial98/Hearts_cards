@@ -156,6 +156,7 @@ namespace HeartsServer.ResultsWriterReader
                     var cardsInTrick = LoadCardsFromCardsLog(trickSummaryLog[0].Split("cards: ")[1].Split(", "));
                     int queuePlayerIndex = whoStarted;
 
+                    //TODO albo wczytywac karty za pomoca player threw card
                     for (int j = 0; j < Consts.PLAYERS_NUMBER_CONST; j++)
                     {
                         trickHistory.Queue.Add(new QueueHistory

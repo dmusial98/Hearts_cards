@@ -11,7 +11,7 @@ namespace HeartsServer.ResultsWriterReader
 		private string _pathToFile;
 		public TxtFileLogWriter()
 		{
-			_pathToFile = $"LogFiles/{DateTime.Now.ToString("G")}_logs.txt".Replace(" ", "_").Replace(":", "_");
+			_pathToFile = $"LogFiles/{DateTime.Now.ToString("G").Replace("\\", "_").Replace("/", "_")}_logs.txt".Replace(" ", "_").Replace(":", "_");
 		}
 
 		#region ILogWriter methods
