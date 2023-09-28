@@ -2,70 +2,99 @@
 
 namespace Hearts_server.GameLogic.Cards
 {
-    public class Card : IComparable<Card>
-    {
-        public CardValue Value { get; private set; }
-        public CardColour Colour { get; private set; }
-        public Card(int value, int colour)
-        {
-            Value = (CardValue)value;
-            Colour = (CardColour)colour;
-        }
-        
-        public Card(CardValue value, CardColour colour)
-        {
-            Value = value;
-            Colour = colour;
-        }
+	public class Card : IComparable<Card>
+	{
+		public CardValue Value { get; private set; }
+		public CardColour Colour { get; private set; }
+		public Card(int value, int colour)
+		{
+			Value = (CardValue)value;
+			Colour = (CardColour)colour;
+		}
 
-        public int CompareTo(Card other)
-        {
-            if (other == null)
-                return -1;
+		public Card(CardValue value, CardColour colour)
+		{
+			Value = value;
+			Colour = colour;
+		}
 
-            if (this.Colour > other.Colour)
-                return 1;
-            else if (this.Colour < other.Colour)
-                return -1;
-            else
-            {
-                if (this.Value > other.Value)
-                    return 1;
-                else if (this.Value < other.Value)
-                    return -1;
-                else
-                    return 0;
-            }
-        }
+		public int CompareTo(Card other)
+		{
+			if (other == null)
+				return -1;
 
-        public override string ToString()
-        {
-            return $"{Value} {Colour}";
-        }
-    }
+			if (this.Colour > other.Colour)
+				return 1;
+			else if (this.Colour < other.Colour)
+				return -1;
+			else
+			{
+				if (this.Value > other.Value)
+					return 1;
+				else if (this.Value < other.Value)
+					return -1;
+				else
+					return 0;
+			}
+		}
 
-    public class CardComparer : IEqualityComparer<Card>
-    {
-        public bool Equals(Card x, Card y)
-        {
-            if (Object.ReferenceEquals(x, y))
-                return true;
+		public override string ToString()
+		{
+			return $"{Value} {Colour}";
+		}
+	}
 
-            if (Object.ReferenceEquals(x, null) || Object.ReferenceEquals(y, null))
-                return false;
+	public class CardComparer : IEqualityComparer<Card>, IComparer<Card>
+	{
+		public bool Equals(Card x, Card y)
+		{
+			if (Object.ReferenceEquals(x, y))
+				return true;
 
-            return x.Value == y.Value && x.Colour == y.Colour;
-        }
+			if (Object.ReferenceEquals(x, null) || Object.ReferenceEquals(y, null))
+				return false;
 
-        public int GetHashCode(Card card)
-        {
-            if (Object.ReferenceEquals(card, null))
-                return 0;
+			return x.Value == y.Value && x.Colour == y.Colour;
+		}
 
-            int hashValue = card.Value.GetHashCode();
-            int hashColour = card.Colour.GetHashCode();
+		public int GetHashCode(Card card)
+		{
+			if (Object.ReferenceEquals(card, null))
+				return 0;
 
-            return hashValue ^ hashColour;
-        }
-    }
+			int hashValue = card.Value.GetHashCode();
+			int hashColour = card.Colour.GetHashCode();
+
+			return hashValue ^ hashColour;
+		}
+
+		public int Compare(Card x, Card y)
+		{
+			if (x == null)
+			{
+				if (y == null)
+					return 0;
+				else
+					return -1;
+			}
+			else
+			{
+				if (y == null)
+					return 1;
+				if (x.Colour > y.Colour)
+					return 1;
+				else if (x.Colour < y.Colour)
+					return -1;
+				else
+				{
+					if (x.Value > y.Value)
+						return 1;
+					else if (x.Value < y.Value)
+						return -1;
+					else
+						return 0;
+				}
+			}
+		}
+	}
 }
