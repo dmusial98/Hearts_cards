@@ -1,4 +1,5 @@
-﻿using System.Data.Common;
+﻿using Newtonsoft.Json;
+using System.Data.Common;
 
 namespace Hearts_server.GameLogic.Cards
 {
@@ -12,6 +13,7 @@ namespace Hearts_server.GameLogic.Cards
 			Colour = (CardColour)colour;
 		}
 
+		[JsonConstructor]
 		public Card(CardValue value, CardColour colour)
 		{
 			Value = value;
