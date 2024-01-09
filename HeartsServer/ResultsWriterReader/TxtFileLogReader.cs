@@ -8,28 +8,16 @@ using Microsoft.AspNetCore.Mvc.ViewFeatures;
 
 namespace HeartsServer.ResultsWriterReader
 {
-	public class TxtFileLogReader : IGameReader
+	public class TxtFileLogReader : GameFileReader, IGameReader
 	{
-		public string FileName { get; set; } = string.Empty;
+		public TxtFileLogReader(string fileName) : base(fileName) { }
+		public TxtFileLogReader() : base() { }
 
-		public TxtFileLogReader(string fileName) => FileName = fileName;
-		public TxtFileLogReader() { }
-
-		public async Task<GameHistory> GetGameHistoryFromFileAsync()
+		public override async Task<GameHistory> GetGameHistoryAsync()
 		{
-			DirectoryInfo directory = new DirectoryInfo("LogFiles");
-			FileInfo file = null;
-			if (FileName == string.Empty)
-				file = directory.GetFiles().OrderByDescending(f => f.LastWriteTime).First();
-			else
-				file = directory.GetFiles().FirstOrDefault(f => f.Name == FileName);
-
-			if (file == null)
-				throw new FileNotFoundException();
-
 			GameHistory history = new GameHistory();
-			string[] linesFromFile = await LoadFromFile(file);
-			var listLines = linesFromFile.ToList();
+			var file = GetFile();
+			var listLines = (await LoadFromFileAsync(file)).ToList();
 
 			//usun niepotrzebne logi +
 			//zaladuj start gry C3 + 
@@ -262,11 +250,11 @@ namespace HeartsServer.ResultsWriterReader
 			return history;
 		}
 
-		private async Task<string[]> LoadFromFile(FileInfo file)
+		private async Task<string[]> LoadFromFileAsync(FileInfo file)
 		{
-			using (var readTask = File.ReadAllLinesAsync(file.FullName))
-				return await readTask;
-		}
+            using (var readTask = File.ReadAllLinesAsync(file.FullName))
+                return await readTask;
+        }
 
 		private static bool IsUnnecessaryLog(string input)
 		{

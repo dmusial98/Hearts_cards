@@ -23,7 +23,7 @@ namespace HeartsServer.GameLogic.Tests.Readers.Tests
 		public async Task GetGameHistoryFromTxtLogFile()
 		{
 			var lines = await GetTextFromFile();
-			var history = new TxtFileLogReader("input.txt").GetGameHistoryFromFileAsync();
+			var history = new TxtFileLogReader("input.txt").GetGameHistoryAsync();
 
 
 		}

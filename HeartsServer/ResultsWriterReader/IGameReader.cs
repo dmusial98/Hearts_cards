@@ -5,6 +5,6 @@ namespace Hearts_server.ResultsWriterReader
 {
     public interface IGameReader
     {
-        public Task<GameHistory> GetGameHistoryFromFileAsync();
+        public Task<GameHistory> GetGameHistoryAsync();
     }
 }

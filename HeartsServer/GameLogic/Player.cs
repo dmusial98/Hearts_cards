@@ -96,7 +96,7 @@ namespace Hearts_server.GameLogic
 			tricks.Clear();
 		}
 
-		public bool DoesPlayerHaveCardWithColour(CardColour colour) => OwnCards.Any(c => c.Colour == colour);
+		public bool DoesHaveCardWithColour(CardColour colour) => OwnCards.Any(c => c.Colour == colour);
 
 		private int CountPointsInTricks()
 		{

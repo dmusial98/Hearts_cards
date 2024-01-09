@@ -20,6 +20,10 @@ namespace Hearts_server.GameLogic.Cards
 			Colour = colour;
 		}
 
+		public bool IsScoring() => (Colour == CardColour.Heart || (Value == CardValue.Queen && Colour == CardColour.Spade ));
+
+		//TODO: te logike z porownywaniem wszedzie wrzucic do jakiejs osobnej klasy, zeby nie kopiowac kodu
+
 		public int CompareTo(Card other)
 		{
 			if (other == null)
