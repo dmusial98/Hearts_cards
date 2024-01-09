@@ -79,7 +79,7 @@ namespace Hearts_server.GameLogic
 			var ownCard = GetOwnCard(card);
 			
 			if (ownCard == null)
-				throw new NotExistedCardThrew();
+				throw new NotExistedCardThrewException();
 
 			cards.Remove(ownCard);
 

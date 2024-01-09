@@ -70,9 +70,6 @@ namespace HeartsServer.GameLogic.Tests
 
         }
 
-
-
-
         public void Add4Players()
         {
             Game game = Game.Instance;
