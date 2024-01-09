@@ -37,7 +37,7 @@ namespace HeartsServer.GameLogic.Tests.GenerateLogs
 
         public List<List<Card>> LoadCardsFromFile(int roundId)
         {
-            var text = File.ReadAllText($@"cards_shuffle\shuffle{roundId}.json");
+            var text = File.ReadAllText($@"cards_shuffle/shuffle{roundId}.json");
             var result = JsonConvert.DeserializeObject<List<List<Card>>>(text);
 
             return result;
