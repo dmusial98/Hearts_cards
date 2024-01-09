@@ -17,7 +17,7 @@ namespace HeartsServer.GameLogic.Tests.GenerateLogs
         public void GenerateLogsForOneGame()
         {
             //zaladuj karty z pliku
-            //przydziel graczom 
+            //przydziel graczom
 
             for (int fileNumber = 0; fileNumber < 21; fileNumber++)
             {
