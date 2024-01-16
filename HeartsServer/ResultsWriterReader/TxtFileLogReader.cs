@@ -60,7 +60,7 @@ namespace HeartsServer.ResultsWriterReader
 
 				foreach (var lineLog in playerCardsBeforeGameLogs)
 				{
-					roundHistory.PlayerCardsBefore.Add(new PlayerCardsHistory
+					roundHistory.PlayerCardsBeforeExchange.Add(new PlayerCardsHistory
 					{
 						PlayerId = Int32.Parse(lineLog.Split("ID: ")[1].Split(' ')[0]),
 						PlayerName = lineLog.Split("player ")[1].Split(',')[0],
@@ -98,14 +98,23 @@ namespace HeartsServer.ResultsWriterReader
 
 				foreach (var line in playersCardsLog)
 				{
-					exchangeHistoryArray
-							.Where(h => h.IdPlayer == Int32.Parse(line.Split(" ")[7])).ToArray()
-							.First().CardsAfter = LoadCardsFromCardsLog(line.Split(" cards: ")[1].Split(", "));
+					//TODO: ogarnac wpisanie kart po wymianie do roundHistory zamiast kart po wymianie w exchangeHistory
+					//roundHistory.CardsAfterExchange = exchangeHistoryArray
+					//		.Where(h => h.IdPlayer == Int32.Parse(line.Split(" ")[7])).ToArray()
+					//		.First().CardsAfter = LoadCardsFromCardsLog(line.Split(" cards: ")[1].Split(", "));
+
+
+					//exchangeHistoryArray
+					//		.Where(h => h.IdPlayer == Int32.Parse(line.Split(" ")[7])).ToArray()
+					//		.First().CardsAfter = LoadCardsFromCardsLog(line.Split(" cards: ")[1].Split(", "));
 
 					listLines.Remove(line);
 				}
 
 				roundHistory.Exchange = exchangeHistoryArray.ToList();
+
+				//Cards after exchange
+
 
 				//Tricks
 				List<string> trickStartedLogs = listLines
@@ -161,10 +170,10 @@ namespace HeartsServer.ResultsWriterReader
 
 					for (int j = 0; j < NumbersConsts.PLAYERS_NUMBER_CONST; j++)
 					{
-						trickHistory.PointsAfterTrick.Add(new PlayerPointsHistory
+						trickHistory.PointsAfterTrick.Add(new PlayerHistory
 						{
-							PlayerName = pointsInRound.First().Split("player's ")[1].Split(", ")[0],
-							PlayerId = Int32.Parse(pointsInRound.First().Split("ID: ")[1].Split(' ')[0]),
+							Name = pointsInRound.First().Split("player's ")[1].Split(", ")[0],
+							Id = Int32.Parse(pointsInRound.First().Split("ID: ")[1].Split(' ')[0]),
 							Points = Int32.Parse(pointsInRound.First().Split("): ")[1])
 						});
 
@@ -180,7 +189,7 @@ namespace HeartsServer.ResultsWriterReader
 
 					foreach (var line in cardsAfterTrick)
 					{
-						trickHistory.PlayerCardsAfterTrick.Add(new PlayerCardsHistory
+						trickHistory.PlayerCardsBeforeTrick.Add(new PlayerCardsHistory
 						{
 							PlayerId = Int32.Parse(line.Split("ID: ")[1].Split(' ')[0]),
 							PlayerName = line.Split("player's ")[1].Split(',')[0],
@@ -207,10 +216,10 @@ namespace HeartsServer.ResultsWriterReader
 
 				foreach (var line in pointsAfterRoundLog)
 				{
-					roundHistory.PointsAfterRound.Add(new PlayerPointsHistory
+					roundHistory.PlayerAfterRound.Add(new PlayerHistory
 					{
-						PlayerId = Int32.Parse(pointsAfterRoundLog?.First().Split("ID: ")[1].Split(' ')[0]),
-						PlayerName = pointsAfterRoundLog?.First().Split("player's ")[1].Split(',')[0],
+						Id = Int32.Parse(pointsAfterRoundLog?.First().Split("ID: ")[1].Split(' ')[0]),
+						Name = pointsAfterRoundLog?.First().Split("player's ")[1].Split(',')[0],
 						Points = Int32.Parse(pointsAfterRoundLog.First().Split("): ")[1])
 					});
 
@@ -265,7 +274,7 @@ namespace HeartsServer.ResultsWriterReader
 
 		private List<Card> LoadCardsFromCardsLog(string[] input)
 		{
-			List<Card> cards = new();
+			List<Card> cards = [];
 
 			foreach (var str in input)
 			{
@@ -287,7 +296,7 @@ namespace HeartsServer.ResultsWriterReader
 
 		private ExchangeHistory[] GetExchangeHistory(string[] gaveLogs, string[] receivedLogs)
 		{
-			List<ExchangeHistory> exchangeHistory = new();
+			List<ExchangeHistory> exchangeHistory = [];
 
 			foreach (var gaveLog in gaveLogs)
 			{

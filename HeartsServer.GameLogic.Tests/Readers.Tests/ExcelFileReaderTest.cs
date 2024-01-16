@@ -10,14 +10,21 @@ namespace HeartsServer.GameLogic.Tests.Readers.Tests
 	[TestClass]
 	public class ExcelFileReaderTest
 	{
-
 		[TestMethod]
-		public void RunExcelChange()
+		public void ReadHistoryFromExcelFile()
 		{
 			ExcelFileReader reader = new ExcelFileReader();
-			reader.ChangeNameColorsAndValuesInExcel(@"LogFiles\Hearts_history.xlsx");
-
-
+			reader.GetGameHistoryAsync().Wait();
 		}
+
+
+		//[TestMethod]
+		//public void RunExcelChange()
+		//{
+		//	ExcelFileReader reader = new ExcelFileReader();
+		//	reader.ChangeNameColorsAndValuesInExcel(@"LogFiles\Hearts_history.xlsx");
+		//}
+
+
 	}
 }

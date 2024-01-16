@@ -2,12 +2,12 @@
 
 namespace HeartsServer.GameLogic.History
 {
-    public class GameHistory
+    public class GameHistory : BaseHistory
     {
-        public bool IsWrittenInFiles { get; set; }
-        public bool IsTerminated { get; set; }
+        public bool IsTerminated { get; set; } //czy skonczona
         public DateTime StartTime { get; set; }
-        public List<RoundHistory> Rounds { get; set; } = new();
         public List<PlayerHistory> Players { get; set; } = new();
+        public List<RoundHistory> Rounds { get; set; } = new();
+        public List<Exception> Errors { get; set; } = new();
     }
 }
