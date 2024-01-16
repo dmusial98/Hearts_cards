@@ -173,8 +173,8 @@ namespace HeartsServer.ResultsWriterReader
 						trickHistory.PointsAfterTrick.Add(new PlayerHistory
 						{
 							Name = pointsInRound.First().Split("player's ")[1].Split(", ")[0],
-							Id = Int32.Parse(pointsInRound.First().Split("ID: ")[1].Split(' ')[0]),
-							Points = Int32.Parse(pointsInRound.First().Split("): ")[1])
+							PlayerId = Int32.Parse(pointsInRound.First().Split("ID: ")[1].Split(' ')[0]),
+							PointsInGame = Int32.Parse(pointsInRound.First().Split("): ")[1])
 						});
 
 						listLines.Remove(pointsInRound[0]);
@@ -216,11 +216,11 @@ namespace HeartsServer.ResultsWriterReader
 
 				foreach (var line in pointsAfterRoundLog)
 				{
-					roundHistory.PlayerAfterRound.Add(new PlayerHistory
+					roundHistory.PlayersAfterRound.Add(new PlayerHistory
 					{
-						Id = Int32.Parse(pointsAfterRoundLog?.First().Split("ID: ")[1].Split(' ')[0]),
+						PlayerId = Int32.Parse(pointsAfterRoundLog?.First().Split("ID: ")[1].Split(' ')[0]),
 						Name = pointsAfterRoundLog?.First().Split("player's ")[1].Split(',')[0],
-						Points = Int32.Parse(pointsAfterRoundLog.First().Split("): ")[1])
+						PointsInGame = Int32.Parse(pointsAfterRoundLog.First().Split("): ")[1])
 					});
 
 					listLines.Remove(line);
@@ -240,7 +240,7 @@ namespace HeartsServer.ResultsWriterReader
 					playersHistory.Add(
 						new PlayerHistory
 						{
-							Id = int.Parse(log.Split("ID: ")[1].Split(' ')[0]),
+							PlayerId = int.Parse(log.Split("ID: ")[1].Split(' ')[0]),
 							Place = int.Parse(log.Split("game: ")[1].Split(' ')[0]),
 							Bonuses = int.Parse(log.Split("with ")[1].Split(' ')[0]),
 							Name = log.Split("player's ")[1].Split(' ')[0],
