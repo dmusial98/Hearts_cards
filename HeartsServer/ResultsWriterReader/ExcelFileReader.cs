@@ -243,6 +243,11 @@ namespace HeartsServer.ResultsWriterReader
 			return list;
 		}
 
+		public void WriteCardsBeforeTrickInExcelFile(string fileName)
+		{
+			
+		}
+
 
 		//TODO: przeniesc do pliku z zapisem excela, a nie odczytem
 		public void ChangeNameColorsAndValuesInExcel(string fileName)
