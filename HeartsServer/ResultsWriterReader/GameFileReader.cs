@@ -5,7 +5,7 @@ namespace HeartsServer.ResultsWriterReader
 {
     public abstract class GameFileReader : IGameReader
     {
-        public string fileName;
+        protected string fileName;
 
         protected GameFileReader(string fileName) => this.fileName = fileName;
         protected GameFileReader() 

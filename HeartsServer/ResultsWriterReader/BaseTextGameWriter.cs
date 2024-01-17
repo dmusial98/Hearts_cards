@@ -6,7 +6,7 @@ using System.Text.RegularExpressions;
 
 namespace Hearts_server.ResultsWriterReader
 {
-	public abstract class BaseGameWriter : IGameWriterHandler
+	public abstract class BaseTextGameWriter : IGameWriterHandler
 	{
 		#region Messages constants
 

@@ -10,7 +10,7 @@ namespace HeartsServer.ResultsWriterReader
 {
 	//TODO: pomyslec czy nie przeniesc handlowych metod do BaseGameWriter
 	//TODO: pomyslec czy nie sparametryzowac handlowych metod do jednej
-	public class ConsoleLogWriter : BaseGameWriter, ILogWriter
+	public class ConsoleLogWriter : BaseTextGameWriter, ILogWriter
 	{
 		#region Handles
 		public override async Task HandleWriteUserConnectedAsync(Player player)

@@ -8,7 +8,7 @@ using HeartsServer.GameLogic.Consts;
 
 namespace HeartsServer.ResultsWriterReader
 {
-	public class TxtFileLogWriter : BaseGameWriter, ILogWriter
+	public class TxtFileLogWriter : BaseTextGameWriter, ILogWriter
 	{
 		private string _pathToFile;
 		public TxtFileLogWriter()

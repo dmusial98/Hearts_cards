@@ -29,7 +29,7 @@ namespace Hearts_server.GameLogic
 		internal IShuffle shuffleLogic;
 		internal IConnectable connection;
 		internal ITImer gameTimer;
-		internal BaseGameWriter gameWriter;
+		internal BaseTextGameWriter gameWriter;
 		internal IGameReader gameReader;
 		internal GameHistory history = new GameHistory();
 
