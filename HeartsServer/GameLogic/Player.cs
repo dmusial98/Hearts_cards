@@ -51,8 +51,14 @@ namespace Hearts_server.GameLogic
 			incrementIdCounter();
 		}
 
-		//add trick during round
-		public void AddTrick(Trick trick)
+        public Player(string name, int id)
+        {
+            Name = name;
+            Id = id;
+        }
+
+        //add trick during round
+        public void AddTrick(Trick trick)
 		{
 			tricks.Add(trick);
 			_pointsInRound = CountPointsInTricks();
