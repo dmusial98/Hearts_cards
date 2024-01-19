@@ -6,17 +6,25 @@ namespace HeartsServer.GameLogic.Tests.Writers.Tests.ILogWriter.Tests
 	[TestClass]
 	public class TxtFileLogWriterTest : LogWriterTestBase
 	{
+		bool fileToClean = true;
+
+		[TestInitialize]
+		public void TestInitialize()
+		{
+			fileToClean = true;
+		}
 
 		[TestCleanup()]
 		public void TestCleanup()
 		{
 			Player.ResetIdCounter();
-			DeleteLastDocumentInDirectory(); 
+			DeleteLastDocumentInDirectory();
+			//fileToClean = true;
 		}
 
 		public async Task<string> GetTextFromFile()
 		{
-			var directory = new DirectoryInfo( "LogFiles");
+			var directory = new DirectoryInfo("LogFiles");
 			var file = directory.GetFiles().OrderByDescending(f => f.LastWriteTime).First();
 
 			using (var readTask = File.ReadAllTextAsync(file.FullName))
@@ -28,7 +36,8 @@ namespace HeartsServer.GameLogic.Tests.Writers.Tests.ILogWriter.Tests
 			DirectoryInfo directory = new DirectoryInfo("LogFiles");
 			var file = directory.GetFiles().OrderByDescending(f => f.LastWriteTime).First();
 
-			if (file.Name != "Append.txt")
+			//if (file.Name != "Append.txt")
+			if(fileToClean)
 				file.Delete();
 		}
 
@@ -216,7 +225,15 @@ namespace HeartsServer.GameLogic.Tests.Writers.Tests.ILogWriter.Tests
 			Assert.IsTrue(result.Contains(String.Concat("C2 ", date, ":  player ", player.Name, ", ID: ", player.Id, " clicked start game", Consts.LogCodesConsts.NEW_LINE)));
 		}
 
-		
+		[TestMethod]
+		public async Task WriteTxtFileFromGameHistory()
+		{
+			var history = await JsonFileReaderWriter.ReadGameHistory(@"LogFiles\15.01.2024_20_58_00_history.json");
+			Assert.IsNotNull(history);
+
+			await new TxtFileLogWriter(history.StartTime).SaveTxtFileLogFileFromGameHistory(history);
+			fileToClean = false;
+		}
 
 	}
 }
