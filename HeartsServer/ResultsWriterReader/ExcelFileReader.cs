@@ -182,8 +182,8 @@ namespace HeartsServer.ResultsWriterReader
                     list.Add(new TrickHistory
                     {
                         TrickNumber = i + 1,
-                        WhoWon = int.TryParse(sheet.Cells[32 + i, 7].Text, out int whoWonInt) ? whoWonInt : -1,
-                        WhoStarted = int.TryParse(sheet.Cells[32 + i, 6].Text, out int whoStartedInt) ? whoStartedInt : -1,
+                        WhoWonId = int.TryParse(sheet.Cells[32 + i, 7].Text, out int whoWonInt) ? whoWonInt : -1,
+                        WhoStartedId = int.TryParse(sheet.Cells[32 + i, 6].Text, out int whoStartedInt) ? whoStartedInt : -1,
                         Queue = new List<QueueHistory>
                         {
                             new QueueHistory

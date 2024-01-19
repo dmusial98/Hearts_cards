@@ -78,6 +78,20 @@ namespace HeartsServer.ResultsWriterReader
                     );
                 }
                 await WritePlayersCardsAsync(round.PlayerCardsAfterExchange.ToArray());
+                
+                foreach(var trick in round.Tricks)
+                {
+                    await WriteStartTrickAsync(trick.TrickNumber, round.RoundNumber);
+                    foreach(var queue in trick.Queue)
+                    {
+                        queue.PlayerName = gameHistory.Players.First(p => p.PlayerId == queue.PlayerId).Name;
+                        await WritePlayerThrewCardAsync(queue);
+                    }
+                    trick.WhoWonName = gameHistory.Players.First(p => p.PlayerId == trick.WhoWonId).Name;
+                    trick.WhoStartedName = gameHistory.Players.First(p => p.PlayerId == trick.WhoStartedId).Name;
+                    await WriteTrickAsync(trick);
+                    // await WritePlayersPointsInRoundAsync();
+                }
 
             }
 
@@ -174,7 +188,22 @@ namespace HeartsServer.ResultsWriterReader
                 await writeTask;
         }
 
+        public async Task WritePlayerThrewCardAsync(QueueHistory queueHistory)
+        {
+            string output = GetPlayerThrewCardLog(queueHistory);
+            output = output + (LogCodesConsts.NEW_LINE);
+            using (Task writeTask = File.AppendAllTextAsync(_pathToFile, output))
+                await writeTask;
+        }
+
         public async Task WriteTrickAsync(Trick trick)
+        {
+            string output = GetTrickLog(trick);
+            output = output + (LogCodesConsts.NEW_LINE);
+            using (Task writeTask = File.AppendAllTextAsync(_pathToFile, output))
+                await writeTask;
+        }
+        public async Task WriteTrickAsync(TrickHistory trick)
         {
             string output = GetTrickLog(trick);
             output = output + (LogCodesConsts.NEW_LINE);

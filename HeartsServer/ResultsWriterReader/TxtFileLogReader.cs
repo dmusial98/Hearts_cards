@@ -147,8 +147,8 @@ namespace HeartsServer.ResultsWriterReader
 					TrickHistory trickHistory = new TrickHistory
 					{
 						TrickNumber = Int32.Parse(trickStartedLogs.First().Split("Trick ")[1].Split(" ")[0]),
-						WhoStarted = whoStarted,
-						WhoWon = Int32.Parse(splittedIds[1].Split(" ")[0]),
+						WhoStartedId = whoStarted,
+						WhoWonId = Int32.Parse(splittedIds[1].Split(" ")[0]),
 					};
 
 					var cardsInTrick = LoadCardsFromCardsLog(trickSummaryLog[0].Split("cards: ")[1].Split(", "));

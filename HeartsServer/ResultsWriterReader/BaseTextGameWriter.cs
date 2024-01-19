@@ -243,6 +243,18 @@ namespace Hearts_server.ResultsWriterReader
 
             return output;
         }
+
+        public string GetPlayerThrewCardLog(QueueHistory queue)
+        {
+            string output = PLAYER_THREW_CARD_CONST
+                            .Replace(CODE_CONST, LogCodesConsts.PLAYER_THREW_CARD_CODE_CONST)
+                            .Replace(TIME_CONST, DateTime.Now.ToString(LogCodesConsts.POLISH_CULTURE_INFO))
+                            .Replace(PLAYER_NAME_CONST, queue.PlayerName)
+                            .Replace(PLAYER_ID_CONST, queue.PlayerId.ToString())
+                            .Replace(CARD_CONST, queue.Card.ToString());
+
+            return output;
+        }
         public string GetTrickLog(Trick trick)
         {
             StringBuilder cardsStr = new StringBuilder();
@@ -259,6 +271,25 @@ namespace Hearts_server.ResultsWriterReader
             output = regexPlayerName.Replace(output, trick.WhoStarted.Name, 1);
             output = regexPlayerId.Replace(output, trick.Owner.Id.ToString(), 1);
             output = regexPlayerId.Replace(output, trick.WhoStarted.Id.ToString(), 1);
+
+            return output;
+        }
+        public string GetTrickLog(TrickHistory trick)
+        {
+            StringBuilder cardsStr = new StringBuilder();
+            foreach (QueueHistory queue in trick.Queue)
+                cardsStr.Append(queue.Card.ToString() + ", ");
+
+
+            string output = TRICK_CONST
+                            .Replace(CODE_CONST, LogCodesConsts.TRICK_CODE_CONST)
+                            .Replace(TIME_CONST, DateTime.Now.ToString(LogCodesConsts.POLISH_CULTURE_INFO))
+                            .Replace(CARDS_CONST, cardsStr.ToString());
+
+            output = regexPlayerName.Replace(output, trick.WhoWonName, 1);
+            output = regexPlayerName.Replace(output, trick.WhoStartedName, 1);
+            output = regexPlayerId.Replace(output, trick.WhoWonId.ToString(), 1);
+            output = regexPlayerId.Replace(output, trick.WhoStartedId.ToString(), 1);
 
             return output;
         }
