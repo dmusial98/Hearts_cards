@@ -10,6 +10,7 @@ namespace HeartsServer.GameLogic.Tests.Readers.Tests
 	[TestClass]
 	public class TxtFileLogReaderTest
 	{
+		[TestMethod]
 		public async Task<string[]> GetTextFromFile()
 		{
 			var directory = new DirectoryInfo("LogFiles");
@@ -19,13 +20,19 @@ namespace HeartsServer.GameLogic.Tests.Readers.Tests
 				return await readTask;
 		}
 
-		[TestMethod]
-		public async Task GetGameHistoryFromTxtLogFile()
-		{
-			var lines = await GetTextFromFile();
-			var history = new TxtFileLogReader("input.txt").GetGameHistoryAsync();
+        [TestMethod]
+        public async Task GetGameHistoryFromTxtLogFile()
+        {
+			//var history = 
 
 
-		}
-	}
+            var history = await new TxtFileLogReader("15.01.2024_20_58_00_logs.txt").GetGameHistoryAsync();
+
+            Assert.IsNotNull(history);
+
+            await JsonFileReaderWriter.WriteGameHistory(history);
+
+			//TODO: punkty w grze przy podsumowaniu graczy na poczatku
+        }
+    }
 }
