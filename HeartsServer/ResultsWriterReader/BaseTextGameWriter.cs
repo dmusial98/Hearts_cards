@@ -374,7 +374,7 @@ namespace Hearts_server.ResultsWriterReader
 			foreach (Player player in players)
 			{
 				output.Append(PLAYER_PLACE_AFTER_GAME_CONST
-												.Replace(CODE_CONST, LogCodesConsts.PLAYERS_PLACES_AFTER_GAME_CODE_CONST)
+												.Replace(CODE_CONST, LogCodesConsts.PLAYERS_PLACES_AFTER_ROUND_CODE_CONST)
 												.Replace(TIME_CONST, DateTime.Now.ToString(LogCodesConsts.POLISH_CULTURE_INFO))
 												.Replace(PLAYER_NAME_CONST, player.Name)
 												.Replace(PLAYER_ID_CONST, player.Id.ToString())
@@ -391,7 +391,7 @@ namespace Hearts_server.ResultsWriterReader
 			foreach (PlayerHistory player in players)
 			{
 				output.Append(PLAYER_PLACE_AFTER_GAME_CONST
-												.Replace(CODE_CONST, LogCodesConsts.PLAYERS_PLACES_AFTER_GAME_CODE_CONST)
+												.Replace(CODE_CONST, LogCodesConsts.PLAYERS_PLACES_AFTER_ROUND_CODE_CONST)
 												.Replace(TIME_CONST, DateTime.Now.ToString(LogCodesConsts.POLISH_CULTURE_INFO))
 												.Replace(PLAYER_NAME_CONST, player.Name)
 												.Replace(PLAYER_ID_CONST, player.PlayerId.ToString())

@@ -25,7 +25,7 @@ namespace HeartsServer.GameLogic.Consts
         public const string TRICK_CODE_CONST = "C8";
         public const string PLAYERS_POINTS_IN_ROUND_CODE_CONST = "C9";
         public const string PLAYERS_POINTS_AFTER_ROUND_CODE_CONST = "C10";
-        public const string PLAYERS_PLACES_AFTER_GAME_CODE_CONST = "C11";
+        public const string PLAYERS_PLACES_AFTER_ROUND_CODE_CONST = "C11";
         public const string PLAYERS_CARDS_CODE_CONST = "C12";
         public const string USER_SEND_MESSAGE_CODE_CONST = "C13";
         public const string ROUND_STARTED_CODE_CONST = "C14";

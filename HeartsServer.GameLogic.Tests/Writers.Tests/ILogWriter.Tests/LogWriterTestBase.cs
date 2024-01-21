@@ -238,7 +238,7 @@ namespace HeartsServer.GameLogic.Tests.Writers.Tests.ILogWriter.Tests
 
 			StringBuilder output = new();
 			foreach (Player player in players)
-				output.Append(String.Concat(LogCodesConsts.PLAYERS_PLACES_AFTER_GAME_CODE_CONST, " ", DateTime.Now.ToString(LogCodesConsts.POLISH_CULTURE_INFO), ":  player's ", player.Name, ", ID: ", player.Id.ToString(), " place in game: ", player.Place, " with ", player.BonusesNumber, " bonuses", Consts.LogCodesConsts.NEW_LINE));
+				output.Append(String.Concat(LogCodesConsts.PLAYERS_PLACES_AFTER_ROUND_CODE_CONST, " ", DateTime.Now.ToString(LogCodesConsts.POLISH_CULTURE_INFO), ":  player's ", player.Name, ", ID: ", player.Id.ToString(), " place in game: ", player.Place, " with ", player.BonusesNumber, " bonuses", Consts.LogCodesConsts.NEW_LINE));
 
 			return output.ToString();
 		}

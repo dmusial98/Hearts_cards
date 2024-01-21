@@ -129,17 +129,11 @@ namespace HeartsServer.ResultsWriterReader
 						PlayerName = history.Players.First(p => p.PlayerId == playerIndex_).Name,
                         Cards = LoadCardsFromCardsLog(line.Split(" cards: ")[1].Split(", ")),
                     });
-					//roundHistory.PlayerCardsAfterExchange[playerIndex].Cards = 
-					//	LoadCardsFromCardsLog(line.Split(" cards: ")[1].Split(", "));
-					//roundHistory.PlayerCardsAfterExchange[playerIndex].PlayerId = playerIndex;
-					//roundHistory.PlayerCardsAfterExchange[playerIndex].PlayerName = 
-					//	history.Players.First(p => p.PlayerId == playerIndex + 1).Name;
+					
                     listLines.Remove(line);
 				}
 
 				roundHistory.Exchange = exchangeHistoryArray.ToList();
-
-				//Cards after exchange
 
 
 				//Tricks
@@ -178,7 +172,7 @@ namespace HeartsServer.ResultsWriterReader
 					};
 
 					var cardsInTrick = LoadCardsFromCardsLog(trickSummaryLog[0].Split("cards: ")[1].Split(", "));
-					int queuePlayerIndex = whoStarted;
+					int queuePlayerIndex = 1;
 
 					for (int j = 0; j < NumbersConsts.PLAYERS_NUMBER_CONST; j++)
 					{
@@ -188,10 +182,7 @@ namespace HeartsServer.ResultsWriterReader
 							Card = cardsInTrick[j],
 						});
 
-						if (queuePlayerIndex == 3)
-							queuePlayerIndex = 0;
-						else
-							queuePlayerIndex++;
+						queuePlayerIndex++;
 					}
 
 					for (int j = 0; j < NumbersConsts.PLAYERS_NUMBER_CONST; j++)
@@ -200,7 +191,7 @@ namespace HeartsServer.ResultsWriterReader
 						{
 							Name = pointsInRound.First().Split("player's ")[1].Split(", ")[0],
 							PlayerId = Int32.Parse(pointsInRound.First().Split("ID: ")[1].Split(' ')[0]),
-							PointsInGame = Int32.Parse(pointsInRound.First().Split("): ")[1])
+							PointsInRound = Int32.Parse(pointsInRound.First().Split("): ")[1])
 						});
 
 						listLines.Remove(pointsInRound[0]);
@@ -250,19 +241,19 @@ namespace HeartsServer.ResultsWriterReader
 				{
 					pointsAfterRound[playerIndex] = Int32.Parse(line.Split("): ")[1]);
 
-                    roundHistory.PlayersAfterRound.Add(new PlayerHistory
-					{
-						PlayerId = Int32.Parse(pointsAfterRoundLog?.First().Split("ID: ")[1].Split(' ')[0]),
-						Name = pointsAfterRoundLog?.First().Split("player's ")[1].Split(',')[0],
-						PointsInGame = pointsAfterRound[playerIndex]
-					});
+					//roundHistory.PlayersAfterRound.Add(new PlayerHistory
+					//{
+					//	PlayerId = Int32.Parse(pointsAfterRoundLog[playerIndex]?.Split("ID: ")[1].Split(' ')[0]),
+					//	Name = pointsAfterRoundLog[playerIndex]?.Split("player's ")[1].Split(',')[0],
+					//	PointsInGame = pointsAfterRound[playerIndex]
+					//});
 
 					listLines.Remove(line);
 					playerIndex++;
 				}
 
 				var playerPlacesAfterGameLogs = listLines
-					.Where(s => s[..3] == LogCodesConsts.PLAYERS_PLACES_AFTER_GAME_CODE_CONST.PadRight(3, ' '))
+					.Where(s => s[..3] == LogCodesConsts.PLAYERS_PLACES_AFTER_ROUND_CODE_CONST.PadRight(3, ' '))
 					//.OrderBy(s => s)
 					.Take(NumbersConsts.PLAYERS_NUMBER_CONST)
 					.ToArray();
@@ -273,15 +264,17 @@ namespace HeartsServer.ResultsWriterReader
 				int pl_index = 0;
 				foreach (var log in playerPlacesAfterGameLogs)
 				{
-					playersHistory.Add(
-						new PlayerHistory
-						{
-							PlayerId = int.Parse(log.Split("ID: ")[1].Split(' ')[0]),
-							Place = int.Parse(log.Split("game: ")[1].Split(' ')[0]),
-							Bonuses = int.Parse(log.Split("with ")[1].Split(' ')[0]),
-							Name = log.Split("player's ")[1].Split(", ")[0],
-							PointsInGame = pointsAfterRound[pl_index]
-                        });
+					var plHistoryObject = new PlayerHistory
+                    {
+                        PlayerId = int.Parse(log.Split("ID: ")[1].Split(' ')[0]),
+                        Place = int.Parse(log.Split("game: ")[1].Split(' ')[0]),
+                        Bonuses = int.Parse(log.Split("with ")[1].Split(' ')[0]),
+                        Name = log.Split("player's ")[1].Split(", ")[0],
+                        PointsInGame = pointsAfterRound[pl_index]
+                    };
+
+                    playersHistory.Add(plHistoryObject);
+					roundHistory.PlayersAfterRound.Add(plHistoryObject);
 
 					listLines.Remove(log);
 					pl_index++;
@@ -292,7 +285,7 @@ namespace HeartsServer.ResultsWriterReader
 
 				history.Rounds.Add(roundHistory);
 				listLines.Remove(roundStartedLog);
-			}
+			} //round
 
 			return history;
 		}

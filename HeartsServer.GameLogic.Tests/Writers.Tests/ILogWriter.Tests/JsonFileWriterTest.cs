@@ -23,6 +23,8 @@ namespace HeartsServer.GameLogic.Tests.Writers.Tests.ILogWriter.Tests
         {
             var history = await JsonFileReaderWriter.ReadGameHistory(@"LogFiles\15.01.2024_20_58_00_history.json");
             Assert.IsNotNull(history);
+
+
         }
 
     }

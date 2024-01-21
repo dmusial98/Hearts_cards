@@ -198,12 +198,12 @@ namespace HeartsServer.ResultsWriterReader
                             },
                             new QueueHistory
                             {
-                                PlayerId = 2,
+                                PlayerId = 3,
                                 Card = GetSingleCard(sheet.Cells[32 + i, 4].Text)
                             },
                             new QueueHistory
                             {
-                                PlayerId = 2,
+                                PlayerId = 4,
                                 Card = GetSingleCard(sheet.Cells[32 + i, 5].Text)
                             }
                         },
