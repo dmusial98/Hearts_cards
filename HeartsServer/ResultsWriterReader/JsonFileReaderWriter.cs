@@ -14,7 +14,7 @@ namespace HeartsServer.ResultsWriterReader
             if (gameHistory != null && gameHistory.StartTime != DateTime.MinValue)
             {
                 var str = JsonConvert.SerializeObject(gameHistory, new Newtonsoft.Json.Converters.StringEnumConverter());
-                await File.WriteAllTextAsync($@"LogFiles\{gameHistory.StartTime.ToString(new CultureInfo("pl-PL"))}_history.json".Replace(" ", "_").Replace(":", "_"), str);
+                await File.WriteAllTextAsync($@"LogFiles{GameLogic.Consts.LogCodesConsts.SLASH_DIRECTORY}{gameHistory.StartTime.ToString(new CultureInfo("pl-PL"))}_history.json".Replace(" ", "_").Replace(":", "_"), str);
             }
         }
 

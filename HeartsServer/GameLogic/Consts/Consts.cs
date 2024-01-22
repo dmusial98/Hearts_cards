@@ -49,5 +49,22 @@ namespace HeartsServer.GameLogic.Consts
                 return newLine;
             }
         }
+
+private static string slashDirectory;
+        public static string SLASH_DIRECTORY
+        {
+            get
+            {
+                if (String.IsNullOrEmpty(slashDirectory))
+                {
+                    if (RuntimeInformation.IsOSPlatform((OSPlatform.Linux)))
+                        slashDirectory = "/";
+                    else
+                        slashDirectory = "\\";
+                }
+
+                return slashDirectory;
+            }
+        }
     }
 }

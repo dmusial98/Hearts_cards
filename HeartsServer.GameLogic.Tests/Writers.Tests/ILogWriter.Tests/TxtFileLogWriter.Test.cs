@@ -228,7 +228,7 @@ namespace HeartsServer.GameLogic.Tests.Writers.Tests.ILogWriter.Tests
 		[TestMethod]
 		public async Task WriteTxtFileFromGameHistory()
 		{
-			var history = await JsonFileReaderWriter.ReadGameHistory(@"LogFiles\15.01.2024_20_58_00_history.json");
+			var history = await JsonFileReaderWriter.ReadGameHistory($@"LogFiles{Consts.LogCodesConsts.SLASH_DIRECTORY}15.01.2024_20_58_00_history.json");
 			Assert.IsNotNull(history);
 
 			await new TxtFileLogWriter(history.StartTime).SaveTxtFileLogFileFromGameHistory(history);
