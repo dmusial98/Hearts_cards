@@ -179,6 +179,7 @@ namespace HeartsServer.ResultsWriterReader
 						trickHistory.Queue.Add(new QueueHistory
 						{
 							PlayerId = queuePlayerIndex,
+							PlayerName = history.Players.Where(p => p.PlayerId == queuePlayerIndex).First().Name,
 							Card = cardsInTrick[j],
 						});
 

@@ -99,11 +99,9 @@ namespace HeartsServer.ResultsWriterReader
                 } //trick
 
                 await WritePlayersPointsAfterRoundAsync(round.PlayersAfterRound.ToArray(), round.RoundNumber);
+                await WritePlacesAfterGameAsync(round.PlayersAfterRound.ToArray());
 
             } //round
-
-            await WritePlacesAfterGameAsync(gameHistory.Players.ToArray());
-
         }
 
         #region ILogWriter methods

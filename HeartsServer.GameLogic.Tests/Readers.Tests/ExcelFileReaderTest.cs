@@ -13,7 +13,7 @@ namespace HeartsServer.GameLogic.Tests.Readers.Tests
 		[TestMethod]
 		public async Task ReadHistoryFromExcelFile()
 		{
-			ExcelFileReader reader = new ExcelFileReader();
+			ExcelFileReader reader = new ExcelFileReader(@"Hearts_history.xlsx");
 			var history = await reader.GetGameHistoryAsync();
 
 			Assert.IsNotNull(history);

@@ -6,16 +6,22 @@ using HeartsServer.GameLogic.History;
 using Microsoft.AspNetCore.Mvc.Formatters;
 using OfficeOpenXml;
 using System.Collections.Generic;
+using System.Drawing;
 using System.Globalization;
 
 namespace HeartsServer.ResultsWriterReader
 {
     public class ExcelFileReader : GameFileReader, IGameReader
     {
+        public ExcelFileReader(string fileName) : base(fileName) { }
+        public ExcelFileReader() : base() {}
+
+        private GameHistory gameHistory { get; set; }
+
         //TODO: posprzatac w kodzie
         public override async Task<GameHistory> GetGameHistoryAsync()
         {
-            GameHistory gameHistory = new GameHistory();
+            gameHistory = new GameHistory();
             var file = GetFile();
 
             using var package = new ExcelPackage(file);
@@ -38,7 +44,9 @@ namespace HeartsServer.ResultsWriterReader
 
             gameHistory.Rounds = GetRoundHistory(package);
 
-            return gameHistory;
+            var toReturn = gameHistory;
+            gameHistory = null;
+            return toReturn;
         }
 
         private List<RoundHistory> GetRoundHistory(ExcelPackage package)
@@ -106,6 +114,7 @@ namespace HeartsServer.ResultsWriterReader
                 history.Add(new PlayerCardsHistory
                 {
                     PlayerId = i + 1,
+                    PlayerName = gameHistory.Players.Where(p => p.PlayerId == i + 1).First().Name,
                     Cards = GetCardsList(range)
                 });
             }
@@ -189,21 +198,25 @@ namespace HeartsServer.ResultsWriterReader
                             new QueueHistory
                             {
                                 PlayerId = 1,
+                                PlayerName = gameHistory.Players.Where(p =>p.PlayerId == 1).First().Name,
                                 Card = GetSingleCard(sheet.Cells[32 + i, 2].Text)
                             },
                             new QueueHistory
                             {
                                 PlayerId = 2,
+                                PlayerName = gameHistory.Players.Where(p =>p.PlayerId == 2).First().Name,
                                 Card = GetSingleCard(sheet.Cells[32 + i, 3].Text)
                             },
                             new QueueHistory
                             {
                                 PlayerId = 3,
+                                PlayerName = gameHistory.Players.Where(p =>p.PlayerId == 3).First().Name,
                                 Card = GetSingleCard(sheet.Cells[32 + i, 4].Text)
                             },
                             new QueueHistory
                             {
                                 PlayerId = 4,
+                                PlayerName = gameHistory.Players.Where(p =>p.PlayerId == 4).First().Name,
                                 Card = GetSingleCard(sheet.Cells[32 + i, 5].Text)
                             }
                         },
@@ -214,21 +227,25 @@ namespace HeartsServer.ResultsWriterReader
                             new PlayerCardsHistory
                             {
                                 PlayerId = 1,
+                                PlayerName = gameHistory.Players.Where(p=> p.PlayerId == 1).First().Name,
                                 Cards = GetCardsList(sheet.Cells[48 + i, 2, 48 + i, 14])
                             },
                             new PlayerCardsHistory
                             {
                                 PlayerId = 2,
+                                PlayerName = gameHistory.Players.Where(p=> p.PlayerId == 2).First().Name,
                                 Cards = GetCardsList(sheet.Cells[48 + i, 15, 48 + i, 27])
                             },
                             new PlayerCardsHistory
                             {
                                 PlayerId = 3,
+                                PlayerName = gameHistory.Players.Where(p=> p.PlayerId == 3).First().Name,
                                 Cards = GetCardsList(sheet.Cells[48 + i, 28, 48 + i, 40])
                             },
                             new PlayerCardsHistory
                             {
                                 PlayerId = 4,
+                                PlayerName = gameHistory.Players.Where(p=> p.PlayerId == 4).First().Name,
                                 Cards = GetCardsList(sheet.Cells[48 + i, 41, 48 + i, 53])
                             }
                         }
@@ -252,6 +269,7 @@ namespace HeartsServer.ResultsWriterReader
                     list.Add(new PlayerHistory
                     {
                         PlayerId = playerIndex,
+                        Name = gameHistory.Players.Where(p => p.PlayerId == playerIndex).First().Name,
                         PointsInRound = points,
                     });
                     playerIndex++;
