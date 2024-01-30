@@ -7,6 +7,8 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "HeartsServer", "HeartsServe
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "HeartsServer.GameLogic.Tests", "..\HeartsServer.GameLogic.Tests\HeartsServer.GameLogic.Tests.csproj", "{3C9B0360-8070-4F03-A409-50EEB3BCCBBD}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SignalRConsole", "..\SignalRConsole\SignalRConsole.csproj", "{40BD1997-288B-45E4-8147-1FF8CA0548DC}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -21,6 +23,10 @@ Global
 		{3C9B0360-8070-4F03-A409-50EEB3BCCBBD}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{3C9B0360-8070-4F03-A409-50EEB3BCCBBD}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{3C9B0360-8070-4F03-A409-50EEB3BCCBBD}.Release|Any CPU.Build.0 = Release|Any CPU
+		{40BD1997-288B-45E4-8147-1FF8CA0548DC}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{40BD1997-288B-45E4-8147-1FF8CA0548DC}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{40BD1997-288B-45E4-8147-1FF8CA0548DC}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{40BD1997-288B-45E4-8147-1FF8CA0548DC}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

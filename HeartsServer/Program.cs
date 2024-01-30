@@ -1,3 +1,5 @@
+using HeartsServer.GameLogic.SignalR;
+
 namespace Hearts_server
 {
     public class Program
@@ -26,7 +28,7 @@ namespace Hearts_server
 
             app.UseAuthorization();
 
-
+            app.MapHub<HeartsHub>("/messageshub");
             app.MapControllers();
 
             app.Run();
