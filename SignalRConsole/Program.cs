@@ -1,24 +1,18 @@
 ﻿using Microsoft.AspNetCore.SignalR.Client;
-using Microsoft.AspNetCore.SignalR;
-using Microsoft.AspNet.SignalR.Client;
-using Microsoft.AspNetCore.Connections;
-//using Microsoft.AspNetCore.SignalR.Client;
 
 namespace SignalRConsole
 {
-    internal class Program
-    {
-        private Connection connection; 
+	internal class Program
+	{
+		static async Task Main(string[] args)
+		{
+			await using var connection = new HubConnectionBuilder().WithUrl("http://localhost:7058/messageshub").Build();
+			await connection.StartAsync();
 
-        static void Main(string[] args)
-        {
-            
-        }
 
-        public void InitializeConnection()
-        {
-            connection = new Connection("http://localhost:5000");
-        }
+			Console.ReadKey();
+		}
 
-    }
+
+	}
 }

@@ -1,17 +1,17 @@
 ﻿using Hearts_server.GameLogic.Cards;
 using Hearts_server.GameLogic.Shuffle;
-using Hearts_server.GameLogic.SignalR;
 using Hearts_server.GameLogic.Timer;
 using Hearts_server.ResultsWriterReader;
 using HeartsServer.GameLogic;
 using HeartsServer.GameLogic.Consts;
 using HeartsServer.GameLogic.History;
+using HeartsServer.SignalR;
 
 namespace Hearts_server.GameLogic
 {
-	//TODO: po rozpoczeciu gry ustawic graczom clickedStartGame na false
-	//TODO: sprawdzic czy nie potrzebny Singleton bezpieczny watkowo
-	public class Game
+    //TODO: po rozpoczeciu gry ustawic graczom clickedStartGame na false
+    //TODO: sprawdzic czy nie potrzebny Singleton bezpieczny watkowo
+    public class Game
 	{
 
 		private static Game _instance;

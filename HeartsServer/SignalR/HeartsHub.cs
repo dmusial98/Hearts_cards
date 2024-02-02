@@ -1,6 +1,6 @@
 ﻿using Microsoft.AspNetCore.SignalR;
 
-namespace HeartsServer.GameLogic.SignalR
+namespace HeartsServer.SignalR
 {
     public class HeartsHub : Hub
     {
@@ -9,5 +9,10 @@ namespace HeartsServer.GameLogic.SignalR
             await Clients.All.SendAsync("ReceiveMessage", user, message);
         }
 
-    }
+		public override async Task OnConnectedAsync()
+		{
+      await Clients.All.SendAsync("ReceiveMessage", $"{Context.ConnectionId} has joined");
+		}
+
+	}
 }

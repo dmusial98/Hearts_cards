@@ -1,4 +1,4 @@
-﻿namespace Hearts_server.GameLogic.SignalR
+﻿namespace HeartsServer.SignalR
 {
     public interface IConnectable
     {
