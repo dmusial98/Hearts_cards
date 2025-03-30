@@ -1,9 +1,4 @@
 ﻿using HeartsServer.ResultsWriterReader;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace HeartsServer.GameLogic.Tests.Writers.Tests.ILogWriter.Tests
 {
@@ -13,7 +8,7 @@ namespace HeartsServer.GameLogic.Tests.Writers.Tests.ILogWriter.Tests
         [TestMethod]
         public async Task WriteJsonFile()
         {
-            ExcelFileReader reader = new ExcelFileReader();
+            ExcelFileReader reader = new ExcelFileReader(@"Hearts_history.xlsx");
             var history = await reader.GetGameHistoryAsync();
             await JsonFileReaderWriter.WriteGameHistory(history);
         }

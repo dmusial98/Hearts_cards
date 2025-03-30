@@ -1,12 +1,6 @@
 ﻿using Hearts_server.GameLogic;
 using Hearts_server.GameLogic.Cards;
 using Newtonsoft.Json;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Text.Json;
-using System.Threading.Tasks;
 
 namespace HeartsServer.GameLogic.Tests.GenerateLogs
 {
@@ -23,7 +17,7 @@ namespace HeartsServer.GameLogic.Tests.GenerateLogs
             {
                 var cards = LoadCardsFromFile(fileNumber);
 
-                Player[] players = new Player[] { new Player("Adam"), new Player("Dawid"), new Player("Rafal"), new Player("Pawel") };
+                Player[] players = { new Player("Adam"), new Player("Dawid"), new Player("Rafal"), new Player("Pawel") };
 
                 for (int i = 0; i < cards.Count; i++)
                 {

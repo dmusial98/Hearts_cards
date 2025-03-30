@@ -1,0 +1,829 @@
+C3 15.01.2024 20:58:00: Game started
+C14 29.03.2025 11:30:57: Round 1 started
+C4 01.01.0001 00:00:00:  player Jan, ID: 1 got cards: Five Heart, Ten Heart, Jack Heart, King Heart, Three Club, Four Club, Six Club, Seven Club, Queen Club, Three Diamond, Seven Diamond, King Diamond, Four Spade, 
+C4 01.01.0001 00:00:00:  player Michał, ID: 2 got cards: Six Heart, Eight Heart, Nine Heart, Five Club, Nine Club, Five Diamond, Six Diamond, Ace Diamond, Three Spade, Five Spade, Ten Spade, Queen Spade, Ace Spade, 
+C4 01.01.0001 00:00:00:  player Zbyszek, ID: 3 got cards: Two Heart, Eight Club, Ten Club, Jack Club, King Club, Ace Club, Four Diamond, Nine Diamond, Ten Diamond, Jack Diamond, Six Spade, Eight Spade, King Spade, 
+C4 01.01.0001 00:00:00:  player Szczepan, ID: 4 got cards: Three Heart, Four Heart, Seven Heart, Queen Heart, Ace Heart, Two Club, Two Diamond, Eight Diamond, Queen Diamond, Two Spade, Seven Spade, Nine Spade, Jack Spade, 
+C5 29.03.2025 11:30:57:  player Jan, ID: 1 gave cards Seven Club, Queen Club, King Diamond,  for exchange to Michał, ID: 2
+C6 29.03.2025 11:30:57:  player Szczepan, ID: 4 received cards Two Diamond, Eight Diamond, Queen Diamond,  for exchange from Jan, ID: 1
+C5 29.03.2025 11:30:57:  player Michał, ID: 2 gave cards Nine Club, Queen Spade, Ace Spade,  for exchange to Zbyszek, ID: 3
+C6 29.03.2025 11:30:57:  player Jan, ID: 1 received cards Seven Club, Queen Club, King Diamond,  for exchange from Michał, ID: 2
+C5 29.03.2025 11:30:57:  player Zbyszek, ID: 3 gave cards Two Heart, Jack Diamond, King Spade,  for exchange to Szczepan, ID: 4
+C6 29.03.2025 11:30:57:  player Michał, ID: 2 received cards Nine Club, Queen Spade, Ace Spade,  for exchange from Zbyszek, ID: 3
+C5 29.03.2025 11:30:57:  player Szczepan, ID: 4 gave cards Two Diamond, Eight Diamond, Queen Diamond,  for exchange to Jan, ID: 1
+C6 29.03.2025 11:30:57:  player Zbyszek, ID: 3 received cards Two Heart, Jack Diamond, King Spade,  for exchange from Szczepan, ID: 4
+C12 29.03.2025 11:30:57:  player's Jan, ID: 1 cards: Five Heart, Ten Heart, Jack Heart, King Heart, Three Club, Four Club, Six Club, Two Diamond, Three Diamond, Seven Diamond, Eight Diamond, Queen Diamond, Four Spade, 
+C12 29.03.2025 11:30:57:  player's Michał, ID: 2 cards: Six Heart, Eight Heart, Nine Heart, Five Club, Seven Club, Queen Club, Five Diamond, Six Diamond, King Diamond, Ace Diamond, Three Spade, Five Spade, Ten Spade, 
+C12 29.03.2025 11:30:57:  player's Zbyszek, ID: 3 cards: Eight Club, Nine Club, Ten Club, Jack Club, King Club, Ace Club, Four Diamond, Nine Diamond, Ten Diamond, Six Spade, Eight Spade, Queen Spade, Ace Spade, 
+C12 29.03.2025 11:30:57:  player's Szczepan, ID: 4 cards: Two Heart, Three Heart, Four Heart, Seven Heart, Queen Heart, Ace Heart, Two Club, Jack Diamond, Two Spade, Seven Spade, Nine Spade, Jack Spade, King Spade, 
+C15 29.03.2025 11:30:57: Trick 1 in 1 round started
+C12 29.03.2025 11:30:57:  player's Jan, ID: 1 cards: Five Heart, Ten Heart, Jack Heart, King Heart, Three Club, Four Club, Six Club, Two Diamond, Three Diamond, Seven Diamond, Eight Diamond, Queen Diamond, Four Spade, 
+C12 29.03.2025 11:30:57:  player's Michał, ID: 2 cards: Six Heart, Eight Heart, Nine Heart, Five Club, Seven Club, Queen Club, Five Diamond, Six Diamond, King Diamond, Ace Diamond, Three Spade, Five Spade, Ten Spade, 
+C12 29.03.2025 11:30:57:  player's Zbyszek, ID: 3 cards: Eight Club, Nine Club, Ten Club, Jack Club, King Club, Ace Club, Four Diamond, Nine Diamond, Ten Diamond, Six Spade, Eight Spade, Queen Spade, Ace Spade, 
+C12 29.03.2025 11:30:57:  player's Szczepan, ID: 4 cards: Two Heart, Three Heart, Four Heart, Seven Heart, Queen Heart, Ace Heart, Two Club, Jack Diamond, Two Spade, Seven Spade, Nine Spade, Jack Spade, King Spade, 
+C7 29.03.2025 11:30:57:  player Jan, ID: 1 threw card Six Club
+C7 29.03.2025 11:30:57:  player Michał, ID: 2 threw card Queen Club
+C7 29.03.2025 11:30:57:  player Zbyszek, ID: 3 threw card King Club
+C7 29.03.2025 11:30:57:  player Szczepan, ID: 4 threw card Two Club
+C8 29.03.2025 11:30:57:  player Zbyszek, ID: 3 won trick, began Szczepan, ID: 4 cards: Six Club, Queen Club, King Club, Two Club, 
+C9 29.03.2025 11:30:57:  player's Jan, ID: 1 points in that round (1): 0
+C9 29.03.2025 11:30:57:  player's Michał, ID: 2 points in that round (1): 0
+C9 29.03.2025 11:30:57:  player's Zbyszek, ID: 3 points in that round (1): 0
+C9 29.03.2025 11:30:57:  player's Szczepan, ID: 4 points in that round (1): 0
+C15 29.03.2025 11:30:57: Trick 2 in 1 round started
+C12 29.03.2025 11:30:57:  player's Jan, ID: 1 cards: Five Heart, Ten Heart, Jack Heart, King Heart, Three Club, Four Club, Two Diamond, Three Diamond, Seven Diamond, Eight Diamond, Queen Diamond, Four Spade, 
+C12 29.03.2025 11:30:57:  player's Michał, ID: 2 cards: Six Heart, Eight Heart, Nine Heart, Five Club, Seven Club, Five Diamond, Six Diamond, King Diamond, Ace Diamond, Three Spade, Five Spade, Ten Spade, 
+C12 29.03.2025 11:30:57:  player's Zbyszek, ID: 3 cards: Eight Club, Nine Club, Ten Club, Jack Club, Ace Club, Four Diamond, Nine Diamond, Ten Diamond, Six Spade, Eight Spade, Queen Spade, Ace Spade, 
+C12 29.03.2025 11:30:57:  player's Szczepan, ID: 4 cards: Two Heart, Three Heart, Four Heart, Seven Heart, Queen Heart, Ace Heart, Jack Diamond, Two Spade, Seven Spade, Nine Spade, Jack Spade, King Spade, 
+C7 29.03.2025 11:30:57:  player Jan, ID: 1 threw card Queen Diamond
+C7 29.03.2025 11:30:57:  player Michał, ID: 2 threw card King Diamond
+C7 29.03.2025 11:30:57:  player Zbyszek, ID: 3 threw card Ten Diamond
+C7 29.03.2025 11:30:57:  player Szczepan, ID: 4 threw card Jack Diamond
+C8 29.03.2025 11:30:57:  player Michał, ID: 2 won trick, began Zbyszek, ID: 3 cards: Queen Diamond, King Diamond, Ten Diamond, Jack Diamond, 
+C9 29.03.2025 11:30:57:  player's Jan, ID: 1 points in that round (1): 0
+C9 29.03.2025 11:30:57:  player's Michał, ID: 2 points in that round (1): 0
+C9 29.03.2025 11:30:57:  player's Zbyszek, ID: 3 points in that round (1): 0
+C9 29.03.2025 11:30:57:  player's Szczepan, ID: 4 points in that round (1): 0
+C15 29.03.2025 11:30:57: Trick 3 in 1 round started
+C12 29.03.2025 11:30:57:  player's Jan, ID: 1 cards: Five Heart, Ten Heart, Jack Heart, King Heart, Three Club, Four Club, Two Diamond, Three Diamond, Seven Diamond, Eight Diamond, Four Spade, 
+C12 29.03.2025 11:30:57:  player's Michał, ID: 2 cards: Six Heart, Eight Heart, Nine Heart, Five Club, Seven Club, Five Diamond, Six Diamond, Ace Diamond, Three Spade, Five Spade, Ten Spade, 
+C12 29.03.2025 11:30:57:  player's Zbyszek, ID: 3 cards: Eight Club, Nine Club, Ten Club, Jack Club, Ace Club, Four Diamond, Nine Diamond, Six Spade, Eight Spade, Queen Spade, Ace Spade, 
+C12 29.03.2025 11:30:57:  player's Szczepan, ID: 4 cards: Two Heart, Three Heart, Four Heart, Seven Heart, Queen Heart, Ace Heart, Two Spade, Seven Spade, Nine Spade, Jack Spade, King Spade, 
+C7 29.03.2025 11:30:57:  player Jan, ID: 1 threw card Four Spade
+C7 29.03.2025 11:30:57:  player Michał, ID: 2 threw card Ten Spade
+C7 29.03.2025 11:30:57:  player Zbyszek, ID: 3 threw card Eight Spade
+C7 29.03.2025 11:30:57:  player Szczepan, ID: 4 threw card Jack Spade
+C8 29.03.2025 11:30:57:  player Szczepan, ID: 4 won trick, began Michał, ID: 2 cards: Four Spade, Ten Spade, Eight Spade, Jack Spade, 
+C9 29.03.2025 11:30:57:  player's Jan, ID: 1 points in that round (1): 0
+C9 29.03.2025 11:30:57:  player's Michał, ID: 2 points in that round (1): 0
+C9 29.03.2025 11:30:57:  player's Zbyszek, ID: 3 points in that round (1): 0
+C9 29.03.2025 11:30:57:  player's Szczepan, ID: 4 points in that round (1): 0
+C15 29.03.2025 11:30:57: Trick 4 in 1 round started
+C12 29.03.2025 11:30:57:  player's Jan, ID: 1 cards: Five Heart, Ten Heart, Jack Heart, King Heart, Three Club, Four Club, Two Diamond, Three Diamond, Seven Diamond, Eight Diamond, 
+C12 29.03.2025 11:30:57:  player's Michał, ID: 2 cards: Six Heart, Eight Heart, Nine Heart, Five Club, Seven Club, Five Diamond, Six Diamond, Ace Diamond, Three Spade, Five Spade, 
+C12 29.03.2025 11:30:57:  player's Zbyszek, ID: 3 cards: Eight Club, Nine Club, Ten Club, Jack Club, Ace Club, Four Diamond, Nine Diamond, Six Spade, Queen Spade, Ace Spade, 
+C12 29.03.2025 11:30:57:  player's Szczepan, ID: 4 cards: Two Heart, Three Heart, Four Heart, Seven Heart, Queen Heart, Ace Heart, Two Spade, Seven Spade, Nine Spade, King Spade, 
+C7 29.03.2025 11:30:57:  player Jan, ID: 1 threw card Jack Heart
+C7 29.03.2025 11:30:57:  player Michał, ID: 2 threw card Five Spade
+C7 29.03.2025 11:30:57:  player Zbyszek, ID: 3 threw card Six Spade
+C7 29.03.2025 11:30:57:  player Szczepan, ID: 4 threw card Two Spade
+C8 29.03.2025 11:30:57:  player Zbyszek, ID: 3 won trick, began Szczepan, ID: 4 cards: Jack Heart, Five Spade, Six Spade, Two Spade, 
+C9 29.03.2025 11:30:57:  player's Jan, ID: 1 points in that round (1): 0
+C9 29.03.2025 11:30:57:  player's Michał, ID: 2 points in that round (1): 0
+C9 29.03.2025 11:30:57:  player's Zbyszek, ID: 3 points in that round (1): 1
+C9 29.03.2025 11:30:57:  player's Szczepan, ID: 4 points in that round (1): 0
+C15 29.03.2025 11:30:57: Trick 5 in 1 round started
+C12 29.03.2025 11:30:57:  player's Jan, ID: 1 cards: Five Heart, Ten Heart, King Heart, Three Club, Four Club, Two Diamond, Three Diamond, Seven Diamond, Eight Diamond, 
+C12 29.03.2025 11:30:57:  player's Michał, ID: 2 cards: Six Heart, Eight Heart, Nine Heart, Five Club, Seven Club, Five Diamond, Six Diamond, Ace Diamond, Three Spade, 
+C12 29.03.2025 11:30:57:  player's Zbyszek, ID: 3 cards: Eight Club, Nine Club, Ten Club, Jack Club, Ace Club, Four Diamond, Nine Diamond, Queen Spade, Ace Spade, 
+C12 29.03.2025 11:30:57:  player's Szczepan, ID: 4 cards: Two Heart, Three Heart, Four Heart, Seven Heart, Queen Heart, Ace Heart, Seven Spade, Nine Spade, King Spade, 
+C7 29.03.2025 11:30:57:  player Jan, ID: 1 threw card Eight Diamond
+C7 29.03.2025 11:30:57:  player Michał, ID: 2 threw card Ace Diamond
+C7 29.03.2025 11:30:57:  player Zbyszek, ID: 3 threw card Nine Diamond
+C7 29.03.2025 11:30:57:  player Szczepan, ID: 4 threw card King Spade
+C8 29.03.2025 11:30:57:  player Michał, ID: 2 won trick, began Zbyszek, ID: 3 cards: Eight Diamond, Ace Diamond, Nine Diamond, King Spade, 
+C9 29.03.2025 11:30:57:  player's Jan, ID: 1 points in that round (1): 0
+C9 29.03.2025 11:30:57:  player's Michał, ID: 2 points in that round (1): 0
+C9 29.03.2025 11:30:57:  player's Zbyszek, ID: 3 points in that round (1): 1
+C9 29.03.2025 11:30:57:  player's Szczepan, ID: 4 points in that round (1): 0
+C15 29.03.2025 11:30:57: Trick 6 in 1 round started
+C12 29.03.2025 11:30:57:  player's Jan, ID: 1 cards: Five Heart, Ten Heart, King Heart, Three Club, Four Club, Two Diamond, Three Diamond, Seven Diamond, 
+C12 29.03.2025 11:30:57:  player's Michał, ID: 2 cards: Six Heart, Eight Heart, Nine Heart, Five Club, Seven Club, Five Diamond, Six Diamond, Three Spade, 
+C12 29.03.2025 11:30:57:  player's Zbyszek, ID: 3 cards: Eight Club, Nine Club, Ten Club, Jack Club, Ace Club, Four Diamond, Queen Spade, Ace Spade, 
+C12 29.03.2025 11:30:57:  player's Szczepan, ID: 4 cards: Two Heart, Three Heart, Four Heart, Seven Heart, Queen Heart, Ace Heart, Seven Spade, Nine Spade, 
+C7 29.03.2025 11:30:57:  player Jan, ID: 1 threw card Ten Heart
+C7 29.03.2025 11:30:57:  player Michał, ID: 2 threw card Three Spade
+C7 29.03.2025 11:30:57:  player Zbyszek, ID: 3 threw card Ace Spade
+C7 29.03.2025 11:30:57:  player Szczepan, ID: 4 threw card Nine Spade
+C8 29.03.2025 11:30:57:  player Zbyszek, ID: 3 won trick, began Michał, ID: 2 cards: Ten Heart, Three Spade, Ace Spade, Nine Spade, 
+C9 29.03.2025 11:30:57:  player's Jan, ID: 1 points in that round (1): 0
+C9 29.03.2025 11:30:57:  player's Michał, ID: 2 points in that round (1): 0
+C9 29.03.2025 11:30:57:  player's Zbyszek, ID: 3 points in that round (1): 2
+C9 29.03.2025 11:30:57:  player's Szczepan, ID: 4 points in that round (1): 0
+C15 29.03.2025 11:30:57: Trick 7 in 1 round started
+C12 29.03.2025 11:30:57:  player's Jan, ID: 1 cards: Five Heart, King Heart, Three Club, Four Club, Two Diamond, Three Diamond, Seven Diamond, 
+C12 29.03.2025 11:30:57:  player's Michał, ID: 2 cards: Six Heart, Eight Heart, Nine Heart, Five Club, Seven Club, Five Diamond, Six Diamond, 
+C12 29.03.2025 11:30:57:  player's Zbyszek, ID: 3 cards: Eight Club, Nine Club, Ten Club, Jack Club, Ace Club, Four Diamond, Queen Spade, 
+C12 29.03.2025 11:30:57:  player's Szczepan, ID: 4 cards: Two Heart, Three Heart, Four Heart, Seven Heart, Queen Heart, Ace Heart, Seven Spade, 
+C7 29.03.2025 11:30:57:  player Jan, ID: 1 threw card Four Club
+C7 29.03.2025 11:30:57:  player Michał, ID: 2 threw card Five Club
+C7 29.03.2025 11:30:57:  player Zbyszek, ID: 3 threw card Ace Club
+C7 29.03.2025 11:30:57:  player Szczepan, ID: 4 threw card Queen Heart
+C8 29.03.2025 11:30:57:  player Zbyszek, ID: 3 won trick, began Zbyszek, ID: 3 cards: Four Club, Five Club, Ace Club, Queen Heart, 
+C9 29.03.2025 11:30:57:  player's Jan, ID: 1 points in that round (1): 0
+C9 29.03.2025 11:30:57:  player's Michał, ID: 2 points in that round (1): 0
+C9 29.03.2025 11:30:57:  player's Zbyszek, ID: 3 points in that round (1): 3
+C9 29.03.2025 11:30:57:  player's Szczepan, ID: 4 points in that round (1): 0
+C15 29.03.2025 11:30:57: Trick 8 in 1 round started
+C12 29.03.2025 11:30:57:  player's Jan, ID: 1 cards: Five Heart, King Heart, Three Club, Two Diamond, Three Diamond, Seven Diamond, 
+C12 29.03.2025 11:30:57:  player's Michał, ID: 2 cards: Six Heart, Eight Heart, Nine Heart, Seven Club, Five Diamond, Six Diamond, 
+C12 29.03.2025 11:30:57:  player's Zbyszek, ID: 3 cards: Eight Club, Nine Club, Ten Club, Jack Club, Four Diamond, Queen Spade, 
+C12 29.03.2025 11:30:57:  player's Szczepan, ID: 4 cards: Two Heart, Three Heart, Four Heart, Seven Heart, Ace Heart, Seven Spade, 
+C7 29.03.2025 11:30:57:  player Jan, ID: 1 threw card Three Club
+C7 29.03.2025 11:30:57:  player Michał, ID: 2 threw card Seven Club
+C7 29.03.2025 11:30:57:  player Zbyszek, ID: 3 threw card Jack Club
+C7 29.03.2025 11:30:57:  player Szczepan, ID: 4 threw card Seven Heart
+C8 29.03.2025 11:30:57:  player Zbyszek, ID: 3 won trick, began Zbyszek, ID: 3 cards: Three Club, Seven Club, Jack Club, Seven Heart, 
+C9 29.03.2025 11:30:57:  player's Jan, ID: 1 points in that round (1): 0
+C9 29.03.2025 11:30:57:  player's Michał, ID: 2 points in that round (1): 0
+C9 29.03.2025 11:30:57:  player's Zbyszek, ID: 3 points in that round (1): 4
+C9 29.03.2025 11:30:57:  player's Szczepan, ID: 4 points in that round (1): 0
+C15 29.03.2025 11:30:57: Trick 9 in 1 round started
+C12 29.03.2025 11:30:57:  player's Jan, ID: 1 cards: Five Heart, King Heart, Two Diamond, Three Diamond, Seven Diamond, 
+C12 29.03.2025 11:30:57:  player's Michał, ID: 2 cards: Six Heart, Eight Heart, Nine Heart, Five Diamond, Six Diamond, 
+C12 29.03.2025 11:30:57:  player's Zbyszek, ID: 3 cards: Eight Club, Nine Club, Ten Club, Four Diamond, Queen Spade, 
+C12 29.03.2025 11:30:57:  player's Szczepan, ID: 4 cards: Two Heart, Three Heart, Four Heart, Ace Heart, Seven Spade, 
+C7 29.03.2025 11:30:57:  player Jan, ID: 1 threw card Two Diamond
+C7 29.03.2025 11:30:57:  player Michał, ID: 2 threw card Six Heart
+C7 29.03.2025 11:30:57:  player Zbyszek, ID: 3 threw card Ten Club
+C7 29.03.2025 11:30:57:  player Szczepan, ID: 4 threw card Four Heart
+C8 29.03.2025 11:30:57:  player Zbyszek, ID: 3 won trick, began Zbyszek, ID: 3 cards: Two Diamond, Six Heart, Ten Club, Four Heart, 
+C9 29.03.2025 11:30:57:  player's Jan, ID: 1 points in that round (1): 0
+C9 29.03.2025 11:30:57:  player's Michał, ID: 2 points in that round (1): 0
+C9 29.03.2025 11:30:57:  player's Zbyszek, ID: 3 points in that round (1): 6
+C9 29.03.2025 11:30:57:  player's Szczepan, ID: 4 points in that round (1): 0
+C15 29.03.2025 11:30:57: Trick 10 in 1 round started
+C12 29.03.2025 11:30:57:  player's Jan, ID: 1 cards: Five Heart, King Heart, Three Diamond, Seven Diamond, 
+C12 29.03.2025 11:30:57:  player's Michał, ID: 2 cards: Eight Heart, Nine Heart, Five Diamond, Six Diamond, 
+C12 29.03.2025 11:30:57:  player's Zbyszek, ID: 3 cards: Eight Club, Nine Club, Four Diamond, Queen Spade, 
+C12 29.03.2025 11:30:57:  player's Szczepan, ID: 4 cards: Two Heart, Three Heart, Ace Heart, Seven Spade, 
+C7 29.03.2025 11:30:57:  player Jan, ID: 1 threw card Three Diamond
+C7 29.03.2025 11:30:57:  player Michał, ID: 2 threw card Eight Heart
+C7 29.03.2025 11:30:57:  player Zbyszek, ID: 3 threw card Nine Club
+C7 29.03.2025 11:30:57:  player Szczepan, ID: 4 threw card Two Heart
+C8 29.03.2025 11:30:57:  player Zbyszek, ID: 3 won trick, began Zbyszek, ID: 3 cards: Three Diamond, Eight Heart, Nine Club, Two Heart, 
+C9 29.03.2025 11:30:57:  player's Jan, ID: 1 points in that round (1): 0
+C9 29.03.2025 11:30:57:  player's Michał, ID: 2 points in that round (1): 0
+C9 29.03.2025 11:30:57:  player's Zbyszek, ID: 3 points in that round (1): 8
+C9 29.03.2025 11:30:57:  player's Szczepan, ID: 4 points in that round (1): 0
+C15 29.03.2025 11:30:57: Trick 11 in 1 round started
+C12 29.03.2025 11:30:57:  player's Jan, ID: 1 cards: Five Heart, King Heart, Seven Diamond, 
+C12 29.03.2025 11:30:57:  player's Michał, ID: 2 cards: Nine Heart, Five Diamond, Six Diamond, 
+C12 29.03.2025 11:30:57:  player's Zbyszek, ID: 3 cards: Eight Club, Four Diamond, Queen Spade, 
+C12 29.03.2025 11:30:57:  player's Szczepan, ID: 4 cards: Three Heart, Ace Heart, Seven Spade, 
+C7 29.03.2025 11:30:57:  player Jan, ID: 1 threw card Five Heart
+C7 29.03.2025 11:30:57:  player Michał, ID: 2 threw card Five Diamond
+C7 29.03.2025 11:30:57:  player Zbyszek, ID: 3 threw card Eight Club
+C7 29.03.2025 11:30:57:  player Szczepan, ID: 4 threw card Three Heart
+C8 29.03.2025 11:30:57:  player Zbyszek, ID: 3 won trick, began Zbyszek, ID: 3 cards: Five Heart, Five Diamond, Eight Club, Three Heart, 
+C9 29.03.2025 11:30:57:  player's Jan, ID: 1 points in that round (1): 0
+C9 29.03.2025 11:30:57:  player's Michał, ID: 2 points in that round (1): 0
+C9 29.03.2025 11:30:57:  player's Zbyszek, ID: 3 points in that round (1): 10
+C9 29.03.2025 11:30:57:  player's Szczepan, ID: 4 points in that round (1): 0
+C15 29.03.2025 11:30:57: Trick 12 in 1 round started
+C12 29.03.2025 11:30:57:  player's Jan, ID: 1 cards: King Heart, Seven Diamond, 
+C12 29.03.2025 11:30:57:  player's Michał, ID: 2 cards: Nine Heart, Six Diamond, 
+C12 29.03.2025 11:30:57:  player's Zbyszek, ID: 3 cards: Four Diamond, Queen Spade, 
+C12 29.03.2025 11:30:57:  player's Szczepan, ID: 4 cards: Ace Heart, Seven Spade, 
+C7 29.03.2025 11:30:57:  player Jan, ID: 1 threw card Seven Diamond
+C7 29.03.2025 11:30:57:  player Michał, ID: 2 threw card Nine Heart
+C7 29.03.2025 11:30:57:  player Zbyszek, ID: 3 threw card Queen Spade
+C7 29.03.2025 11:30:57:  player Szczepan, ID: 4 threw card Seven Spade
+C8 29.03.2025 11:30:57:  player Zbyszek, ID: 3 won trick, began Zbyszek, ID: 3 cards: Seven Diamond, Nine Heart, Queen Spade, Seven Spade, 
+C9 29.03.2025 11:30:57:  player's Jan, ID: 1 points in that round (1): 0
+C9 29.03.2025 11:30:57:  player's Michał, ID: 2 points in that round (1): 0
+C9 29.03.2025 11:30:57:  player's Zbyszek, ID: 3 points in that round (1): 24
+C9 29.03.2025 11:30:57:  player's Szczepan, ID: 4 points in that round (1): 0
+C15 29.03.2025 11:30:57: Trick 13 in 1 round started
+C12 29.03.2025 11:30:57:  player's Jan, ID: 1 cards: King Heart, 
+C12 29.03.2025 11:30:57:  player's Michał, ID: 2 cards: Six Diamond, 
+C12 29.03.2025 11:30:57:  player's Zbyszek, ID: 3 cards: Four Diamond, 
+C12 29.03.2025 11:30:57:  player's Szczepan, ID: 4 cards: Ace Heart, 
+C7 29.03.2025 11:30:57:  player Jan, ID: 1 threw card King Heart
+C7 29.03.2025 11:30:57:  player Michał, ID: 2 threw card Six Diamond
+C7 29.03.2025 11:30:57:  player Zbyszek, ID: 3 threw card Four Diamond
+C7 29.03.2025 11:30:57:  player Szczepan, ID: 4 threw card Ace Heart
+C8 29.03.2025 11:30:57:  player Michał, ID: 2 won trick, began Zbyszek, ID: 3 cards: King Heart, Six Diamond, Four Diamond, Ace Heart, 
+C9 29.03.2025 11:30:57:  player's Jan, ID: 1 points in that round (1): 0
+C9 29.03.2025 11:30:57:  player's Michał, ID: 2 points in that round (1): 2
+C9 29.03.2025 11:30:57:  player's Zbyszek, ID: 3 points in that round (1): 24
+C9 29.03.2025 11:30:57:  player's Szczepan, ID: 4 points in that round (1): 0
+C10 29.03.2025 11:30:57:  player's Jan, ID: 1 points after that round (1): 0
+C10 29.03.2025 11:30:57:  player's Michał, ID: 2 points after that round (1): 2
+C10 29.03.2025 11:30:57:  player's Zbyszek, ID: 3 points after that round (1): 24
+C10 29.03.2025 11:30:57:  player's Szczepan, ID: 4 points after that round (1): 0
+C11 29.03.2025 11:30:57:  player's Jan, ID: 1 place in game: 1 with 0 bonuses
+C11 29.03.2025 11:30:57:  player's Michał, ID: 2 place in game: 3 with 0 bonuses
+C11 29.03.2025 11:30:57:  player's Zbyszek, ID: 3 place in game: 4 with 0 bonuses
+C11 29.03.2025 11:30:57:  player's Szczepan, ID: 4 place in game: 1 with 0 bonuses
+C14 29.03.2025 11:30:57: Round 2 started
+C4 01.01.0001 00:00:00:  player Jan, ID: 1 got cards: Ace Spade, Ten Heart, Jack Heart, King Heart, Three Club, Four Club, Six Club, Seven Club, Queen Club, Three Diamond, Seven Diamond, King Diamond, Four Spade, 
+C4 01.01.0001 00:00:00:  player Michał, ID: 2 got cards: Six Heart, Eight Heart, Nine Heart, Five Club, Nine Club, Five Diamond, Six Diamond, Ace Diamond, Three Spade, Five Spade, Ten Spade, Queen Spade, Ace Spade, 
+C4 01.01.0001 00:00:00:  player Zbyszek, ID: 3 got cards: Two Heart, Eight Club, Ten Club, Jack Club, King Club, Ace Club, Four Diamond, Nine Diamond, Ten Diamond, Jack Diamond, Six Spade, Eight Spade, King Spade, 
+C4 01.01.0001 00:00:00:  player Szczepan, ID: 4 got cards: Three Heart, Four Heart, Seven Heart, Queen Heart, Ace Heart, Two Club, Two Diamond, Eight Diamond, Queen Diamond, Two Spade, Seven Spade, Nine Spade, Jack Spade, 
+C5 29.03.2025 11:30:57:  player Jan, ID: 1 gave cards Seven Club, Queen Club, King Diamond,  for exchange to Michał, ID: 2
+C6 29.03.2025 11:30:57:  player Szczepan, ID: 4 received cards Two Diamond, Eight Diamond, Queen Diamond,  for exchange from Jan, ID: 1
+C5 29.03.2025 11:30:57:  player Michał, ID: 2 gave cards Nine Club, Queen Spade, Ace Spade,  for exchange to Zbyszek, ID: 3
+C6 29.03.2025 11:30:57:  player Jan, ID: 1 received cards Seven Club, Queen Club, King Diamond,  for exchange from Michał, ID: 2
+C5 29.03.2025 11:30:57:  player Zbyszek, ID: 3 gave cards Two Heart, Jack Diamond, King Spade,  for exchange to Szczepan, ID: 4
+C6 29.03.2025 11:30:57:  player Michał, ID: 2 received cards Nine Club, Queen Spade, Ace Spade,  for exchange from Zbyszek, ID: 3
+C5 29.03.2025 11:30:57:  player Szczepan, ID: 4 gave cards Two Diamond, Eight Diamond, Queen Diamond,  for exchange to Jan, ID: 1
+C6 29.03.2025 11:30:57:  player Zbyszek, ID: 3 received cards Two Heart, Jack Diamond, King Spade,  for exchange from Szczepan, ID: 4
+C12 29.03.2025 11:30:57:  player's Jan, ID: 1 cards: Five Heart, Ten Heart, Jack Heart, King Heart, Three Club, Four Club, Six Club, Two Diamond, Three Diamond, Seven Diamond, Eight Diamond, Queen Diamond, Four Spade, 
+C12 29.03.2025 11:30:57:  player's Michał, ID: 2 cards: Six Heart, Eight Heart, Nine Heart, Five Club, Seven Club, Queen Club, Five Diamond, Six Diamond, King Diamond, Ace Diamond, Three Spade, Five Spade, Ten Spade, 
+C12 29.03.2025 11:30:57:  player's Zbyszek, ID: 3 cards: Eight Club, Nine Club, Ten Club, Jack Club, King Club, Ace Club, Four Diamond, Nine Diamond, Ten Diamond, Six Spade, Eight Spade, Queen Spade, Ace Spade, 
+C12 29.03.2025 11:30:57:  player's Szczepan, ID: 4 cards: Two Heart, Three Heart, Four Heart, Seven Heart, Queen Heart, Ace Heart, Two Club, Jack Diamond, Two Spade, Seven Spade, Nine Spade, Jack Spade, King Spade, 
+C15 29.03.2025 11:30:57: Trick 1 in 2 round started
+C12 29.03.2025 11:30:57:  player's Jan, ID: 1 cards: Five Heart, Ten Heart, Jack Heart, King Heart, Three Club, Four Club, Six Club, Two Diamond, Three Diamond, Seven Diamond, Eight Diamond, Queen Diamond, Four Spade, 
+C12 29.03.2025 11:30:57:  player's Michał, ID: 2 cards: Six Heart, Eight Heart, Nine Heart, Five Club, Seven Club, Queen Club, Five Diamond, Six Diamond, King Diamond, Ace Diamond, Three Spade, Five Spade, Ten Spade, 
+C12 29.03.2025 11:30:57:  player's Zbyszek, ID: 3 cards: Eight Club, Nine Club, Ten Club, Jack Club, King Club, Ace Club, Four Diamond, Nine Diamond, Ten Diamond, Six Spade, Eight Spade, Queen Spade, Ace Spade, 
+C12 29.03.2025 11:30:57:  player's Szczepan, ID: 4 cards: Two Heart, Three Heart, Four Heart, Seven Heart, Queen Heart, Ace Heart, Two Club, Jack Diamond, Two Spade, Seven Spade, Nine Spade, Jack Spade, King Spade, 
+C7 29.03.2025 11:30:57:  player Jan, ID: 1 threw card Six Club
+C7 29.03.2025 11:30:57:  player Michał, ID: 2 threw card Queen Club
+C7 29.03.2025 11:30:57:  player Zbyszek, ID: 3 threw card King Club
+C7 29.03.2025 11:30:57:  player Szczepan, ID: 4 threw card Two Club
+C8 29.03.2025 11:30:57:  player Zbyszek, ID: 3 won trick, began Szczepan, ID: 4 cards: Six Club, Queen Club, King Club, Two Club, 
+C9 29.03.2025 11:30:57:  player's Jan, ID: 1 points in that round (2): 0
+C9 29.03.2025 11:30:57:  player's Michał, ID: 2 points in that round (2): 0
+C9 29.03.2025 11:30:57:  player's Zbyszek, ID: 3 points in that round (2): 0
+C9 29.03.2025 11:30:57:  player's Szczepan, ID: 4 points in that round (2): 0
+C15 29.03.2025 11:30:57: Trick 2 in 2 round started
+C12 29.03.2025 11:30:57:  player's Jan, ID: 1 cards: Five Heart, Ten Heart, Jack Heart, King Heart, Three Club, Four Club, Two Diamond, Three Diamond, Seven Diamond, Eight Diamond, Queen Diamond, Four Spade, 
+C12 29.03.2025 11:30:57:  player's Michał, ID: 2 cards: Six Heart, Eight Heart, Nine Heart, Five Club, Seven Club, Five Diamond, Six Diamond, King Diamond, Ace Diamond, Three Spade, Five Spade, Ten Spade, 
+C12 29.03.2025 11:30:57:  player's Zbyszek, ID: 3 cards: Eight Club, Nine Club, Ten Club, Jack Club, Ace Club, Four Diamond, Nine Diamond, Ten Diamond, Six Spade, Eight Spade, Queen Spade, Ace Spade, 
+C12 29.03.2025 11:30:57:  player's Szczepan, ID: 4 cards: Two Heart, Three Heart, Four Heart, Seven Heart, Queen Heart, Ace Heart, Jack Diamond, Two Spade, Seven Spade, Nine Spade, Jack Spade, King Spade, 
+C7 29.03.2025 11:30:57:  player Jan, ID: 1 threw card Queen Diamond
+C7 29.03.2025 11:30:57:  player Michał, ID: 2 threw card King Diamond
+C7 29.03.2025 11:30:57:  player Zbyszek, ID: 3 threw card Ten Diamond
+C7 29.03.2025 11:30:57:  player Szczepan, ID: 4 threw card Jack Diamond
+C8 29.03.2025 11:30:57:  player Michał, ID: 2 won trick, began Zbyszek, ID: 3 cards: Queen Diamond, King Diamond, Ten Diamond, Jack Diamond, 
+C9 29.03.2025 11:30:57:  player's Jan, ID: 1 points in that round (2): 0
+C9 29.03.2025 11:30:57:  player's Michał, ID: 2 points in that round (2): 0
+C9 29.03.2025 11:30:57:  player's Zbyszek, ID: 3 points in that round (2): 0
+C9 29.03.2025 11:30:57:  player's Szczepan, ID: 4 points in that round (2): 0
+C15 29.03.2025 11:30:57: Trick 3 in 2 round started
+C12 29.03.2025 11:30:57:  player's Jan, ID: 1 cards: Five Heart, Ten Heart, Jack Heart, King Heart, Three Club, Four Club, Two Diamond, Three Diamond, Seven Diamond, Eight Diamond, Four Spade, 
+C12 29.03.2025 11:30:57:  player's Michał, ID: 2 cards: Six Heart, Eight Heart, Nine Heart, Five Club, Seven Club, Five Diamond, Six Diamond, Ace Diamond, Three Spade, Five Spade, Ten Spade, 
+C12 29.03.2025 11:30:57:  player's Zbyszek, ID: 3 cards: Eight Club, Nine Club, Ten Club, Jack Club, Ace Club, Four Diamond, Nine Diamond, Six Spade, Eight Spade, Queen Spade, Ace Spade, 
+C12 29.03.2025 11:30:57:  player's Szczepan, ID: 4 cards: Two Heart, Three Heart, Four Heart, Seven Heart, Queen Heart, Ace Heart, Two Spade, Seven Spade, Nine Spade, Jack Spade, King Spade, 
+C7 29.03.2025 11:30:57:  player Jan, ID: 1 threw card Four Spade
+C7 29.03.2025 11:30:57:  player Michał, ID: 2 threw card Ten Spade
+C7 29.03.2025 11:30:57:  player Zbyszek, ID: 3 threw card Eight Spade
+C7 29.03.2025 11:30:57:  player Szczepan, ID: 4 threw card Jack Spade
+C8 29.03.2025 11:30:57:  player Szczepan, ID: 4 won trick, began Michał, ID: 2 cards: Four Spade, Ten Spade, Eight Spade, Jack Spade, 
+C9 29.03.2025 11:30:57:  player's Jan, ID: 1 points in that round (2): 0
+C9 29.03.2025 11:30:57:  player's Michał, ID: 2 points in that round (2): 0
+C9 29.03.2025 11:30:57:  player's Zbyszek, ID: 3 points in that round (2): 0
+C9 29.03.2025 11:30:57:  player's Szczepan, ID: 4 points in that round (2): 0
+C15 29.03.2025 11:30:57: Trick 4 in 2 round started
+C12 29.03.2025 11:30:57:  player's Jan, ID: 1 cards: Five Heart, Ten Heart, Jack Heart, King Heart, Three Club, Four Club, Two Diamond, Three Diamond, Seven Diamond, Eight Diamond, 
+C12 29.03.2025 11:30:57:  player's Michał, ID: 2 cards: Six Heart, Eight Heart, Nine Heart, Five Club, Seven Club, Five Diamond, Six Diamond, Ace Diamond, Three Spade, Five Spade, 
+C12 29.03.2025 11:30:57:  player's Zbyszek, ID: 3 cards: Eight Club, Nine Club, Ten Club, Jack Club, Ace Club, Four Diamond, Nine Diamond, Six Spade, Queen Spade, Ace Spade, 
+C12 29.03.2025 11:30:57:  player's Szczepan, ID: 4 cards: Two Heart, Three Heart, Four Heart, Seven Heart, Queen Heart, Ace Heart, Two Spade, Seven Spade, Nine Spade, King Spade, 
+C7 29.03.2025 11:30:57:  player Jan, ID: 1 threw card Jack Heart
+C7 29.03.2025 11:30:57:  player Michał, ID: 2 threw card Five Spade
+C7 29.03.2025 11:30:57:  player Zbyszek, ID: 3 threw card Six Spade
+C7 29.03.2025 11:30:57:  player Szczepan, ID: 4 threw card Two Spade
+C8 29.03.2025 11:30:57:  player Zbyszek, ID: 3 won trick, began Szczepan, ID: 4 cards: Jack Heart, Five Spade, Six Spade, Two Spade, 
+C9 29.03.2025 11:30:57:  player's Jan, ID: 1 points in that round (2): 0
+C9 29.03.2025 11:30:57:  player's Michał, ID: 2 points in that round (2): 0
+C9 29.03.2025 11:30:57:  player's Zbyszek, ID: 3 points in that round (2): 1
+C9 29.03.2025 11:30:57:  player's Szczepan, ID: 4 points in that round (2): 0
+C15 29.03.2025 11:30:57: Trick 5 in 2 round started
+C12 29.03.2025 11:30:57:  player's Jan, ID: 1 cards: Five Heart, Ten Heart, King Heart, Three Club, Four Club, Two Diamond, Three Diamond, Seven Diamond, Eight Diamond, 
+C12 29.03.2025 11:30:57:  player's Michał, ID: 2 cards: Six Heart, Eight Heart, Nine Heart, Five Club, Seven Club, Five Diamond, Six Diamond, Ace Diamond, Three Spade, 
+C12 29.03.2025 11:30:57:  player's Zbyszek, ID: 3 cards: Eight Club, Nine Club, Ten Club, Jack Club, Ace Club, Four Diamond, Nine Diamond, Queen Spade, Ace Spade, 
+C12 29.03.2025 11:30:57:  player's Szczepan, ID: 4 cards: Two Heart, Three Heart, Four Heart, Seven Heart, Queen Heart, Ace Heart, Seven Spade, Nine Spade, King Spade, 
+C7 29.03.2025 11:30:57:  player Jan, ID: 1 threw card Eight Diamond
+C7 29.03.2025 11:30:57:  player Michał, ID: 2 threw card Ace Diamond
+C7 29.03.2025 11:30:57:  player Zbyszek, ID: 3 threw card Nine Diamond
+C7 29.03.2025 11:30:57:  player Szczepan, ID: 4 threw card King Spade
+C8 29.03.2025 11:30:57:  player Michał, ID: 2 won trick, began Zbyszek, ID: 3 cards: Eight Diamond, Ace Diamond, Nine Diamond, King Spade, 
+C9 29.03.2025 11:30:57:  player's Jan, ID: 1 points in that round (2): 0
+C9 29.03.2025 11:30:57:  player's Michał, ID: 2 points in that round (2): 0
+C9 29.03.2025 11:30:57:  player's Zbyszek, ID: 3 points in that round (2): 1
+C9 29.03.2025 11:30:57:  player's Szczepan, ID: 4 points in that round (2): 0
+C15 29.03.2025 11:30:57: Trick 6 in 2 round started
+C12 29.03.2025 11:30:57:  player's Jan, ID: 1 cards: Five Heart, Ten Heart, King Heart, Three Club, Four Club, Two Diamond, Three Diamond, Seven Diamond, 
+C12 29.03.2025 11:30:57:  player's Michał, ID: 2 cards: Six Heart, Eight Heart, Nine Heart, Five Club, Seven Club, Five Diamond, Six Diamond, Three Spade, 
+C12 29.03.2025 11:30:57:  player's Zbyszek, ID: 3 cards: Eight Club, Nine Club, Ten Club, Jack Club, Ace Club, Four Diamond, Queen Spade, Ace Spade, 
+C12 29.03.2025 11:30:57:  player's Szczepan, ID: 4 cards: Two Heart, Three Heart, Four Heart, Seven Heart, Queen Heart, Ace Heart, Seven Spade, Nine Spade, 
+C7 29.03.2025 11:30:57:  player Jan, ID: 1 threw card Ten Heart
+C7 29.03.2025 11:30:57:  player Michał, ID: 2 threw card Three Spade
+C7 29.03.2025 11:30:57:  player Zbyszek, ID: 3 threw card Ace Spade
+C7 29.03.2025 11:30:57:  player Szczepan, ID: 4 threw card Nine Spade
+C8 29.03.2025 11:30:57:  player Zbyszek, ID: 3 won trick, began Michał, ID: 2 cards: Ten Heart, Three Spade, Ace Spade, Nine Spade, 
+C9 29.03.2025 11:30:57:  player's Jan, ID: 1 points in that round (2): 0
+C9 29.03.2025 11:30:57:  player's Michał, ID: 2 points in that round (2): 0
+C9 29.03.2025 11:30:57:  player's Zbyszek, ID: 3 points in that round (2): 2
+C9 29.03.2025 11:30:57:  player's Szczepan, ID: 4 points in that round (2): 0
+C15 29.03.2025 11:30:57: Trick 7 in 2 round started
+C12 29.03.2025 11:30:57:  player's Jan, ID: 1 cards: Five Heart, King Heart, Three Club, Four Club, Two Diamond, Three Diamond, Seven Diamond, 
+C12 29.03.2025 11:30:57:  player's Michał, ID: 2 cards: Six Heart, Eight Heart, Nine Heart, Five Club, Seven Club, Five Diamond, Six Diamond, 
+C12 29.03.2025 11:30:57:  player's Zbyszek, ID: 3 cards: Eight Club, Nine Club, Ten Club, Jack Club, Ace Club, Four Diamond, Queen Spade, 
+C12 29.03.2025 11:30:57:  player's Szczepan, ID: 4 cards: Two Heart, Three Heart, Four Heart, Seven Heart, Queen Heart, Ace Heart, Seven Spade, 
+C7 29.03.2025 11:30:57:  player Jan, ID: 1 threw card Four Club
+C7 29.03.2025 11:30:57:  player Michał, ID: 2 threw card Five Club
+C7 29.03.2025 11:30:57:  player Zbyszek, ID: 3 threw card Ace Club
+C7 29.03.2025 11:30:57:  player Szczepan, ID: 4 threw card Queen Heart
+C8 29.03.2025 11:30:57:  player Zbyszek, ID: 3 won trick, began Zbyszek, ID: 3 cards: Four Club, Five Club, Ace Club, Queen Heart, 
+C9 29.03.2025 11:30:57:  player's Jan, ID: 1 points in that round (2): 0
+C9 29.03.2025 11:30:57:  player's Michał, ID: 2 points in that round (2): 0
+C9 29.03.2025 11:30:57:  player's Zbyszek, ID: 3 points in that round (2): 3
+C9 29.03.2025 11:30:57:  player's Szczepan, ID: 4 points in that round (2): 0
+C15 29.03.2025 11:30:57: Trick 8 in 2 round started
+C12 29.03.2025 11:30:57:  player's Jan, ID: 1 cards: Five Heart, King Heart, Three Club, Two Diamond, Three Diamond, Seven Diamond, 
+C12 29.03.2025 11:30:57:  player's Michał, ID: 2 cards: Six Heart, Eight Heart, Nine Heart, Seven Club, Five Diamond, Six Diamond, 
+C12 29.03.2025 11:30:57:  player's Zbyszek, ID: 3 cards: Eight Club, Nine Club, Ten Club, Jack Club, Four Diamond, Queen Spade, 
+C12 29.03.2025 11:30:57:  player's Szczepan, ID: 4 cards: Two Heart, Three Heart, Four Heart, Seven Heart, Ace Heart, Seven Spade, 
+C7 29.03.2025 11:30:57:  player Jan, ID: 1 threw card Three Club
+C7 29.03.2025 11:30:57:  player Michał, ID: 2 threw card Seven Club
+C7 29.03.2025 11:30:57:  player Zbyszek, ID: 3 threw card Jack Club
+C7 29.03.2025 11:30:57:  player Szczepan, ID: 4 threw card Seven Heart
+C8 29.03.2025 11:30:57:  player Zbyszek, ID: 3 won trick, began Zbyszek, ID: 3 cards: Three Club, Seven Club, Jack Club, Seven Heart, 
+C9 29.03.2025 11:30:57:  player's Jan, ID: 1 points in that round (2): 0
+C9 29.03.2025 11:30:57:  player's Michał, ID: 2 points in that round (2): 0
+C9 29.03.2025 11:30:57:  player's Zbyszek, ID: 3 points in that round (2): 4
+C9 29.03.2025 11:30:57:  player's Szczepan, ID: 4 points in that round (2): 0
+C15 29.03.2025 11:30:57: Trick 9 in 2 round started
+C12 29.03.2025 11:30:57:  player's Jan, ID: 1 cards: Five Heart, King Heart, Two Diamond, Three Diamond, Seven Diamond, 
+C12 29.03.2025 11:30:57:  player's Michał, ID: 2 cards: Six Heart, Eight Heart, Nine Heart, Five Diamond, Six Diamond, 
+C12 29.03.2025 11:30:57:  player's Zbyszek, ID: 3 cards: Eight Club, Nine Club, Ten Club, Four Diamond, Queen Spade, 
+C12 29.03.2025 11:30:57:  player's Szczepan, ID: 4 cards: Two Heart, Three Heart, Four Heart, Ace Heart, Seven Spade, 
+C7 29.03.2025 11:30:57:  player Jan, ID: 1 threw card Two Diamond
+C7 29.03.2025 11:30:57:  player Michał, ID: 2 threw card Six Heart
+C7 29.03.2025 11:30:57:  player Zbyszek, ID: 3 threw card Ten Club
+C7 29.03.2025 11:30:57:  player Szczepan, ID: 4 threw card Four Heart
+C8 29.03.2025 11:30:57:  player Zbyszek, ID: 3 won trick, began Zbyszek, ID: 3 cards: Two Diamond, Six Heart, Ten Club, Four Heart, 
+C9 29.03.2025 11:30:57:  player's Jan, ID: 1 points in that round (2): 0
+C9 29.03.2025 11:30:57:  player's Michał, ID: 2 points in that round (2): 0
+C9 29.03.2025 11:30:57:  player's Zbyszek, ID: 3 points in that round (2): 6
+C9 29.03.2025 11:30:57:  player's Szczepan, ID: 4 points in that round (2): 0
+C15 29.03.2025 11:30:57: Trick 10 in 2 round started
+C12 29.03.2025 11:30:57:  player's Jan, ID: 1 cards: Five Heart, King Heart, Three Diamond, Seven Diamond, 
+C12 29.03.2025 11:30:57:  player's Michał, ID: 2 cards: Eight Heart, Nine Heart, Five Diamond, Six Diamond, 
+C12 29.03.2025 11:30:57:  player's Zbyszek, ID: 3 cards: Eight Club, Nine Club, Four Diamond, Queen Spade, 
+C12 29.03.2025 11:30:57:  player's Szczepan, ID: 4 cards: Two Heart, Three Heart, Ace Heart, Seven Spade, 
+C7 29.03.2025 11:30:57:  player Jan, ID: 1 threw card Three Diamond
+C7 29.03.2025 11:30:57:  player Michał, ID: 2 threw card Eight Heart
+C7 29.03.2025 11:30:57:  player Zbyszek, ID: 3 threw card Nine Club
+C7 29.03.2025 11:30:57:  player Szczepan, ID: 4 threw card Two Heart
+C8 29.03.2025 11:30:57:  player Zbyszek, ID: 3 won trick, began Zbyszek, ID: 3 cards: Three Diamond, Eight Heart, Nine Club, Two Heart, 
+C9 29.03.2025 11:30:57:  player's Jan, ID: 1 points in that round (2): 0
+C9 29.03.2025 11:30:57:  player's Michał, ID: 2 points in that round (2): 0
+C9 29.03.2025 11:30:57:  player's Zbyszek, ID: 3 points in that round (2): 8
+C9 29.03.2025 11:30:57:  player's Szczepan, ID: 4 points in that round (2): 0
+C15 29.03.2025 11:30:57: Trick 11 in 2 round started
+C12 29.03.2025 11:30:57:  player's Jan, ID: 1 cards: Five Heart, King Heart, Seven Diamond, 
+C12 29.03.2025 11:30:57:  player's Michał, ID: 2 cards: Nine Heart, Five Diamond, Six Diamond, 
+C12 29.03.2025 11:30:57:  player's Zbyszek, ID: 3 cards: Eight Club, Four Diamond, Queen Spade, 
+C12 29.03.2025 11:30:57:  player's Szczepan, ID: 4 cards: Three Heart, Ace Heart, Seven Spade, 
+C7 29.03.2025 11:30:57:  player Jan, ID: 1 threw card Five Heart
+C7 29.03.2025 11:30:57:  player Michał, ID: 2 threw card Five Diamond
+C7 29.03.2025 11:30:57:  player Zbyszek, ID: 3 threw card Eight Club
+C7 29.03.2025 11:30:57:  player Szczepan, ID: 4 threw card Three Heart
+C8 29.03.2025 11:30:57:  player Zbyszek, ID: 3 won trick, began Zbyszek, ID: 3 cards: Five Heart, Five Diamond, Eight Club, Three Heart, 
+C9 29.03.2025 11:30:57:  player's Jan, ID: 1 points in that round (2): 0
+C9 29.03.2025 11:30:57:  player's Michał, ID: 2 points in that round (2): 0
+C9 29.03.2025 11:30:57:  player's Zbyszek, ID: 3 points in that round (2): 10
+C9 29.03.2025 11:30:57:  player's Szczepan, ID: 4 points in that round (2): 0
+C15 29.03.2025 11:30:57: Trick 12 in 2 round started
+C12 29.03.2025 11:30:57:  player's Jan, ID: 1 cards: King Heart, Seven Diamond, 
+C12 29.03.2025 11:30:57:  player's Michał, ID: 2 cards: Nine Heart, Six Diamond, 
+C12 29.03.2025 11:30:57:  player's Zbyszek, ID: 3 cards: Four Diamond, Queen Spade, 
+C12 29.03.2025 11:30:57:  player's Szczepan, ID: 4 cards: Ace Heart, Seven Spade, 
+C7 29.03.2025 11:30:57:  player Jan, ID: 1 threw card Seven Diamond
+C7 29.03.2025 11:30:57:  player Michał, ID: 2 threw card Nine Heart
+C7 29.03.2025 11:30:57:  player Zbyszek, ID: 3 threw card Queen Spade
+C7 29.03.2025 11:30:57:  player Szczepan, ID: 4 threw card Seven Spade
+C8 29.03.2025 11:30:57:  player Zbyszek, ID: 3 won trick, began Zbyszek, ID: 3 cards: Seven Diamond, Nine Heart, Queen Spade, Seven Spade, 
+C9 29.03.2025 11:30:57:  player's Jan, ID: 1 points in that round (2): 0
+C9 29.03.2025 11:30:57:  player's Michał, ID: 2 points in that round (2): 0
+C9 29.03.2025 11:30:57:  player's Zbyszek, ID: 3 points in that round (2): 24
+C9 29.03.2025 11:30:57:  player's Szczepan, ID: 4 points in that round (2): 0
+C15 29.03.2025 11:30:57: Trick 13 in 2 round started
+C12 29.03.2025 11:30:57:  player's Jan, ID: 1 cards: King Heart, 
+C12 29.03.2025 11:30:57:  player's Michał, ID: 2 cards: Six Diamond, 
+C12 29.03.2025 11:30:57:  player's Zbyszek, ID: 3 cards: Four Diamond, 
+C12 29.03.2025 11:30:57:  player's Szczepan, ID: 4 cards: Ace Heart, 
+C7 29.03.2025 11:30:57:  player Jan, ID: 1 threw card King Heart
+C7 29.03.2025 11:30:57:  player Michał, ID: 2 threw card Six Diamond
+C7 29.03.2025 11:30:57:  player Zbyszek, ID: 3 threw card Four Diamond
+C7 29.03.2025 11:30:57:  player Szczepan, ID: 4 threw card Ace Heart
+C8 29.03.2025 11:30:57:  player Michał, ID: 2 won trick, began Zbyszek, ID: 3 cards: King Heart, Six Diamond, Four Diamond, Ace Heart, 
+C9 29.03.2025 11:30:57:  player's Jan, ID: 1 points in that round (2): 0
+C9 29.03.2025 11:30:57:  player's Michał, ID: 2 points in that round (2): 2
+C9 29.03.2025 11:30:57:  player's Zbyszek, ID: 3 points in that round (2): 24
+C9 29.03.2025 11:30:57:  player's Szczepan, ID: 4 points in that round (2): 0
+C10 29.03.2025 11:30:57:  player's Paweł, ID: 1 points after that round (2): 0
+C10 29.03.2025 11:30:57:  player's Rafał, ID: 2 points after that round (2): 2
+C10 29.03.2025 11:30:57:  player's Adam, ID: 3 points after that round (2): 24
+C10 29.03.2025 11:30:57:  player's Tomek, ID: 4 points after that round (2): 0
+C11 29.03.2025 11:30:57:  player's Paweł, ID: 1 place in game: 1 with 0 bonuses
+C11 29.03.2025 11:30:57:  player's Rafał, ID: 2 place in game: 3 with 0 bonuses
+C11 29.03.2025 11:30:57:  player's Adam, ID: 3 place in game: 4 with 0 bonuses
+C11 29.03.2025 11:30:57:  player's Tomek, ID: 4 place in game: 1 with 0 bonusesC3 15.01.2024 20:58:00: Game started
+C14 30.03.2025 23:22:16: Round 1 started
+C4 01.01.0001 00:00:00:  player Jan, ID: 1 got cards: Five Heart, Ten Heart, Jack Heart, King Heart, Three Club, Four Club, Six Club, Seven Club, Queen Club, Three Diamond, Seven Diamond, King Diamond, Four Spade, 
+C4 01.01.0001 00:00:00:  player Michał, ID: 2 got cards: Six Heart, Eight Heart, Nine Heart, Five Club, Nine Club, Five Diamond, Six Diamond, Ace Diamond, Three Spade, Five Spade, Ten Spade, Queen Spade, Ace Spade, 
+C4 01.01.0001 00:00:00:  player Zbyszek, ID: 3 got cards: Two Heart, Eight Club, Ten Club, Jack Club, King Club, Ace Club, Four Diamond, Nine Diamond, Ten Diamond, Jack Diamond, Six Spade, Eight Spade, King Spade, 
+C4 01.01.0001 00:00:00:  player Szczepan, ID: 4 got cards: Three Heart, Four Heart, Seven Heart, Queen Heart, Ace Heart, Two Club, Two Diamond, Eight Diamond, Queen Diamond, Two Spade, Seven Spade, Nine Spade, Jack Spade, 
+C5 30.03.2025 23:22:16:  player Jan, ID: 1 gave cards Seven Club, Queen Club, King Diamond,  for exchange to Michał, ID: 2
+C6 30.03.2025 23:22:16:  player Szczepan, ID: 4 received cards Two Diamond, Eight Diamond, Queen Diamond,  for exchange from Jan, ID: 1
+C5 30.03.2025 23:22:16:  player Michał, ID: 2 gave cards Nine Club, Queen Spade, Ace Spade,  for exchange to Zbyszek, ID: 3
+C6 30.03.2025 23:22:16:  player Jan, ID: 1 received cards Seven Club, Queen Club, King Diamond,  for exchange from Michał, ID: 2
+C5 30.03.2025 23:22:16:  player Zbyszek, ID: 3 gave cards Two Heart, Jack Diamond, King Spade,  for exchange to Szczepan, ID: 4
+C6 30.03.2025 23:22:16:  player Michał, ID: 2 received cards Nine Club, Queen Spade, Ace Spade,  for exchange from Zbyszek, ID: 3
+C5 30.03.2025 23:22:16:  player Szczepan, ID: 4 gave cards Two Diamond, Eight Diamond, Queen Diamond,  for exchange to Jan, ID: 1
+C6 30.03.2025 23:22:16:  player Zbyszek, ID: 3 received cards Two Heart, Jack Diamond, King Spade,  for exchange from Szczepan, ID: 4
+C12 30.03.2025 23:22:16:  player's Jan, ID: 1 cards: Five Heart, Ten Heart, Jack Heart, King Heart, Three Club, Four Club, Six Club, Two Diamond, Three Diamond, Seven Diamond, Eight Diamond, Queen Diamond, Four Spade, 
+C12 30.03.2025 23:22:16:  player's Michał, ID: 2 cards: Six Heart, Eight Heart, Nine Heart, Five Club, Seven Club, Queen Club, Five Diamond, Six Diamond, King Diamond, Ace Diamond, Three Spade, Five Spade, Ten Spade, 
+C12 30.03.2025 23:22:16:  player's Zbyszek, ID: 3 cards: Eight Club, Nine Club, Ten Club, Jack Club, King Club, Ace Club, Four Diamond, Nine Diamond, Ten Diamond, Six Spade, Eight Spade, Queen Spade, Ace Spade, 
+C12 30.03.2025 23:22:16:  player's Szczepan, ID: 4 cards: Two Heart, Three Heart, Four Heart, Seven Heart, Queen Heart, Ace Heart, Two Club, Jack Diamond, Two Spade, Seven Spade, Nine Spade, Jack Spade, King Spade, 
+C15 30.03.2025 23:22:16: Trick 1 in 1 round started
+C12 30.03.2025 23:22:16:  player's Jan, ID: 1 cards: Five Heart, Ten Heart, Jack Heart, King Heart, Three Club, Four Club, Six Club, Two Diamond, Three Diamond, Seven Diamond, Eight Diamond, Queen Diamond, Four Spade, 
+C12 30.03.2025 23:22:16:  player's Michał, ID: 2 cards: Six Heart, Eight Heart, Nine Heart, Five Club, Seven Club, Queen Club, Five Diamond, Six Diamond, King Diamond, Ace Diamond, Three Spade, Five Spade, Ten Spade, 
+C12 30.03.2025 23:22:16:  player's Zbyszek, ID: 3 cards: Eight Club, Nine Club, Ten Club, Jack Club, King Club, Ace Club, Four Diamond, Nine Diamond, Ten Diamond, Six Spade, Eight Spade, Queen Spade, Ace Spade, 
+C12 30.03.2025 23:22:16:  player's Szczepan, ID: 4 cards: Two Heart, Three Heart, Four Heart, Seven Heart, Queen Heart, Ace Heart, Two Club, Jack Diamond, Two Spade, Seven Spade, Nine Spade, Jack Spade, King Spade, 
+C7 30.03.2025 23:22:16:  player Jan, ID: 1 threw card Six Club
+C7 30.03.2025 23:22:16:  player Michał, ID: 2 threw card Queen Club
+C7 30.03.2025 23:22:16:  player Zbyszek, ID: 3 threw card King Club
+C7 30.03.2025 23:22:16:  player Szczepan, ID: 4 threw card Two Club
+C8 30.03.2025 23:22:16:  player Zbyszek, ID: 3 won trick, began Szczepan, ID: 4 cards: Six Club, Queen Club, King Club, Two Club, 
+C9 30.03.2025 23:22:16:  player's Jan, ID: 1 points in that round (1): 0
+C9 30.03.2025 23:22:16:  player's Michał, ID: 2 points in that round (1): 0
+C9 30.03.2025 23:22:16:  player's Zbyszek, ID: 3 points in that round (1): 0
+C9 30.03.2025 23:22:16:  player's Szczepan, ID: 4 points in that round (1): 0
+C15 30.03.2025 23:22:16: Trick 2 in 1 round started
+C12 30.03.2025 23:22:16:  player's Jan, ID: 1 cards: Five Heart, Ten Heart, Jack Heart, King Heart, Three Club, Four Club, Two Diamond, Three Diamond, Seven Diamond, Eight Diamond, Queen Diamond, Four Spade, 
+C12 30.03.2025 23:22:16:  player's Michał, ID: 2 cards: Six Heart, Eight Heart, Nine Heart, Five Club, Seven Club, Five Diamond, Six Diamond, King Diamond, Ace Diamond, Three Spade, Five Spade, Ten Spade, 
+C12 30.03.2025 23:22:16:  player's Zbyszek, ID: 3 cards: Eight Club, Nine Club, Ten Club, Jack Club, Ace Club, Four Diamond, Nine Diamond, Ten Diamond, Six Spade, Eight Spade, Queen Spade, Ace Spade, 
+C12 30.03.2025 23:22:16:  player's Szczepan, ID: 4 cards: Two Heart, Three Heart, Four Heart, Seven Heart, Queen Heart, Ace Heart, Jack Diamond, Two Spade, Seven Spade, Nine Spade, Jack Spade, King Spade, 
+C7 30.03.2025 23:22:16:  player Jan, ID: 1 threw card Queen Diamond
+C7 30.03.2025 23:22:16:  player Michał, ID: 2 threw card King Diamond
+C7 30.03.2025 23:22:16:  player Zbyszek, ID: 3 threw card Ten Diamond
+C7 30.03.2025 23:22:16:  player Szczepan, ID: 4 threw card Jack Diamond
+C8 30.03.2025 23:22:16:  player Michał, ID: 2 won trick, began Zbyszek, ID: 3 cards: Queen Diamond, King Diamond, Ten Diamond, Jack Diamond, 
+C9 30.03.2025 23:22:16:  player's Jan, ID: 1 points in that round (1): 0
+C9 30.03.2025 23:22:16:  player's Michał, ID: 2 points in that round (1): 0
+C9 30.03.2025 23:22:16:  player's Zbyszek, ID: 3 points in that round (1): 0
+C9 30.03.2025 23:22:16:  player's Szczepan, ID: 4 points in that round (1): 0
+C15 30.03.2025 23:22:16: Trick 3 in 1 round started
+C12 30.03.2025 23:22:16:  player's Jan, ID: 1 cards: Five Heart, Ten Heart, Jack Heart, King Heart, Three Club, Four Club, Two Diamond, Three Diamond, Seven Diamond, Eight Diamond, Four Spade, 
+C12 30.03.2025 23:22:16:  player's Michał, ID: 2 cards: Six Heart, Eight Heart, Nine Heart, Five Club, Seven Club, Five Diamond, Six Diamond, Ace Diamond, Three Spade, Five Spade, Ten Spade, 
+C12 30.03.2025 23:22:16:  player's Zbyszek, ID: 3 cards: Eight Club, Nine Club, Ten Club, Jack Club, Ace Club, Four Diamond, Nine Diamond, Six Spade, Eight Spade, Queen Spade, Ace Spade, 
+C12 30.03.2025 23:22:16:  player's Szczepan, ID: 4 cards: Two Heart, Three Heart, Four Heart, Seven Heart, Queen Heart, Ace Heart, Two Spade, Seven Spade, Nine Spade, Jack Spade, King Spade, 
+C7 30.03.2025 23:22:16:  player Jan, ID: 1 threw card Four Spade
+C7 30.03.2025 23:22:16:  player Michał, ID: 2 threw card Ten Spade
+C7 30.03.2025 23:22:16:  player Zbyszek, ID: 3 threw card Eight Spade
+C7 30.03.2025 23:22:16:  player Szczepan, ID: 4 threw card Jack Spade
+C8 30.03.2025 23:22:16:  player Szczepan, ID: 4 won trick, began Michał, ID: 2 cards: Four Spade, Ten Spade, Eight Spade, Jack Spade, 
+C9 30.03.2025 23:22:16:  player's Jan, ID: 1 points in that round (1): 0
+C9 30.03.2025 23:22:16:  player's Michał, ID: 2 points in that round (1): 0
+C9 30.03.2025 23:22:16:  player's Zbyszek, ID: 3 points in that round (1): 0
+C9 30.03.2025 23:22:16:  player's Szczepan, ID: 4 points in that round (1): 0
+C15 30.03.2025 23:22:16: Trick 4 in 1 round started
+C12 30.03.2025 23:22:16:  player's Jan, ID: 1 cards: Five Heart, Ten Heart, Jack Heart, King Heart, Three Club, Four Club, Two Diamond, Three Diamond, Seven Diamond, Eight Diamond, 
+C12 30.03.2025 23:22:16:  player's Michał, ID: 2 cards: Six Heart, Eight Heart, Nine Heart, Five Club, Seven Club, Five Diamond, Six Diamond, Ace Diamond, Three Spade, Five Spade, 
+C12 30.03.2025 23:22:16:  player's Zbyszek, ID: 3 cards: Eight Club, Nine Club, Ten Club, Jack Club, Ace Club, Four Diamond, Nine Diamond, Six Spade, Queen Spade, Ace Spade, 
+C12 30.03.2025 23:22:16:  player's Szczepan, ID: 4 cards: Two Heart, Three Heart, Four Heart, Seven Heart, Queen Heart, Ace Heart, Two Spade, Seven Spade, Nine Spade, King Spade, 
+C7 30.03.2025 23:22:16:  player Jan, ID: 1 threw card Jack Heart
+C7 30.03.2025 23:22:16:  player Michał, ID: 2 threw card Five Spade
+C7 30.03.2025 23:22:16:  player Zbyszek, ID: 3 threw card Six Spade
+C7 30.03.2025 23:22:16:  player Szczepan, ID: 4 threw card Two Spade
+C8 30.03.2025 23:22:16:  player Zbyszek, ID: 3 won trick, began Szczepan, ID: 4 cards: Jack Heart, Five Spade, Six Spade, Two Spade, 
+C9 30.03.2025 23:22:16:  player's Jan, ID: 1 points in that round (1): 0
+C9 30.03.2025 23:22:16:  player's Michał, ID: 2 points in that round (1): 0
+C9 30.03.2025 23:22:16:  player's Zbyszek, ID: 3 points in that round (1): 1
+C9 30.03.2025 23:22:16:  player's Szczepan, ID: 4 points in that round (1): 0
+C15 30.03.2025 23:22:16: Trick 5 in 1 round started
+C12 30.03.2025 23:22:16:  player's Jan, ID: 1 cards: Five Heart, Ten Heart, King Heart, Three Club, Four Club, Two Diamond, Three Diamond, Seven Diamond, Eight Diamond, 
+C12 30.03.2025 23:22:16:  player's Michał, ID: 2 cards: Six Heart, Eight Heart, Nine Heart, Five Club, Seven Club, Five Diamond, Six Diamond, Ace Diamond, Three Spade, 
+C12 30.03.2025 23:22:16:  player's Zbyszek, ID: 3 cards: Eight Club, Nine Club, Ten Club, Jack Club, Ace Club, Four Diamond, Nine Diamond, Queen Spade, Ace Spade, 
+C12 30.03.2025 23:22:16:  player's Szczepan, ID: 4 cards: Two Heart, Three Heart, Four Heart, Seven Heart, Queen Heart, Ace Heart, Seven Spade, Nine Spade, King Spade, 
+C7 30.03.2025 23:22:16:  player Jan, ID: 1 threw card Eight Diamond
+C7 30.03.2025 23:22:16:  player Michał, ID: 2 threw card Ace Diamond
+C7 30.03.2025 23:22:16:  player Zbyszek, ID: 3 threw card Nine Diamond
+C7 30.03.2025 23:22:16:  player Szczepan, ID: 4 threw card King Spade
+C8 30.03.2025 23:22:16:  player Michał, ID: 2 won trick, began Zbyszek, ID: 3 cards: Eight Diamond, Ace Diamond, Nine Diamond, King Spade, 
+C9 30.03.2025 23:22:16:  player's Jan, ID: 1 points in that round (1): 0
+C9 30.03.2025 23:22:16:  player's Michał, ID: 2 points in that round (1): 0
+C9 30.03.2025 23:22:16:  player's Zbyszek, ID: 3 points in that round (1): 1
+C9 30.03.2025 23:22:16:  player's Szczepan, ID: 4 points in that round (1): 0
+C15 30.03.2025 23:22:16: Trick 6 in 1 round started
+C12 30.03.2025 23:22:16:  player's Jan, ID: 1 cards: Five Heart, Ten Heart, King Heart, Three Club, Four Club, Two Diamond, Three Diamond, Seven Diamond, 
+C12 30.03.2025 23:22:16:  player's Michał, ID: 2 cards: Six Heart, Eight Heart, Nine Heart, Five Club, Seven Club, Five Diamond, Six Diamond, Three Spade, 
+C12 30.03.2025 23:22:16:  player's Zbyszek, ID: 3 cards: Eight Club, Nine Club, Ten Club, Jack Club, Ace Club, Four Diamond, Queen Spade, Ace Spade, 
+C12 30.03.2025 23:22:16:  player's Szczepan, ID: 4 cards: Two Heart, Three Heart, Four Heart, Seven Heart, Queen Heart, Ace Heart, Seven Spade, Nine Spade, 
+C7 30.03.2025 23:22:16:  player Jan, ID: 1 threw card Ten Heart
+C7 30.03.2025 23:22:16:  player Michał, ID: 2 threw card Three Spade
+C7 30.03.2025 23:22:16:  player Zbyszek, ID: 3 threw card Ace Spade
+C7 30.03.2025 23:22:16:  player Szczepan, ID: 4 threw card Nine Spade
+C8 30.03.2025 23:22:16:  player Zbyszek, ID: 3 won trick, began Michał, ID: 2 cards: Ten Heart, Three Spade, Ace Spade, Nine Spade, 
+C9 30.03.2025 23:22:16:  player's Jan, ID: 1 points in that round (1): 0
+C9 30.03.2025 23:22:16:  player's Michał, ID: 2 points in that round (1): 0
+C9 30.03.2025 23:22:16:  player's Zbyszek, ID: 3 points in that round (1): 2
+C9 30.03.2025 23:22:16:  player's Szczepan, ID: 4 points in that round (1): 0
+C15 30.03.2025 23:22:16: Trick 7 in 1 round started
+C12 30.03.2025 23:22:16:  player's Jan, ID: 1 cards: Five Heart, King Heart, Three Club, Four Club, Two Diamond, Three Diamond, Seven Diamond, 
+C12 30.03.2025 23:22:16:  player's Michał, ID: 2 cards: Six Heart, Eight Heart, Nine Heart, Five Club, Seven Club, Five Diamond, Six Diamond, 
+C12 30.03.2025 23:22:16:  player's Zbyszek, ID: 3 cards: Eight Club, Nine Club, Ten Club, Jack Club, Ace Club, Four Diamond, Queen Spade, 
+C12 30.03.2025 23:22:16:  player's Szczepan, ID: 4 cards: Two Heart, Three Heart, Four Heart, Seven Heart, Queen Heart, Ace Heart, Seven Spade, 
+C7 30.03.2025 23:22:16:  player Jan, ID: 1 threw card Four Club
+C7 30.03.2025 23:22:16:  player Michał, ID: 2 threw card Five Club
+C7 30.03.2025 23:22:16:  player Zbyszek, ID: 3 threw card Ace Club
+C7 30.03.2025 23:22:16:  player Szczepan, ID: 4 threw card Queen Heart
+C8 30.03.2025 23:22:16:  player Zbyszek, ID: 3 won trick, began Zbyszek, ID: 3 cards: Four Club, Five Club, Ace Club, Queen Heart, 
+C9 30.03.2025 23:22:16:  player's Jan, ID: 1 points in that round (1): 0
+C9 30.03.2025 23:22:16:  player's Michał, ID: 2 points in that round (1): 0
+C9 30.03.2025 23:22:16:  player's Zbyszek, ID: 3 points in that round (1): 3
+C9 30.03.2025 23:22:16:  player's Szczepan, ID: 4 points in that round (1): 0
+C15 30.03.2025 23:22:16: Trick 8 in 1 round started
+C12 30.03.2025 23:22:16:  player's Jan, ID: 1 cards: Five Heart, King Heart, Three Club, Two Diamond, Three Diamond, Seven Diamond, 
+C12 30.03.2025 23:22:16:  player's Michał, ID: 2 cards: Six Heart, Eight Heart, Nine Heart, Seven Club, Five Diamond, Six Diamond, 
+C12 30.03.2025 23:22:16:  player's Zbyszek, ID: 3 cards: Eight Club, Nine Club, Ten Club, Jack Club, Four Diamond, Queen Spade, 
+C12 30.03.2025 23:22:16:  player's Szczepan, ID: 4 cards: Two Heart, Three Heart, Four Heart, Seven Heart, Ace Heart, Seven Spade, 
+C7 30.03.2025 23:22:16:  player Jan, ID: 1 threw card Three Club
+C7 30.03.2025 23:22:16:  player Michał, ID: 2 threw card Seven Club
+C7 30.03.2025 23:22:16:  player Zbyszek, ID: 3 threw card Jack Club
+C7 30.03.2025 23:22:16:  player Szczepan, ID: 4 threw card Seven Heart
+C8 30.03.2025 23:22:16:  player Zbyszek, ID: 3 won trick, began Zbyszek, ID: 3 cards: Three Club, Seven Club, Jack Club, Seven Heart, 
+C9 30.03.2025 23:22:16:  player's Jan, ID: 1 points in that round (1): 0
+C9 30.03.2025 23:22:16:  player's Michał, ID: 2 points in that round (1): 0
+C9 30.03.2025 23:22:16:  player's Zbyszek, ID: 3 points in that round (1): 4
+C9 30.03.2025 23:22:16:  player's Szczepan, ID: 4 points in that round (1): 0
+C15 30.03.2025 23:22:16: Trick 9 in 1 round started
+C12 30.03.2025 23:22:16:  player's Jan, ID: 1 cards: Five Heart, King Heart, Two Diamond, Three Diamond, Seven Diamond, 
+C12 30.03.2025 23:22:16:  player's Michał, ID: 2 cards: Six Heart, Eight Heart, Nine Heart, Five Diamond, Six Diamond, 
+C12 30.03.2025 23:22:16:  player's Zbyszek, ID: 3 cards: Eight Club, Nine Club, Ten Club, Four Diamond, Queen Spade, 
+C12 30.03.2025 23:22:16:  player's Szczepan, ID: 4 cards: Two Heart, Three Heart, Four Heart, Ace Heart, Seven Spade, 
+C7 30.03.2025 23:22:16:  player Jan, ID: 1 threw card Two Diamond
+C7 30.03.2025 23:22:16:  player Michał, ID: 2 threw card Six Heart
+C7 30.03.2025 23:22:16:  player Zbyszek, ID: 3 threw card Ten Club
+C7 30.03.2025 23:22:16:  player Szczepan, ID: 4 threw card Four Heart
+C8 30.03.2025 23:22:16:  player Zbyszek, ID: 3 won trick, began Zbyszek, ID: 3 cards: Two Diamond, Six Heart, Ten Club, Four Heart, 
+C9 30.03.2025 23:22:16:  player's Jan, ID: 1 points in that round (1): 0
+C9 30.03.2025 23:22:16:  player's Michał, ID: 2 points in that round (1): 0
+C9 30.03.2025 23:22:16:  player's Zbyszek, ID: 3 points in that round (1): 6
+C9 30.03.2025 23:22:16:  player's Szczepan, ID: 4 points in that round (1): 0
+C15 30.03.2025 23:22:16: Trick 10 in 1 round started
+C12 30.03.2025 23:22:16:  player's Jan, ID: 1 cards: Five Heart, King Heart, Three Diamond, Seven Diamond, 
+C12 30.03.2025 23:22:16:  player's Michał, ID: 2 cards: Eight Heart, Nine Heart, Five Diamond, Six Diamond, 
+C12 30.03.2025 23:22:16:  player's Zbyszek, ID: 3 cards: Eight Club, Nine Club, Four Diamond, Queen Spade, 
+C12 30.03.2025 23:22:16:  player's Szczepan, ID: 4 cards: Two Heart, Three Heart, Ace Heart, Seven Spade, 
+C7 30.03.2025 23:22:16:  player Jan, ID: 1 threw card Three Diamond
+C7 30.03.2025 23:22:16:  player Michał, ID: 2 threw card Eight Heart
+C7 30.03.2025 23:22:16:  player Zbyszek, ID: 3 threw card Nine Club
+C7 30.03.2025 23:22:16:  player Szczepan, ID: 4 threw card Two Heart
+C8 30.03.2025 23:22:16:  player Zbyszek, ID: 3 won trick, began Zbyszek, ID: 3 cards: Three Diamond, Eight Heart, Nine Club, Two Heart, 
+C9 30.03.2025 23:22:16:  player's Jan, ID: 1 points in that round (1): 0
+C9 30.03.2025 23:22:16:  player's Michał, ID: 2 points in that round (1): 0
+C9 30.03.2025 23:22:16:  player's Zbyszek, ID: 3 points in that round (1): 8
+C9 30.03.2025 23:22:16:  player's Szczepan, ID: 4 points in that round (1): 0
+C15 30.03.2025 23:22:16: Trick 11 in 1 round started
+C12 30.03.2025 23:22:16:  player's Jan, ID: 1 cards: Five Heart, King Heart, Seven Diamond, 
+C12 30.03.2025 23:22:16:  player's Michał, ID: 2 cards: Nine Heart, Five Diamond, Six Diamond, 
+C12 30.03.2025 23:22:16:  player's Zbyszek, ID: 3 cards: Eight Club, Four Diamond, Queen Spade, 
+C12 30.03.2025 23:22:16:  player's Szczepan, ID: 4 cards: Three Heart, Ace Heart, Seven Spade, 
+C7 30.03.2025 23:22:16:  player Jan, ID: 1 threw card Five Heart
+C7 30.03.2025 23:22:16:  player Michał, ID: 2 threw card Five Diamond
+C7 30.03.2025 23:22:16:  player Zbyszek, ID: 3 threw card Eight Club
+C7 30.03.2025 23:22:16:  player Szczepan, ID: 4 threw card Three Heart
+C8 30.03.2025 23:22:16:  player Zbyszek, ID: 3 won trick, began Zbyszek, ID: 3 cards: Five Heart, Five Diamond, Eight Club, Three Heart, 
+C9 30.03.2025 23:22:16:  player's Jan, ID: 1 points in that round (1): 0
+C9 30.03.2025 23:22:16:  player's Michał, ID: 2 points in that round (1): 0
+C9 30.03.2025 23:22:16:  player's Zbyszek, ID: 3 points in that round (1): 10
+C9 30.03.2025 23:22:16:  player's Szczepan, ID: 4 points in that round (1): 0
+C15 30.03.2025 23:22:16: Trick 12 in 1 round started
+C12 30.03.2025 23:22:16:  player's Jan, ID: 1 cards: King Heart, Seven Diamond, 
+C12 30.03.2025 23:22:16:  player's Michał, ID: 2 cards: Nine Heart, Six Diamond, 
+C12 30.03.2025 23:22:16:  player's Zbyszek, ID: 3 cards: Four Diamond, Queen Spade, 
+C12 30.03.2025 23:22:16:  player's Szczepan, ID: 4 cards: Ace Heart, Seven Spade, 
+C7 30.03.2025 23:22:16:  player Jan, ID: 1 threw card Seven Diamond
+C7 30.03.2025 23:22:16:  player Michał, ID: 2 threw card Nine Heart
+C7 30.03.2025 23:22:16:  player Zbyszek, ID: 3 threw card Queen Spade
+C7 30.03.2025 23:22:16:  player Szczepan, ID: 4 threw card Seven Spade
+C8 30.03.2025 23:22:16:  player Zbyszek, ID: 3 won trick, began Zbyszek, ID: 3 cards: Seven Diamond, Nine Heart, Queen Spade, Seven Spade, 
+C9 30.03.2025 23:22:16:  player's Jan, ID: 1 points in that round (1): 0
+C9 30.03.2025 23:22:16:  player's Michał, ID: 2 points in that round (1): 0
+C9 30.03.2025 23:22:16:  player's Zbyszek, ID: 3 points in that round (1): 24
+C9 30.03.2025 23:22:16:  player's Szczepan, ID: 4 points in that round (1): 0
+C15 30.03.2025 23:22:16: Trick 13 in 1 round started
+C12 30.03.2025 23:22:16:  player's Jan, ID: 1 cards: King Heart, 
+C12 30.03.2025 23:22:16:  player's Michał, ID: 2 cards: Six Diamond, 
+C12 30.03.2025 23:22:16:  player's Zbyszek, ID: 3 cards: Four Diamond, 
+C12 30.03.2025 23:22:16:  player's Szczepan, ID: 4 cards: Ace Heart, 
+C7 30.03.2025 23:22:16:  player Jan, ID: 1 threw card King Heart
+C7 30.03.2025 23:22:16:  player Michał, ID: 2 threw card Six Diamond
+C7 30.03.2025 23:22:16:  player Zbyszek, ID: 3 threw card Four Diamond
+C7 30.03.2025 23:22:16:  player Szczepan, ID: 4 threw card Ace Heart
+C8 30.03.2025 23:22:16:  player Michał, ID: 2 won trick, began Zbyszek, ID: 3 cards: King Heart, Six Diamond, Four Diamond, Ace Heart, 
+C9 30.03.2025 23:22:16:  player's Jan, ID: 1 points in that round (1): 0
+C9 30.03.2025 23:22:16:  player's Michał, ID: 2 points in that round (1): 2
+C9 30.03.2025 23:22:16:  player's Zbyszek, ID: 3 points in that round (1): 24
+C9 30.03.2025 23:22:16:  player's Szczepan, ID: 4 points in that round (1): 0
+C10 30.03.2025 23:22:16:  player's Jan, ID: 1 points after that round (1): 0
+C10 30.03.2025 23:22:16:  player's Michał, ID: 2 points after that round (1): 2
+C10 30.03.2025 23:22:16:  player's Zbyszek, ID: 3 points after that round (1): 24
+C10 30.03.2025 23:22:16:  player's Szczepan, ID: 4 points after that round (1): 0
+C11 30.03.2025 23:22:16:  player's Jan, ID: 1 place in game: 1 with 0 bonuses
+C11 30.03.2025 23:22:16:  player's Michał, ID: 2 place in game: 3 with 0 bonuses
+C11 30.03.2025 23:22:16:  player's Zbyszek, ID: 3 place in game: 4 with 0 bonuses
+C11 30.03.2025 23:22:16:  player's Szczepan, ID: 4 place in game: 1 with 0 bonuses
+C14 30.03.2025 23:22:16: Round 2 started
+C4 01.01.0001 00:00:00:  player Jan, ID: 1 got cards: Ace Spade, Ten Heart, Jack Heart, King Heart, Three Club, Four Club, Six Club, Seven Club, Queen Club, Three Diamond, Seven Diamond, King Diamond, Four Spade, 
+C4 01.01.0001 00:00:00:  player Michał, ID: 2 got cards: Six Heart, Eight Heart, Nine Heart, Five Club, Nine Club, Five Diamond, Six Diamond, Ace Diamond, Three Spade, Five Spade, Ten Spade, Queen Spade, Ace Spade, 
+C4 01.01.0001 00:00:00:  player Zbyszek, ID: 3 got cards: Two Heart, Eight Club, Ten Club, Jack Club, King Club, Ace Club, Four Diamond, Nine Diamond, Ten Diamond, Jack Diamond, Six Spade, Eight Spade, King Spade, 
+C4 01.01.0001 00:00:00:  player Szczepan, ID: 4 got cards: Three Heart, Four Heart, Seven Heart, Queen Heart, Ace Heart, Two Club, Two Diamond, Eight Diamond, Queen Diamond, Two Spade, Seven Spade, Nine Spade, Jack Spade, 
+C5 30.03.2025 23:22:16:  player Jan, ID: 1 gave cards Seven Club, Queen Club, King Diamond,  for exchange to Michał, ID: 2
+C6 30.03.2025 23:22:16:  player Szczepan, ID: 4 received cards Two Diamond, Eight Diamond, Queen Diamond,  for exchange from Jan, ID: 1
+C5 30.03.2025 23:22:16:  player Michał, ID: 2 gave cards Nine Club, Queen Spade, Ace Spade,  for exchange to Zbyszek, ID: 3
+C6 30.03.2025 23:22:16:  player Jan, ID: 1 received cards Seven Club, Queen Club, King Diamond,  for exchange from Michał, ID: 2
+C5 30.03.2025 23:22:16:  player Zbyszek, ID: 3 gave cards Two Heart, Jack Diamond, King Spade,  for exchange to Szczepan, ID: 4
+C6 30.03.2025 23:22:16:  player Michał, ID: 2 received cards Nine Club, Queen Spade, Ace Spade,  for exchange from Zbyszek, ID: 3
+C5 30.03.2025 23:22:16:  player Szczepan, ID: 4 gave cards Two Diamond, Eight Diamond, Queen Diamond,  for exchange to Jan, ID: 1
+C6 30.03.2025 23:22:16:  player Zbyszek, ID: 3 received cards Two Heart, Jack Diamond, King Spade,  for exchange from Szczepan, ID: 4
+C12 30.03.2025 23:22:16:  player's Jan, ID: 1 cards: Five Heart, Ten Heart, Jack Heart, King Heart, Three Club, Four Club, Six Club, Two Diamond, Three Diamond, Seven Diamond, Eight Diamond, Queen Diamond, Four Spade, 
+C12 30.03.2025 23:22:16:  player's Michał, ID: 2 cards: Six Heart, Eight Heart, Nine Heart, Five Club, Seven Club, Queen Club, Five Diamond, Six Diamond, King Diamond, Ace Diamond, Three Spade, Five Spade, Ten Spade, 
+C12 30.03.2025 23:22:16:  player's Zbyszek, ID: 3 cards: Eight Club, Nine Club, Ten Club, Jack Club, King Club, Ace Club, Four Diamond, Nine Diamond, Ten Diamond, Six Spade, Eight Spade, Queen Spade, Ace Spade, 
+C12 30.03.2025 23:22:16:  player's Szczepan, ID: 4 cards: Two Heart, Three Heart, Four Heart, Seven Heart, Queen Heart, Ace Heart, Two Club, Jack Diamond, Two Spade, Seven Spade, Nine Spade, Jack Spade, King Spade, 
+C15 30.03.2025 23:22:16: Trick 1 in 2 round started
+C12 30.03.2025 23:22:16:  player's Jan, ID: 1 cards: Five Heart, Ten Heart, Jack Heart, King Heart, Three Club, Four Club, Six Club, Two Diamond, Three Diamond, Seven Diamond, Eight Diamond, Queen Diamond, Four Spade, 
+C12 30.03.2025 23:22:16:  player's Michał, ID: 2 cards: Six Heart, Eight Heart, Nine Heart, Five Club, Seven Club, Queen Club, Five Diamond, Six Diamond, King Diamond, Ace Diamond, Three Spade, Five Spade, Ten Spade, 
+C12 30.03.2025 23:22:16:  player's Zbyszek, ID: 3 cards: Eight Club, Nine Club, Ten Club, Jack Club, King Club, Ace Club, Four Diamond, Nine Diamond, Ten Diamond, Six Spade, Eight Spade, Queen Spade, Ace Spade, 
+C12 30.03.2025 23:22:16:  player's Szczepan, ID: 4 cards: Two Heart, Three Heart, Four Heart, Seven Heart, Queen Heart, Ace Heart, Two Club, Jack Diamond, Two Spade, Seven Spade, Nine Spade, Jack Spade, King Spade, 
+C7 30.03.2025 23:22:16:  player Jan, ID: 1 threw card Six Club
+C7 30.03.2025 23:22:16:  player Michał, ID: 2 threw card Queen Club
+C7 30.03.2025 23:22:16:  player Zbyszek, ID: 3 threw card King Club
+C7 30.03.2025 23:22:16:  player Szczepan, ID: 4 threw card Two Club
+C8 30.03.2025 23:22:16:  player Zbyszek, ID: 3 won trick, began Szczepan, ID: 4 cards: Six Club, Queen Club, King Club, Two Club, 
+C9 30.03.2025 23:22:16:  player's Jan, ID: 1 points in that round (2): 0
+C9 30.03.2025 23:22:16:  player's Michał, ID: 2 points in that round (2): 0
+C9 30.03.2025 23:22:16:  player's Zbyszek, ID: 3 points in that round (2): 0
+C9 30.03.2025 23:22:16:  player's Szczepan, ID: 4 points in that round (2): 0
+C15 30.03.2025 23:22:16: Trick 2 in 2 round started
+C12 30.03.2025 23:22:16:  player's Jan, ID: 1 cards: Five Heart, Ten Heart, Jack Heart, King Heart, Three Club, Four Club, Two Diamond, Three Diamond, Seven Diamond, Eight Diamond, Queen Diamond, Four Spade, 
+C12 30.03.2025 23:22:16:  player's Michał, ID: 2 cards: Six Heart, Eight Heart, Nine Heart, Five Club, Seven Club, Five Diamond, Six Diamond, King Diamond, Ace Diamond, Three Spade, Five Spade, Ten Spade, 
+C12 30.03.2025 23:22:16:  player's Zbyszek, ID: 3 cards: Eight Club, Nine Club, Ten Club, Jack Club, Ace Club, Four Diamond, Nine Diamond, Ten Diamond, Six Spade, Eight Spade, Queen Spade, Ace Spade, 
+C12 30.03.2025 23:22:16:  player's Szczepan, ID: 4 cards: Two Heart, Three Heart, Four Heart, Seven Heart, Queen Heart, Ace Heart, Jack Diamond, Two Spade, Seven Spade, Nine Spade, Jack Spade, King Spade, 
+C7 30.03.2025 23:22:16:  player Jan, ID: 1 threw card Queen Diamond
+C7 30.03.2025 23:22:16:  player Michał, ID: 2 threw card King Diamond
+C7 30.03.2025 23:22:16:  player Zbyszek, ID: 3 threw card Ten Diamond
+C7 30.03.2025 23:22:16:  player Szczepan, ID: 4 threw card Jack Diamond
+C8 30.03.2025 23:22:16:  player Michał, ID: 2 won trick, began Zbyszek, ID: 3 cards: Queen Diamond, King Diamond, Ten Diamond, Jack Diamond, 
+C9 30.03.2025 23:22:16:  player's Jan, ID: 1 points in that round (2): 0
+C9 30.03.2025 23:22:16:  player's Michał, ID: 2 points in that round (2): 0
+C9 30.03.2025 23:22:16:  player's Zbyszek, ID: 3 points in that round (2): 0
+C9 30.03.2025 23:22:16:  player's Szczepan, ID: 4 points in that round (2): 0
+C15 30.03.2025 23:22:16: Trick 3 in 2 round started
+C12 30.03.2025 23:22:16:  player's Jan, ID: 1 cards: Five Heart, Ten Heart, Jack Heart, King Heart, Three Club, Four Club, Two Diamond, Three Diamond, Seven Diamond, Eight Diamond, Four Spade, 
+C12 30.03.2025 23:22:16:  player's Michał, ID: 2 cards: Six Heart, Eight Heart, Nine Heart, Five Club, Seven Club, Five Diamond, Six Diamond, Ace Diamond, Three Spade, Five Spade, Ten Spade, 
+C12 30.03.2025 23:22:16:  player's Zbyszek, ID: 3 cards: Eight Club, Nine Club, Ten Club, Jack Club, Ace Club, Four Diamond, Nine Diamond, Six Spade, Eight Spade, Queen Spade, Ace Spade, 
+C12 30.03.2025 23:22:16:  player's Szczepan, ID: 4 cards: Two Heart, Three Heart, Four Heart, Seven Heart, Queen Heart, Ace Heart, Two Spade, Seven Spade, Nine Spade, Jack Spade, King Spade, 
+C7 30.03.2025 23:22:16:  player Jan, ID: 1 threw card Four Spade
+C7 30.03.2025 23:22:16:  player Michał, ID: 2 threw card Ten Spade
+C7 30.03.2025 23:22:16:  player Zbyszek, ID: 3 threw card Eight Spade
+C7 30.03.2025 23:22:16:  player Szczepan, ID: 4 threw card Jack Spade
+C8 30.03.2025 23:22:16:  player Szczepan, ID: 4 won trick, began Michał, ID: 2 cards: Four Spade, Ten Spade, Eight Spade, Jack Spade, 
+C9 30.03.2025 23:22:16:  player's Jan, ID: 1 points in that round (2): 0
+C9 30.03.2025 23:22:16:  player's Michał, ID: 2 points in that round (2): 0
+C9 30.03.2025 23:22:16:  player's Zbyszek, ID: 3 points in that round (2): 0
+C9 30.03.2025 23:22:16:  player's Szczepan, ID: 4 points in that round (2): 0
+C15 30.03.2025 23:22:16: Trick 4 in 2 round started
+C12 30.03.2025 23:22:16:  player's Jan, ID: 1 cards: Five Heart, Ten Heart, Jack Heart, King Heart, Three Club, Four Club, Two Diamond, Three Diamond, Seven Diamond, Eight Diamond, 
+C12 30.03.2025 23:22:16:  player's Michał, ID: 2 cards: Six Heart, Eight Heart, Nine Heart, Five Club, Seven Club, Five Diamond, Six Diamond, Ace Diamond, Three Spade, Five Spade, 
+C12 30.03.2025 23:22:16:  player's Zbyszek, ID: 3 cards: Eight Club, Nine Club, Ten Club, Jack Club, Ace Club, Four Diamond, Nine Diamond, Six Spade, Queen Spade, Ace Spade, 
+C12 30.03.2025 23:22:16:  player's Szczepan, ID: 4 cards: Two Heart, Three Heart, Four Heart, Seven Heart, Queen Heart, Ace Heart, Two Spade, Seven Spade, Nine Spade, King Spade, 
+C7 30.03.2025 23:22:16:  player Jan, ID: 1 threw card Jack Heart
+C7 30.03.2025 23:22:16:  player Michał, ID: 2 threw card Five Spade
+C7 30.03.2025 23:22:16:  player Zbyszek, ID: 3 threw card Six Spade
+C7 30.03.2025 23:22:16:  player Szczepan, ID: 4 threw card Two Spade
+C8 30.03.2025 23:22:16:  player Zbyszek, ID: 3 won trick, began Szczepan, ID: 4 cards: Jack Heart, Five Spade, Six Spade, Two Spade, 
+C9 30.03.2025 23:22:16:  player's Jan, ID: 1 points in that round (2): 0
+C9 30.03.2025 23:22:16:  player's Michał, ID: 2 points in that round (2): 0
+C9 30.03.2025 23:22:16:  player's Zbyszek, ID: 3 points in that round (2): 1
+C9 30.03.2025 23:22:16:  player's Szczepan, ID: 4 points in that round (2): 0
+C15 30.03.2025 23:22:16: Trick 5 in 2 round started
+C12 30.03.2025 23:22:16:  player's Jan, ID: 1 cards: Five Heart, Ten Heart, King Heart, Three Club, Four Club, Two Diamond, Three Diamond, Seven Diamond, Eight Diamond, 
+C12 30.03.2025 23:22:16:  player's Michał, ID: 2 cards: Six Heart, Eight Heart, Nine Heart, Five Club, Seven Club, Five Diamond, Six Diamond, Ace Diamond, Three Spade, 
+C12 30.03.2025 23:22:16:  player's Zbyszek, ID: 3 cards: Eight Club, Nine Club, Ten Club, Jack Club, Ace Club, Four Diamond, Nine Diamond, Queen Spade, Ace Spade, 
+C12 30.03.2025 23:22:16:  player's Szczepan, ID: 4 cards: Two Heart, Three Heart, Four Heart, Seven Heart, Queen Heart, Ace Heart, Seven Spade, Nine Spade, King Spade, 
+C7 30.03.2025 23:22:16:  player Jan, ID: 1 threw card Eight Diamond
+C7 30.03.2025 23:22:16:  player Michał, ID: 2 threw card Ace Diamond
+C7 30.03.2025 23:22:16:  player Zbyszek, ID: 3 threw card Nine Diamond
+C7 30.03.2025 23:22:16:  player Szczepan, ID: 4 threw card King Spade
+C8 30.03.2025 23:22:16:  player Michał, ID: 2 won trick, began Zbyszek, ID: 3 cards: Eight Diamond, Ace Diamond, Nine Diamond, King Spade, 
+C9 30.03.2025 23:22:16:  player's Jan, ID: 1 points in that round (2): 0
+C9 30.03.2025 23:22:16:  player's Michał, ID: 2 points in that round (2): 0
+C9 30.03.2025 23:22:16:  player's Zbyszek, ID: 3 points in that round (2): 1
+C9 30.03.2025 23:22:16:  player's Szczepan, ID: 4 points in that round (2): 0
+C15 30.03.2025 23:22:16: Trick 6 in 2 round started
+C12 30.03.2025 23:22:16:  player's Jan, ID: 1 cards: Five Heart, Ten Heart, King Heart, Three Club, Four Club, Two Diamond, Three Diamond, Seven Diamond, 
+C12 30.03.2025 23:22:16:  player's Michał, ID: 2 cards: Six Heart, Eight Heart, Nine Heart, Five Club, Seven Club, Five Diamond, Six Diamond, Three Spade, 
+C12 30.03.2025 23:22:16:  player's Zbyszek, ID: 3 cards: Eight Club, Nine Club, Ten Club, Jack Club, Ace Club, Four Diamond, Queen Spade, Ace Spade, 
+C12 30.03.2025 23:22:16:  player's Szczepan, ID: 4 cards: Two Heart, Three Heart, Four Heart, Seven Heart, Queen Heart, Ace Heart, Seven Spade, Nine Spade, 
+C7 30.03.2025 23:22:16:  player Jan, ID: 1 threw card Ten Heart
+C7 30.03.2025 23:22:16:  player Michał, ID: 2 threw card Three Spade
+C7 30.03.2025 23:22:16:  player Zbyszek, ID: 3 threw card Ace Spade
+C7 30.03.2025 23:22:16:  player Szczepan, ID: 4 threw card Nine Spade
+C8 30.03.2025 23:22:16:  player Zbyszek, ID: 3 won trick, began Michał, ID: 2 cards: Ten Heart, Three Spade, Ace Spade, Nine Spade, 
+C9 30.03.2025 23:22:16:  player's Jan, ID: 1 points in that round (2): 0
+C9 30.03.2025 23:22:16:  player's Michał, ID: 2 points in that round (2): 0
+C9 30.03.2025 23:22:16:  player's Zbyszek, ID: 3 points in that round (2): 2
+C9 30.03.2025 23:22:16:  player's Szczepan, ID: 4 points in that round (2): 0
+C15 30.03.2025 23:22:16: Trick 7 in 2 round started
+C12 30.03.2025 23:22:16:  player's Jan, ID: 1 cards: Five Heart, King Heart, Three Club, Four Club, Two Diamond, Three Diamond, Seven Diamond, 
+C12 30.03.2025 23:22:16:  player's Michał, ID: 2 cards: Six Heart, Eight Heart, Nine Heart, Five Club, Seven Club, Five Diamond, Six Diamond, 
+C12 30.03.2025 23:22:16:  player's Zbyszek, ID: 3 cards: Eight Club, Nine Club, Ten Club, Jack Club, Ace Club, Four Diamond, Queen Spade, 
+C12 30.03.2025 23:22:16:  player's Szczepan, ID: 4 cards: Two Heart, Three Heart, Four Heart, Seven Heart, Queen Heart, Ace Heart, Seven Spade, 
+C7 30.03.2025 23:22:16:  player Jan, ID: 1 threw card Four Club
+C7 30.03.2025 23:22:16:  player Michał, ID: 2 threw card Five Club
+C7 30.03.2025 23:22:16:  player Zbyszek, ID: 3 threw card Ace Club
+C7 30.03.2025 23:22:16:  player Szczepan, ID: 4 threw card Queen Heart
+C8 30.03.2025 23:22:16:  player Zbyszek, ID: 3 won trick, began Zbyszek, ID: 3 cards: Four Club, Five Club, Ace Club, Queen Heart, 
+C9 30.03.2025 23:22:16:  player's Jan, ID: 1 points in that round (2): 0
+C9 30.03.2025 23:22:16:  player's Michał, ID: 2 points in that round (2): 0
+C9 30.03.2025 23:22:16:  player's Zbyszek, ID: 3 points in that round (2): 3
+C9 30.03.2025 23:22:16:  player's Szczepan, ID: 4 points in that round (2): 0
+C15 30.03.2025 23:22:16: Trick 8 in 2 round started
+C12 30.03.2025 23:22:16:  player's Jan, ID: 1 cards: Five Heart, King Heart, Three Club, Two Diamond, Three Diamond, Seven Diamond, 
+C12 30.03.2025 23:22:16:  player's Michał, ID: 2 cards: Six Heart, Eight Heart, Nine Heart, Seven Club, Five Diamond, Six Diamond, 
+C12 30.03.2025 23:22:16:  player's Zbyszek, ID: 3 cards: Eight Club, Nine Club, Ten Club, Jack Club, Four Diamond, Queen Spade, 
+C12 30.03.2025 23:22:16:  player's Szczepan, ID: 4 cards: Two Heart, Three Heart, Four Heart, Seven Heart, Ace Heart, Seven Spade, 
+C7 30.03.2025 23:22:16:  player Jan, ID: 1 threw card Three Club
+C7 30.03.2025 23:22:16:  player Michał, ID: 2 threw card Seven Club
+C7 30.03.2025 23:22:16:  player Zbyszek, ID: 3 threw card Jack Club
+C7 30.03.2025 23:22:16:  player Szczepan, ID: 4 threw card Seven Heart
+C8 30.03.2025 23:22:16:  player Zbyszek, ID: 3 won trick, began Zbyszek, ID: 3 cards: Three Club, Seven Club, Jack Club, Seven Heart, 
+C9 30.03.2025 23:22:16:  player's Jan, ID: 1 points in that round (2): 0
+C9 30.03.2025 23:22:16:  player's Michał, ID: 2 points in that round (2): 0
+C9 30.03.2025 23:22:16:  player's Zbyszek, ID: 3 points in that round (2): 4
+C9 30.03.2025 23:22:16:  player's Szczepan, ID: 4 points in that round (2): 0
+C15 30.03.2025 23:22:16: Trick 9 in 2 round started
+C12 30.03.2025 23:22:16:  player's Jan, ID: 1 cards: Five Heart, King Heart, Two Diamond, Three Diamond, Seven Diamond, 
+C12 30.03.2025 23:22:16:  player's Michał, ID: 2 cards: Six Heart, Eight Heart, Nine Heart, Five Diamond, Six Diamond, 
+C12 30.03.2025 23:22:16:  player's Zbyszek, ID: 3 cards: Eight Club, Nine Club, Ten Club, Four Diamond, Queen Spade, 
+C12 30.03.2025 23:22:16:  player's Szczepan, ID: 4 cards: Two Heart, Three Heart, Four Heart, Ace Heart, Seven Spade, 
+C7 30.03.2025 23:22:16:  player Jan, ID: 1 threw card Two Diamond
+C7 30.03.2025 23:22:16:  player Michał, ID: 2 threw card Six Heart
+C7 30.03.2025 23:22:16:  player Zbyszek, ID: 3 threw card Ten Club
+C7 30.03.2025 23:22:16:  player Szczepan, ID: 4 threw card Four Heart
+C8 30.03.2025 23:22:16:  player Zbyszek, ID: 3 won trick, began Zbyszek, ID: 3 cards: Two Diamond, Six Heart, Ten Club, Four Heart, 
+C9 30.03.2025 23:22:16:  player's Jan, ID: 1 points in that round (2): 0
+C9 30.03.2025 23:22:16:  player's Michał, ID: 2 points in that round (2): 0
+C9 30.03.2025 23:22:16:  player's Zbyszek, ID: 3 points in that round (2): 6
+C9 30.03.2025 23:22:16:  player's Szczepan, ID: 4 points in that round (2): 0
+C15 30.03.2025 23:22:16: Trick 10 in 2 round started
+C12 30.03.2025 23:22:16:  player's Jan, ID: 1 cards: Five Heart, King Heart, Three Diamond, Seven Diamond, 
+C12 30.03.2025 23:22:16:  player's Michał, ID: 2 cards: Eight Heart, Nine Heart, Five Diamond, Six Diamond, 
+C12 30.03.2025 23:22:16:  player's Zbyszek, ID: 3 cards: Eight Club, Nine Club, Four Diamond, Queen Spade, 
+C12 30.03.2025 23:22:16:  player's Szczepan, ID: 4 cards: Two Heart, Three Heart, Ace Heart, Seven Spade, 
+C7 30.03.2025 23:22:16:  player Jan, ID: 1 threw card Three Diamond
+C7 30.03.2025 23:22:16:  player Michał, ID: 2 threw card Eight Heart
+C7 30.03.2025 23:22:16:  player Zbyszek, ID: 3 threw card Nine Club
+C7 30.03.2025 23:22:16:  player Szczepan, ID: 4 threw card Two Heart
+C8 30.03.2025 23:22:16:  player Zbyszek, ID: 3 won trick, began Zbyszek, ID: 3 cards: Three Diamond, Eight Heart, Nine Club, Two Heart, 
+C9 30.03.2025 23:22:16:  player's Jan, ID: 1 points in that round (2): 0
+C9 30.03.2025 23:22:16:  player's Michał, ID: 2 points in that round (2): 0
+C9 30.03.2025 23:22:16:  player's Zbyszek, ID: 3 points in that round (2): 8
+C9 30.03.2025 23:22:16:  player's Szczepan, ID: 4 points in that round (2): 0
+C15 30.03.2025 23:22:16: Trick 11 in 2 round started
+C12 30.03.2025 23:22:16:  player's Jan, ID: 1 cards: Five Heart, King Heart, Seven Diamond, 
+C12 30.03.2025 23:22:16:  player's Michał, ID: 2 cards: Nine Heart, Five Diamond, Six Diamond, 
+C12 30.03.2025 23:22:16:  player's Zbyszek, ID: 3 cards: Eight Club, Four Diamond, Queen Spade, 
+C12 30.03.2025 23:22:16:  player's Szczepan, ID: 4 cards: Three Heart, Ace Heart, Seven Spade, 
+C7 30.03.2025 23:22:16:  player Jan, ID: 1 threw card Five Heart
+C7 30.03.2025 23:22:16:  player Michał, ID: 2 threw card Five Diamond
+C7 30.03.2025 23:22:16:  player Zbyszek, ID: 3 threw card Eight Club
+C7 30.03.2025 23:22:16:  player Szczepan, ID: 4 threw card Three Heart
+C8 30.03.2025 23:22:16:  player Zbyszek, ID: 3 won trick, began Zbyszek, ID: 3 cards: Five Heart, Five Diamond, Eight Club, Three Heart, 
+C9 30.03.2025 23:22:16:  player's Jan, ID: 1 points in that round (2): 0
+C9 30.03.2025 23:22:16:  player's Michał, ID: 2 points in that round (2): 0
+C9 30.03.2025 23:22:16:  player's Zbyszek, ID: 3 points in that round (2): 10
+C9 30.03.2025 23:22:16:  player's Szczepan, ID: 4 points in that round (2): 0
+C15 30.03.2025 23:22:16: Trick 12 in 2 round started
+C12 30.03.2025 23:22:16:  player's Jan, ID: 1 cards: King Heart, Seven Diamond, 
+C12 30.03.2025 23:22:16:  player's Michał, ID: 2 cards: Nine Heart, Six Diamond, 
+C12 30.03.2025 23:22:16:  player's Zbyszek, ID: 3 cards: Four Diamond, Queen Spade, 
+C12 30.03.2025 23:22:16:  player's Szczepan, ID: 4 cards: Ace Heart, Seven Spade, 
+C7 30.03.2025 23:22:16:  player Jan, ID: 1 threw card Seven Diamond
+C7 30.03.2025 23:22:16:  player Michał, ID: 2 threw card Nine Heart
+C7 30.03.2025 23:22:16:  player Zbyszek, ID: 3 threw card Queen Spade
+C7 30.03.2025 23:22:16:  player Szczepan, ID: 4 threw card Seven Spade
+C8 30.03.2025 23:22:16:  player Zbyszek, ID: 3 won trick, began Zbyszek, ID: 3 cards: Seven Diamond, Nine Heart, Queen Spade, Seven Spade, 
+C9 30.03.2025 23:22:16:  player's Jan, ID: 1 points in that round (2): 0
+C9 30.03.2025 23:22:16:  player's Michał, ID: 2 points in that round (2): 0
+C9 30.03.2025 23:22:16:  player's Zbyszek, ID: 3 points in that round (2): 24
+C9 30.03.2025 23:22:16:  player's Szczepan, ID: 4 points in that round (2): 0
+C15 30.03.2025 23:22:16: Trick 13 in 2 round started
+C12 30.03.2025 23:22:16:  player's Jan, ID: 1 cards: King Heart, 
+C12 30.03.2025 23:22:16:  player's Michał, ID: 2 cards: Six Diamond, 
+C12 30.03.2025 23:22:16:  player's Zbyszek, ID: 3 cards: Four Diamond, 
+C12 30.03.2025 23:22:16:  player's Szczepan, ID: 4 cards: Ace Heart, 
+C7 30.03.2025 23:22:16:  player Jan, ID: 1 threw card King Heart
+C7 30.03.2025 23:22:16:  player Michał, ID: 2 threw card Six Diamond
+C7 30.03.2025 23:22:16:  player Zbyszek, ID: 3 threw card Four Diamond
+C7 30.03.2025 23:22:16:  player Szczepan, ID: 4 threw card Ace Heart
+C8 30.03.2025 23:22:16:  player Michał, ID: 2 won trick, began Zbyszek, ID: 3 cards: King Heart, Six Diamond, Four Diamond, Ace Heart, 
+C9 30.03.2025 23:22:16:  player's Jan, ID: 1 points in that round (2): 0
+C9 30.03.2025 23:22:16:  player's Michał, ID: 2 points in that round (2): 2
+C9 30.03.2025 23:22:16:  player's Zbyszek, ID: 3 points in that round (2): 24
+C9 30.03.2025 23:22:16:  player's Szczepan, ID: 4 points in that round (2): 0
+C10 30.03.2025 23:22:16:  player's Paweł, ID: 1 points after that round (2): 0
+C10 30.03.2025 23:22:16:  player's Rafał, ID: 2 points after that round (2): 2
+C10 30.03.2025 23:22:16:  player's Adam, ID: 3 points after that round (2): 24
+C10 30.03.2025 23:22:16:  player's Tomek, ID: 4 points after that round (2): 0
+C11 30.03.2025 23:22:16:  player's Paweł, ID: 1 place in game: 1 with 0 bonuses
+C11 30.03.2025 23:22:16:  player's Rafał, ID: 2 place in game: 3 with 0 bonuses
+C11 30.03.2025 23:22:16:  player's Adam, ID: 3 place in game: 4 with 0 bonuses
+C11 30.03.2025 23:22:16:  player's Tomek, ID: 4 place in game: 1 with 0 bonuses
