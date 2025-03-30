@@ -12,9 +12,14 @@ namespace HeartsServer.ResultsWriterReader
     public class TxtFileLogWriter : BaseTextGameWriter, ILogWriter
     {
         private string _pathToFile;
-        public TxtFileLogWriter() => setPathToFile(DateTime.Now);
-        public TxtFileLogWriter(DateTime dateTime) => setPathToFile(dateTime);
+        public TxtFileLogWriter() => SetPathToFile(DateTime.Now);
+        public TxtFileLogWriter(DateTime dateTime) => SetPathToFile(dateTime);
 
+        public TxtFileLogWriter(string path)
+        {
+            _pathToFile = path;
+        }
+        
         //public async Task WriteStartedGameAsync()
         //public async Task WriteStartedGameAsync(DateTime datetime)
         //public async Task WriteStartRoundAsync(int roundNumber)
@@ -29,7 +34,7 @@ namespace HeartsServer.ResultsWriterReader
         //public async Task WritePlacesAfterGameAsync(Player[] players)
         //public async Task WritePlayersCardsAsync(Player[] players)
 
-        void setPathToFile(DateTime dateTime)
+        void SetPathToFile(DateTime dateTime)
         {
             _pathToFile = $"LogFiles/{dateTime.ToString(new CultureInfo("pl-PL"))}_logs.txt".Replace(" ", "_").Replace(":", "_");
         }
@@ -39,7 +44,7 @@ namespace HeartsServer.ResultsWriterReader
             if (gameHistory == null || gameHistory.StartTime == DateTime.MinValue)
                 return;
 
-            setPathToFile(gameHistory.StartTime);
+            SetPathToFile(gameHistory.StartTime);
 
             await WriteStartedGameAsync(gameHistory.StartTime);
             foreach (var round in gameHistory.Rounds)
