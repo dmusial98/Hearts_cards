@@ -10,12 +10,16 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <None Remove="cards_shuffle\shuffle0.json" />
     <None Remove="LogFiles\15.01.2024_20_58_00_history.json" />
     <None Remove="LogFiles\15.01.2024_20_58_00_logs.txt" />
     <None Remove="LogFiles\Hearts_history.xlsx" />
   </ItemGroup>
 
   <ItemGroup>
+    <Content Include="cards_shuffle\shuffle0.json">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
     <Content Include="LogFiles\15.01.2024_20_58_00_history.json">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
