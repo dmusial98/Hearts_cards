@@ -27,9 +27,6 @@
     <Content Include="LogFiles\15.01.2024_20_58_00_logs.txt">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
-    <Content Include="LogFiles\txtFileLogWriter.Test\15.01.2024_20_58_00_logs.txt">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-    </Content>
     <Content Include="LogFiles\Hearts_history.xlsx">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
@@ -47,6 +44,10 @@
 
   <ItemGroup>
     <ProjectReference Include="..\HeartsServer\HeartsServer.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Folder Include="LogFiles\txtFileLogWriter.Test\" />
   </ItemGroup>
 
 </Project>
