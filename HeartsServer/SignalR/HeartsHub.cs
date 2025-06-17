@@ -12,7 +12,7 @@ namespace HeartsServer.SignalR
         public override async Task OnConnectedAsync()
         {
             await Clients.All.SendAsync("ReceiveMessage", $"{Context.ConnectionId} has joined");
-        }
+        }   
 
         public async Task WriteText(string text)
         {
