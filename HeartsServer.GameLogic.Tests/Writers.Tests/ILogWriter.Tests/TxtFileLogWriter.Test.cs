@@ -233,9 +233,9 @@ namespace HeartsServer.GameLogic.Tests.Writers.Tests.ILogWriter.Tests
         {
             var history =
                 await JsonFileReaderWriter.ReadGameHistory(Path.Combine("LogFiles",
-                    "15.01.2024_20_58_00_history.json"));
+                    "17.06.2025_20_58_00_history.json"));
             Assert.IsNotNull(history);
-
+        
             await new TxtFileLogWriter(history.StartTime).SaveTxtFileLogFileFromGameHistory(history);
             _fileToClean = false;
         }

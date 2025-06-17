@@ -12,6 +12,7 @@
   <ItemGroup>
     <None Remove="cards_shuffle\shuffle0.json" />
     <None Remove="LogFiles\15.01.2024_20_58_00_history.json" />
+<!--    <None Remove="LogFiles\17.06.2025_20_58_00_history.json" />-->
     <None Remove="LogFiles\15.01.2024_20_58_00_logs.txt" />
     <None Remove="LogFiles\txtFileLogWriter.Test\15.01.2024_20_58_00_logs.txt" />
     <None Remove="LogFiles\Hearts_history.xlsx" />
@@ -28,6 +29,9 @@
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
     <Content Include="LogFiles\Hearts_history.xlsx">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="LogFiles\17.06.2025_20_58_00_history.json">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
   </ItemGroup>
