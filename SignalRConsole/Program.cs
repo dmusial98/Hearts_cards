@@ -17,15 +17,15 @@ namespace SignalRConsole
         		options.HttpMessageHandlerFactory = _ => handler;
 			})
 			.WithAutomaticReconnect().Build();
-			
-			await connection.StartAsync();
 
 			connection.On("ReceiveMessage", (string mess) =>
 			{
-                Console.WriteLine(mess);
-            });
+				Console.WriteLine(mess);
+			});
 
-            await connection.SendAsync("WriteText", "Hub received message from client :D");
+			await connection.StartAsync();
+
+			await connection.SendAsync("WriteText", "Hub received message from client :D");
 
 			Console.ReadKey();
 		}
