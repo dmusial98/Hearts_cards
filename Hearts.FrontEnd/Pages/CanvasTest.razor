@@ -1,0 +1,25 @@
+﻿@page "/canvas"
+@using SkiaSharp
+@using SkiaSharp.Views.Blazor
+
+<SKCanvasView OnPaintSurface="OnPaint" Width="1000" Height="1000" />
+
+@code {
+    void OnPaint(SKPaintSurfaceEventArgs e)
+    {
+        var canvas = e.Surface.Canvas;
+        canvas.Clear(SKColors.White);
+
+        using var paint = new SKPaint
+        {
+            Color = SKColors.DarkRed,
+            IsAntialias = true,
+            Style = SKPaintStyle.Fill,
+            TextSize = 36
+        };
+
+        canvas.DrawCircle(200, 150, 50, paint);
+        canvas.DrawText("Kierki", 140, 250, paint);
+        canvas.DrawRect(300, 300, 500, 400, paint);
+    }
+}
