@@ -72,16 +72,11 @@ namespace HeartsServer.ResultsWriterReader
 				{
                     if (history.Players == null || history.Players.Count <  NumbersConsts.PLAYERS_NUMBER_CONST)
                     {
-						var a = lineLog.Split("player ")[1];
-						var b = a.Split(", ID")[0];
-						var c = lineLog.Split("player ")[1].Split(", ID")[0];
-
-                        history.Players.Add(new PlayerHistory
+	                    history.Players.Add(new PlayerHistory
 						{
 							PlayerId = Int32.Parse(lineLog.Split("ID: ")[1].Split(' ')[0]),
                             Name = lineLog.Split("player ")[1].Split(", ID")[0],
                         });
-
                     }
                     roundHistory.PlayerCardsBeforeExchange.Add(new PlayerCardsHistory
 					{
